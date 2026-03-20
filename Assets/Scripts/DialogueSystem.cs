@@ -54,10 +54,14 @@ public class DialogueSystem : MonoBehaviour
     void ChooseA()
     {
         dialogueText.text = "Wybrałeś opcję A";
+        choiceA.gameObject.SetActive(false);
+        choiceB.gameObject.SetActive(false);
     }
 
     void ChooseB()
     {
         dialogueText.text = "Wybrałeś opcję B";
+        choiceA.gameObject.SetActive(false);
+        choiceB.gameObject.SetActive(false);
     }
 }
