@@ -1,4 +1,4 @@
-
+using UnityEngine.InputSystem;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (isPaused) ResumeGame();
             else PauseGame();
@@ -54,7 +54,7 @@ public class PauseMenu : MonoBehaviour
     }
     private void MainMenu()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
