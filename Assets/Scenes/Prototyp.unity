@@ -368,6 +368,7 @@ MonoBehaviour:
   nextButton: {fileID: 2072401820}
   choiceA: {fileID: 1954220180}
   choiceB: {fileID: 1635728704}
+  typingSpeed: 0.05
 --- !u!4 &691522168
 Transform:
   m_ObjectHideFlags: 0

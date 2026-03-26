@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -11,28 +12,65 @@ public class DialogueSystem : MonoBehaviour
 
     private int index = 0;
 
+    private bool isTyping = false;
+    private Coroutine typingCoroutine;
+
+    public float typingSpeed = 0.05f;
+
     string[] dialogue = {
         "Siema",
         "To jest prototyp visual novelki",
-        "Kliknij dalej żeby przejść",
+        "Kliknij spację żeby przejść dalej",
         "A teraz wybierz opcję"
     };
 
     void Start()
     {
-        ShowText();
-
         choiceA.gameObject.SetActive(false);
         choiceB.gameObject.SetActive(false);
 
-        nextButton.onClick.AddListener(Next);
+        nextButton.gameObject.SetActive(false); 
+
         choiceA.onClick.AddListener(ChooseA);
         choiceB.onClick.AddListener(ChooseB);
+
+        StartTyping();
     }
 
-    void ShowText()
+    void Update()
     {
-        dialogueText.text = dialogue[index];
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (isTyping)
+            {
+                StopCoroutine(typingCoroutine);
+                dialogueText.text = dialogue[index];
+                isTyping = false;
+            }
+            else
+            {
+                Next();
+            }
+        }
+    }
+
+    void StartTyping()
+    {
+        typingCoroutine = StartCoroutine(TypeText(dialogue[index]));
+    }
+
+    IEnumerator TypeText(string text)
+    {
+        isTyping = true;
+        dialogueText.text = "";
+
+        foreach (char letter in text)
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+
+        isTyping = false;
     }
 
     void Next()
@@ -41,11 +79,10 @@ public class DialogueSystem : MonoBehaviour
 
         if (index < dialogue.Length)
         {
-            ShowText();
+            StartTyping();
         }
         else
         {
-            nextButton.gameObject.SetActive(false);
             choiceA.gameObject.SetActive(true);
             choiceB.gameObject.SetActive(true);
         }
@@ -54,14 +91,10 @@ public class DialogueSystem : MonoBehaviour
     void ChooseA()
     {
         dialogueText.text = "Wybrałeś opcję A";
-        choiceA.gameObject.SetActive(false);
-        choiceB.gameObject.SetActive(false);
     }
 
     void ChooseB()
     {
         dialogueText.text = "Wybrałeś opcję B";
-        choiceA.gameObject.SetActive(false);
-        choiceB.gameObject.SetActive(false);
     }
 }
