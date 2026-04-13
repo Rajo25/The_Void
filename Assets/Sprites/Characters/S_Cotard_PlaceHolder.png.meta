@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5d6e4ac2695aa3b4e8dd6673b004c1c9
+guid: e32747ed779141248bed7ac8f0686037
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2665677556370724710
-    second: S_The_Void_CotardM_Wip1_0
+      213: -9060919902322616043
+    second: S_Cotard_PlaceHolder_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: S_The_Void_CotardM_Wip1_0
+      name: S_Cotard_PlaceHolder_0
       rect:
         serializedVersion: 2
-        x: 63
+        x: 41
         y: 0
         width: 853
-        height: 1941
+        height: 1929
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 66755393d936ef420800000000000000
-      internalID: 2665677556370724710
+      spriteID: 5191bcb0b55214280800000000000000
+      internalID: -9060919902322616043
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      S_The_Void_CotardM_Wip1_0: 2665677556370724710
+      S_Cotard_PlaceHolder_0: -9060919902322616043
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
