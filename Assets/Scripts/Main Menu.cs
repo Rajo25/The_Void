@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MeinMenu : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
     //public string nextSceneName = "GAME";
     private bool isPaused = false;
@@ -27,7 +27,7 @@ public class MeinMenu : MonoBehaviour
         Quit_Game.onClick.AddListener(QuitGame);
 
     }
-    public void LoadNextSpecificScene() //To nic nie robi , zostawiam se komende by nie szukaæ
+    public void LoadNextSpecificScene() //To nic nie robi , zostawiam se komende by nie szukaï¿½
     {
 
         //SceneManager.LoadScene(nextSceneName);
