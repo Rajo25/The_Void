@@ -9,17 +9,18 @@ public class DialogueSystem : MonoBehaviour
     public Button nextButton;
     public Button choiceA;
     public Button choiceB;
+    public static bool IsPaused;
+    
+
     private string[] currentDialogue;
 
     private int index = 0;
-    
     private bool isTyping = false;
     private Coroutine typingCoroutine;
 
     public float typingSpeed = 0.05f;
 
-    string[] dialogue = {
-        "Dziennik Alysii - Wpis 001\nDla moich uczniów",
+    string[] dialogue = { "Dziennik Alysii - Wpis 001\nDla moich uczniów",
         "Jeżeli to czytacie, oznacza to, że weszłam tam, gdzie nikt nie powinien.",
         "Mówiono mi, żebym tego nie robiła\nŻe nie wszystko jest do odkrycia",
         "Że niektóre tajemnice istnieją tylko po to aby pozostać tajemnicami",
@@ -137,14 +138,8 @@ public class DialogueSystem : MonoBehaviour
         "A jeśli nigdy nie istniałeś\nto\ndlaczego wciąż tu jesteś?",
         "...",
         "Alysia\nJeśli ich usuniemy… już nigdy ich nie zobaczę…",
-        "Cotard:\nJeśli tego nie usuniesz… nigdy nie wyjdziesz."
-        
-        
-    };
-
-    string[] Choice_A =
-    {
-        "Alysia zamyka oczy",
+        "Cotard:\nJeśli tego nie usuniesz… nigdy nie wyjdziesz." };
+    string[] Choice_A = {  "Alysia zamyka oczy",
         "To nie oni.",
         "Iluzja zaczyna pękać",
         "Uczeń:\nPani… dlaczego…?",
@@ -158,31 +153,36 @@ public class DialogueSystem : MonoBehaviour
         "Chodź..\nIdziemy niżej.",
         "Alysia:\nZaczynam rozumieć, dlaczego ludzie nie chcą wiedzieć.",
         "Nie pamiętam już swoich uczniów.",
-        "DZIĘKUJĘ ZA GRĘ W PROTOTYP"
-        
-        
-    };
+        "DZIĘKUJĘ ZA GRĘ W PROTOTYP" };
+
+    public int currentIndex; 
 
     void Start()
     {
         currentDialogue = dialogue;
+
         choiceA.gameObject.SetActive(false);
         choiceB.gameObject.SetActive(false);
 
-        nextButton.gameObject.SetActive(false); 
-
         choiceA.onClick.AddListener(ChooseA);
         choiceB.onClick.AddListener(ChooseB);
+        
+        if (PlayerPrefs.HasKey("dialogueIndex"))
+        {
+            index = PlayerPrefs.GetInt("dialogueIndex");
+        }
 
         StartTyping();
     }
 
     void Update()
     {
+        if (PauseMenu.IsPaused)
+            return;
+
         if (Input.GetKeyDown(KeyCode.Space) ||
             Input.GetKeyDown(KeyCode.Return) ||
-            Input.GetMouseButtonDown(0) ||
-        Input.GetKeyDown(KeyCode.KeypadEnter))
+            Input.GetMouseButtonDown(0))
         {
             if (isTyping)
             {
@@ -209,6 +209,9 @@ public class DialogueSystem : MonoBehaviour
 
         foreach (char letter in text)
         {
+            if (PauseMenu.IsPaused)
+                yield break;
+
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
@@ -246,6 +249,11 @@ public class DialogueSystem : MonoBehaviour
     void ChooseB()
     {
         dialogueText.text = "WIP";
-        
+    }
+
+    // 🔥 SAVE INDEX
+    public int GetIndex()
+    {
+        return index;
     }
 }

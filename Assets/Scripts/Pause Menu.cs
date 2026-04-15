@@ -8,13 +8,17 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
 
     private bool isPaused = false;
+    
+    public static bool IsPaused = false;
 
     public Button _MainMenu;
     public Button Quit_Game;
     public Button Resume_;
     public Button SaveGameBtn; 
 
-    public Transform player; 
+    public Transform player;
+
+    public DialogueSystem dialogueSystem; 
 
     private void Start()
     {
@@ -39,6 +43,9 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        
+        IsPaused = true;
+
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
@@ -48,6 +55,9 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+
+        
+        IsPaused = false;
     }
 
     private void MainMenu()
@@ -55,6 +65,9 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(0);
         Time.timeScale = 1f;
         isPaused = false;
+        
+        IsPaused = false;
+
         Cursor.visible = true;
     }
 
@@ -66,19 +79,22 @@ public class PauseMenu : MonoBehaviour
     
     private void SaveGame()
     {
-        // zapis sceny
         PlayerPrefs.SetInt("SceneIndex", SceneManager.GetActiveScene().buildIndex);
         
         PlayerPrefs.SetFloat("PlayerX", player.position.x);
         PlayerPrefs.SetFloat("PlayerY", player.position.y);
         PlayerPrefs.SetFloat("PlayerZ", player.position.z);
 
+        if (dialogueSystem != null)
+        {
+            PlayerPrefs.SetInt("dialogueIndex", dialogueSystem.GetIndex());
+        }
+
         PlayerPrefs.Save();
 
         Debug.Log("Gra zapisana!");
     }
 
-    
     public void LoadGame()
     {
         if (PlayerPrefs.HasKey("SceneIndex"))
