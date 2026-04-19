@@ -4,6 +4,7 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class DialogueSystem : MonoBehaviour
     public Button nextButton;
     public Button choiceA;
     public Button choiceB;
+    public Button backButton;
+    public Button skipButton;
+    public Button autoButton;
+
+    private bool isAuto = false;
+    private Coroutine autoCoroutine;
 
     public static bool IsPaused;
 
@@ -41,6 +48,9 @@ public class DialogueSystem : MonoBehaviour
 
         choiceA.onClick.AddListener(ChooseA);
         choiceB.onClick.AddListener(ChooseB);
+        backButton.onClick.AddListener(GoBack);
+        skipButton.onClick.AddListener(SkipDialogue);
+        autoButton.onClick.AddListener(ToggleAuto);
 
         if (PlayerPrefs.HasKey("dialogueIndex"))
         {
@@ -61,8 +71,10 @@ public class DialogueSystem : MonoBehaviour
             return;
         }
 
+        bool clickedUI = EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
+
         if (Keyboard.current.spaceKey.wasPressedThisFrame ||
-            Mouse.current.leftButton.wasPressedThisFrame)
+            (Mouse.current.leftButton.wasPressedThisFrame && !clickedUI))
         {
             if (isTyping)
             {
@@ -88,6 +100,7 @@ public class DialogueSystem : MonoBehaviour
 
     void UpdateSpeaker(string line)
     {
+        if (nameText == null) return;
         if (!line.Contains("|"))
         {
             nameText.text = "";
@@ -148,6 +161,7 @@ public class DialogueSystem : MonoBehaviour
 
     void Next()
     {
+        if (isTyping) return;
         history.Push(DialogueHolder.index);
 
         DialogueHolder.index++;
@@ -330,5 +344,81 @@ public class DialogueSystem : MonoBehaviour
     public int GetIndex()
     {
         return DialogueHolder.index;
+    }
+    void SkipDialogue()
+    {
+        StopAllCoroutines();
+        isTyping = false;
+        
+        while (true)
+        {
+            if (currentNode == "Chapter1d2" ||
+                currentNode == "Chapter1d3" ||
+                currentNode == "Chapter1d4" ||
+                currentNode == "Chapter1d5" ||
+                currentNode == "Chapter1d8")
+            {
+                break;
+            }
+
+            DialogueHolder.index++;
+
+            if (DialogueHolder.index >= currentDialogue.Length)
+            {
+                HandleDialogueEnd();
+                
+                if (choiceA.gameObject.activeSelf)
+                    break;
+            }
+        }
+
+        dialogueText.text = GetCleanText(currentDialogue[DialogueHolder.index]);
+        UpdateSpeaker(currentDialogue[DialogueHolder.index]);
+
+        choiceA.gameObject.SetActive(true);
+        choiceB.gameObject.SetActive(true);
+    }
+    void ToggleAuto()
+    {
+        isAuto = !isAuto;
+
+        if (isAuto)
+        {
+            Debug.Log("AUTO ON");
+            autoCoroutine = StartCoroutine(AutoPlay());
+        }
+        else
+        {
+            Debug.Log("AUTO OFF");
+            if (autoCoroutine != null)
+                StopCoroutine(autoCoroutine);
+        }
+    }
+    IEnumerator AutoPlay()
+    {
+        while (isAuto)
+        {
+            if (PauseMenu.IsPaused)
+            {
+                yield return null;
+                continue;
+            }
+
+            if (isTyping)
+            {
+                yield return null;
+                continue;
+            }
+
+            yield return new WaitForSeconds(1.5f);
+            
+            if (choiceA.gameObject.activeSelf)
+            {
+                isAuto = false;
+                yield break;
+            }
+
+            Next();
+        }
     }
 }
