@@ -1389,7 +1389,6 @@ MonoBehaviour:
   Quit_Game: {fileID: 467084155}
   Resume_: {fileID: 467084156}
   SaveGameBtn: {fileID: 686624474}
-  SaveGameMainBtn: {fileID: 103737794}
   player: {fileID: 1019526048}
   dialogueSystem: {fileID: 691522167}
 --- !u!114 &691522170

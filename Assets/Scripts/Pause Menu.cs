@@ -15,6 +15,7 @@ public class PauseMenu : MonoBehaviour
     public Button Quit_Game;
     public Button Resume_;
     public Button SaveGameBtn; 
+    public Button SaveGameMainBtn;
 
     public Transform player;
 
@@ -25,6 +26,7 @@ public class PauseMenu : MonoBehaviour
         _MainMenu.onClick.AddListener(MainMenu);
         Quit_Game.onClick.AddListener(QuitGame);
         Resume_.onClick.AddListener(ResumeGame);
+        SaveGameMainBtn.onClick.AddListener(SaveGame);
 
         SaveGameBtn.onClick.AddListener(SaveGame); 
     }
@@ -104,5 +106,10 @@ public class PauseMenu : MonoBehaviour
 
             Debug.Log("Gra wczytana!");
         }
+    }
+    public void SaveGameGlobal()
+    {
+        SaveGame();
+        Debug.Log("Save wykonany z UI (global)");
     }
 }
