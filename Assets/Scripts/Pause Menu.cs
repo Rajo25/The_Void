@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
 
     public Transform player;
 
-    public DialogueSystem dialogueSystem; 
+    public DialogueSystem dialogueSystem;
 
     private void Start()
     {

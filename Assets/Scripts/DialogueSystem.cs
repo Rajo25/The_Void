@@ -9,6 +9,7 @@ public class DialogueSystem : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI nameText;
+    public DialogueHolder dialogueHolder;
 
     public Button nextButton;
     public Button choiceA;
@@ -19,159 +20,21 @@ public class DialogueSystem : MonoBehaviour
     private string[] currentDialogue;
     private Stack<int> history = new Stack<int>();
 
-    private int index = 0;
+    
     private bool isTyping = false;
     private Coroutine typingCoroutine;
 
     public float typingSpeed = 0.05f;
     
     private string currentSpeaker = "";
-
-    string[] dialogue = {
-        "NARRATOR|Dziennik Alysii - Wpis 001\nDla moich uczniów",
-        "NARRATOR|Jeżeli to czytacie, oznacza to, że weszłam tam, gdzie nikt nie powinien.",
-        "NARRATOR|Mówiono mi, żebym tego nie robiła\nŻe nie wszystko jest do odkrycia",
-        "NARRATOR|Że niektóre tajemnice istnieją tylko po to aby pozostać tajemnicami",
-        "NARRATOR|Ale jeśli świat ma sens to musi istnieć jego źródło\nA jeśli nie ma sensu…",
-        "NARRATOR|… to chce wiedzieć dlaczego.",
-        "NARRATOR|...",
-        "NARRATOR|Nie idę tam jako bohaterka\nIdę jako nauczycielka, która nie może znieść niewiedzy",
-        "NARRATOR|I nie jestem sama.",
-        "NARRATOR|Podnóże góry",
-
-        "NARRATOR|Wiatr jest dziwnie cichy\nNie zimny, nie ciepły\nPo prostu… nieobecny",
-        "NARRATOR|Ogromny krater ciągnie się w dół jakby świat został wyrwany z własnego ciała",
-
-        "ALYSIA|…to tutaj.",
-        "COTARD|Nie.",
-        "NARRATOR|...",
-        "NARRATOR|...",
-        "NARRATOR|...",
-
-        "NARRATOR|Tu nic nie ma",
-        "NARRATOR|Alysia wybucha śmiechem",
-        "ALYSIA|Właśnie dlatego tu jesteśmy",
-
-        "NARRATOR|Cotard patrzy w dół.",
-        "NARRATOR|Długo.",
-        "NARRATOR|Zbyt długo.",
-        "COTARD|Nie czuję strachu",
-
-        "NARRATOR|...",
-        "NARRATOR|To nie jest odwaga.",
-        "ALYSIA|Wiem.",
-        "COTARD|Bo ja nie istnieję.",
-
-        "NARRATOR|...",
-        "NARRATOR|Cisza",
-        "NARRATOR|...",
-        "NARRATOR|Nie niezręczna, nie ciężka\nPo prostu… pusta",
-
-        "ALYSIA|Może dlatego jesteś jedyną osobą która może tam wejść.",
-        "NARRATOR|Cotard przekrzywia głowę jakby analizował coś czego nie da się zrozumieć",
-
-        "COTARD|Jeśli mnie tam nie ma…\n…to nic mnie nie dotknie.",
-        "ALYSIA|Albo wszystko",
-
-        "NARRATOR|Dziennik Alysii - wpis 002",
-        "NARRATOR|Cotard twierdzi, że nie istnieje\nNie próbuje go przekonywać, że sie myli",
-        "NARRATOR|Bo jeśli Góra Nicości robi to co podejrzewam\nto jego “choroba” może być… adaptacją",
-        "NARRATOR|...",
-        "NARRATOR|Albo początkiem",
-        "NARRATOR|Zejście",
-        "NARRATOR|Pierwszy krok\nZiemia nie wydaje dźwięku",
-        "Alysia|\nSłyszysz to?",
-        "Cotard|\nNie",
-        "NARRATOR|...",
-        "Właśnie o to chodzi.",
-        "NARRATOR|...",
-        "NARRATOR|Każdy kolejny krok sprawia, że świat za nimi staje się… mniej wyraźny",
-        "NARRATOR|Jakby ktoś ścierał go gumką",
-        "Alysia|\n(szeptem)\nNie odwracaj się",
-        "Cotard|\nJuż tego nie ma",
-        "Alysia|\nCo? czego",
-        "Cotard|\nGóra",
-        "NARRATOR|...",
-        "NARRATOR|Nie pamiętam jak wyglądała.",
-        "NARRATOR|Alysia zatrzymuje się na chwilę.",
-        "Alysia|\nZa szybko to sie dzieje",
-        "Cotard|\nTo nie “za szybko”",
-        "NARRATOR|...",
-        "NARRATOR|to normalne.",
-        "NARRATOR|Pierwsze zmiany",
-        "NARRATOR|Powietrze zaczyna pachnieć… słodko\nZbyt słodko",
-        "NARRATOR|Pierwsze kwiaty\nDelikatne. Piękne. Nierealne.",
-        "Alysia|\nAAAAAHHHHH Kwiatowa Nicośc, ale tu pięknie!",
-        "Cotard|\nNie są prawdziwe.",
-        "Alysia|\nSkąd wiesz?",
-        "NARRATOR|Cotard podchodzi bliżej jednego z kwiatów\nDotyka go.\nPłatki “zacinają się” na ułamek sekundy. Jak glitch",
-        "Cotard|\nBo ja też nie jestem",
-        "NARRATOR|Alysia zapisuje coś szybko w notesie.",
-        "Alysia|\nHalucynacje!!! Albo coś więcej!",
-        "NARRATOR|Cotard uśmiechając się\nA jeśli to nie halucynacje?",
-        "Alysia|\nTo co?",
-        "Cotard|\nMoże to powierzchnia była iluzją.",
-        "NARRATOR|...",
-        "NARRATOR|Cisza.",
-        "NARRATOR|Dziennik Alysii - Wpis 003",
-        "NARRATOR|Kwiaty wydzielają coś do powietrza\nWidze rzeczy, które nie istnieją",
-        "NARRATOR|Albo przestaje widzieć rzeczy, które istnieją",
-        "NARRATOR|Nie jestem jeszcze pewna",
-        "NARRATOR|On.. reaguje inaczej\nJakby był mniej podatny",
-        "NARRATOR|Albo już wcześniej coś stracił",
-        "NARRATOR|Halucynacje",
-        "NARRATOR|Świat zaczyna się rozpadać\nNie gwałtownie\nSubtelnie.",
-        "NARRATOR|Alysia widzi swoich uczniów, ale nie mają twarzy\nŚwiatło na nich pada\nCzuje spokój",
-        "NARRATOR|Uczeń (Iluzja)\nPani Alysio! Wróci pani?",
-        "NARRATOR|Alysia zamiera",
-        "NARRATOR|Cotard ostro mówi\nNIE PATRZ.",
-        "Alysia|\nOni są tacy… prawdziwi",
-        "NARRATOR|Cotard chwyta jej ramię.\nJego dłoń jest zimna",
-        "Cotard|\nTo nie są oni",
-        "Alysia|\nSkąd wiesz?!",
-        "NARRATOR|Cotard śmieje się lekko\nBo ja ich nie widzę.",
-        "NARRATOR|...",
-        "NARRATOR|A ja widze tylko rzeczy, które są istnieniem. A nie otchłanią.",
-        "Alysia|\n…\n",
-        "NARRATOR|Decyzja",
-        "NARRATOR|Kwiaty zaczynają świecić\nŚwiat dzieli się na dwie wersje\nPrzed bohaterami pojawiają się dwie decyzje",
-        "NARRATOR|Nicość:\nJedno. Musi. Zniknąć.",
-        "NARRATOR|Alysia patrzy na Cotarda\nSłyszysz to?!",
-        "Cotard|\nTak",
-        "NARRATOR|...",
-        "NARRATOR|To nie głos",
-        "Alysia|\nto co…?",
-        "Cotard|\nTo brak czegoś.",
-        "NARRATOR|Dziennik Alysii wpis 004",
-        "NARRATOR|Nie wiem co wybierzemy\nNie wiem, czy to w ogóle jest wybór",
-        "NARRATOR|Ale czuję, że to dopiero początek\nJeśli każde zejście wymaga poświęcenia…",
-        "NARRATOR|…to pytanie brzmi:",
-        "NARRATOR|Ile z nas zostanie na końcu?",
-        "NARRATOR|Końcówka:",
-        "NARRATOR|Cotard patrzy na Alysie:\nJeśli znikniesz to…",
-        "NARRATOR|czy kiedykolwiek istniałaś?",
-        "NARRATOR|Alysia uśmiecha się słabo.",
-        "NARRATOR|A jeśli nigdy nie istniałeś\nto\ndlaczego wciąż tu jesteś?",
-        "NARRATOR|...",
-        "Alysia|\nJeśli ich usuniemy… już nigdy ich nie zobaczę…",
-        "Cotard|\nJeśli tego nie usuniesz… nigdy nie wyjdziesz."
-    };
-
-    string[] Choice_A = {
-        "ALYSIA|To nie oni.",
-        "NARRATOR|Iluzja zaczyna pękać",
-        "NARRATOR|Uczeń:\nPani… dlaczego…?",
-        "ALYSIA|Przepraszam…",
-        "COTARD|Dobrze.",
-        "NARRATOR|...",
-        "NARRATOR|DZIĘKUJĘ ZA GRĘ W PROTOTYP"
-    };
+    private string currentNode = "prologue";
 
     public int currentIndex;
 
     void Start()
     {
-        currentDialogue = dialogue;
+        currentDialogue = dialogueHolder.prologue;
+        currentNode = "prologue";
 
         choiceA.gameObject.SetActive(false);
         choiceB.gameObject.SetActive(false);
@@ -181,7 +44,7 @@ public class DialogueSystem : MonoBehaviour
 
         if (PlayerPrefs.HasKey("dialogueIndex"))
         {
-            index = PlayerPrefs.GetInt("dialogueIndex");
+            DialogueHolder.index = PlayerPrefs.GetInt("dialogueIndex");
         }
 
         StartTyping();
@@ -204,7 +67,7 @@ public class DialogueSystem : MonoBehaviour
             if (isTyping)
             {
                 StopCoroutine(typingCoroutine);
-                dialogueText.text = GetCleanText(currentDialogue[index]);
+                dialogueText.text = GetCleanText(currentDialogue[DialogueHolder.index]);
                 isTyping = false;
             }
             else
@@ -216,7 +79,7 @@ public class DialogueSystem : MonoBehaviour
 
     void StartTyping()
     {
-        string line = currentDialogue[index];
+        string line = currentDialogue[DialogueHolder.index];
 
         UpdateSpeaker(line);
 
@@ -235,7 +98,11 @@ public class DialogueSystem : MonoBehaviour
 
         if (speaker == "NARRATOR")
         {
-            nameText.text = "";
+            nameText.text = "...";
+        }
+        if (speaker == "UNKNOWN")
+        {
+            nameText.text = "???";
         }
         else if (speaker == "ALYSIA")
         {
@@ -244,6 +111,14 @@ public class DialogueSystem : MonoBehaviour
         else if (speaker == "COTARD")
         {
             nameText.text = "Cotard";
+        }
+        else if (speaker == "BEE")
+        {
+            nameText.text = "Przczułka";
+        }
+        else if (speaker == "STUDENTS")
+        {
+            nameText.text = "Uczniowie";
         }
     }
 
@@ -273,19 +148,95 @@ public class DialogueSystem : MonoBehaviour
 
     void Next()
     {
-        history.Push(index);
+        history.Push(DialogueHolder.index);
 
-        index++;
+        DialogueHolder.index++;
 
-        if (index < currentDialogue.Length)
+        if (DialogueHolder.index < currentDialogue.Length)
         {
             StartTyping();
         }
         else
         {
+            HandleDialogueEnd();
+        }
+    }
+    void HandleDialogueEnd()
+    {
+        if (currentNode == "prologue")
+        {
+            currentDialogue = dialogueHolder.Chapter1d1;
+            currentNode = "Chapter1d1";
+        }
+        else if (currentNode == "Chapter1d1")
+        {
+            currentDialogue = dialogueHolder.Chapter1d2;
+            currentNode = "Chapter1d2";
+        }
+        else if (currentNode == "Chapter1d2")
+        {
             choiceA.gameObject.SetActive(true);
             choiceB.gameObject.SetActive(true);
+            return;
         }
+        else if (currentNode == "Chapter1ch1d2" || currentNode == "Chapter1ch2d2")
+        {
+            currentDialogue = dialogueHolder.Chapter1d3;
+            currentNode = "Chapter1d3";
+        }
+        else if (currentNode == "Chapter1d3")
+        {
+            choiceA.gameObject.SetActive(true);
+            choiceB.gameObject.SetActive(true);
+            return;
+        }
+        else if (currentNode == "Chapter1ch1d3" || currentNode == "Chapter1ch2d3")
+        {
+            currentDialogue = dialogueHolder.Chapter1d4;
+            currentNode = "Chapter1d4";
+        }
+        else if (currentNode == "Chapter1d4")
+        {
+            choiceA.gameObject.SetActive(true);
+            choiceB.gameObject.SetActive(true);
+            return;
+        }
+        else if (currentNode == "Chapter1ch1d4" || currentNode == "Chapter1ch2d4")
+        {
+            currentDialogue = dialogueHolder.Chapter1d5;
+            currentNode = "Chapter1d5";
+        }
+        else if (currentNode == "Chapter1d5")
+        {
+            choiceA.gameObject.SetActive(true);
+            choiceB.gameObject.SetActive(true);
+            return;
+        }
+        else if (currentNode == "Chapter1ch1d5" || currentNode == "Chapter1ch2d5")
+        {
+            currentDialogue = dialogueHolder.Chapter1d6;
+            currentNode = "Chapter1d6";
+        }
+        else if (currentNode == "Chapter1d6")
+        {
+            currentDialogue = dialogueHolder.Chapter1d7;
+            currentNode = "Chapter1d7";
+        }
+        else if (currentNode == "Chapter1d7")
+        {
+            currentDialogue = dialogueHolder.Chapter1d8;
+            currentNode = "Chapter1d8";
+        }
+        else if (currentNode == "Chapter1d8")
+        {
+            choiceA.gameObject.SetActive(true);
+            choiceB.gameObject.SetActive(true);
+            return;
+        }
+
+        DialogueHolder.index = 0;
+        history.Clear();
+        StartTyping();
     }
 
     void GoBack()
@@ -295,17 +246,41 @@ public class DialogueSystem : MonoBehaviour
         StopAllCoroutines();
         isTyping = false;
 
-        index = history.Pop();
+        DialogueHolder.index = history.Pop();
 
-        dialogueText.text = GetCleanText(currentDialogue[index]);
-        UpdateSpeaker(currentDialogue[index]);
+        dialogueText.text = GetCleanText(currentDialogue[DialogueHolder.index]);
+        UpdateSpeaker(currentDialogue[DialogueHolder.index]);
     }
 
     void ChooseA()
     {
-        currentDialogue = Choice_A;
-        index = 0;
+        if (currentNode == "Chapter1d2")
+        {
+            currentDialogue = dialogueHolder.Chapter1ch1d2;
+            currentNode = "Chapter1ch1d2";
+        }
+        else if (currentNode == "Chapter1d3")
+        {
+            currentDialogue = dialogueHolder.Chapter1ch1d3;
+            currentNode = "Chapter1ch1d3";
+        }
+        else if (currentNode == "Chapter1d4")
+        {
+            currentDialogue = dialogueHolder.Chapter1ch1d4;
+            currentNode = "Chapter1ch1d4";
+        }
+        else if (currentNode == "Chapter1d5")
+        {
+            currentDialogue = dialogueHolder.Chapter1ch1d5;
+            currentNode = "Chapter1ch1d5";
+        }
+        else if (currentNode == "Chapter1d8")
+        {
+            currentDialogue = dialogueHolder.Chapter1ch1d8;
+            currentNode = "Chapter1ch1d8";
+        }
 
+        DialogueHolder.index = 0;
         history.Clear();
 
         choiceA.gameObject.SetActive(false);
@@ -317,11 +292,43 @@ public class DialogueSystem : MonoBehaviour
 
     void ChooseB()
     {
-        dialogueText.text = "WIP";
-    }
+        if (currentNode == "Chapter1d2")
+        {
+            currentDialogue = dialogueHolder.Chapter1ch2d2;
+            currentNode = "Chapter1ch2d2";
+        }
+        else if (currentNode == "Chapter1d3")
+        {
+            currentDialogue = dialogueHolder.Chapter1ch2d3;
+            currentNode = "Chapter1ch2d3";
+        }
+        else if (currentNode == "Chapter1d4")
+        {
+            currentDialogue = dialogueHolder.Chapter1ch2d4;
+            currentNode = "Chapter1ch2d4";
+        }
+        else if (currentNode == "Chapter1d5")
+        {
+            currentDialogue = dialogueHolder.Chapter1ch2d5;
+            currentNode = "Chapter1ch2d5";
+        }
+        else if (currentNode == "Chapter1d8")
+        {
+            currentDialogue = dialogueHolder.Chapter1ch2d8;
+            currentNode = "Chapter1ch2d8";
+        }
 
+        DialogueHolder.index = 0;
+        history.Clear();
+
+        choiceA.gameObject.SetActive(false);
+        choiceB.gameObject.SetActive(false);
+
+        StopAllCoroutines();
+        StartTyping();
+    }
     public int GetIndex()
     {
-        return index;
+        return DialogueHolder.index;
     }
 }
