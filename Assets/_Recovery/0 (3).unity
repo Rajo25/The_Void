@@ -1,0 +1,4339 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 10
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 1
+    m_PVRFilteringGaussRadiusAO: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 3
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &103737792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 103737793}
+  - component: {fileID: 103737796}
+  - component: {fileID: 103737795}
+  - component: {fileID: 103737794}
+  m_Layer: 5
+  m_Name: SaveButt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &103737793
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103737792}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1672783580}
+  m_Father: {fileID: 1880298251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.94723785, y: 0.049000002}
+  m_AnchorMax: {x: 0.98741263, y: 0.1994986}
+  m_AnchoredPosition: {x: -0.89990234, y: 0.5}
+  m_SizeDelta: {x: 2.0290527, y: 1.0267944}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &103737794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103737792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 103737795}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &103737795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103737792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -2718338029609815685, guid: e874732a4eb6fd34d89d26b8c71f0e0e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &103737796
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103737792}
+  m_CullTransparentMesh: 1
+--- !u!1 &159856118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159856119}
+  - component: {fileID: 159856121}
+  - component: {fileID: 159856120}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &159856119
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159856118}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1954220177}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &159856120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159856118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Wyb\xF3r 1"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &159856121
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159856118}
+  m_CullTransparentMesh: 1
+--- !u!1 &219490817
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 219490820}
+  - component: {fileID: 219490819}
+  - component: {fileID: 219490818}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &219490818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219490817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
+--- !u!114 &219490819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219490817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &219490820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219490817}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &268708123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 268708124}
+  - component: {fileID: 268708126}
+  - component: {fileID: 268708125}
+  m_Layer: 5
+  m_Name: NameText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &268708124
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268708123}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1787943882}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000010252, y: 5.3}
+  m_SizeDelta: {x: 200, y: 45.5618}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &268708125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268708123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 0.9960785, g: 0.93725497, b: 0.77647066, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 40
+  m_fontSizeBase: 40
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 3
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &268708126
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268708123}
+  m_CullTransparentMesh: 1
+--- !u!1 &299717641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 299717642}
+  - component: {fileID: 299717644}
+  - component: {fileID: 299717643}
+  - component: {fileID: 299717645}
+  m_Layer: 5
+  m_Name: nextButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &299717642
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299717641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1921130051}
+  m_Father: {fileID: 832283670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &299717643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299717641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &299717644
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299717641}
+  m_CullTransparentMesh: 1
+--- !u!114 &299717645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299717641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 299717643}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &355848616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 355848617}
+  - component: {fileID: 355848620}
+  - component: {fileID: 355848619}
+  - component: {fileID: 355848618}
+  m_Layer: 5
+  m_Name: AutoButt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &355848617
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355848616}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1680098310}
+  m_Father: {fileID: 1880298251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.855, y: 0.049000002}
+  m_AnchorMax: {x: 0.89500004, y: 0.1994986}
+  m_AnchoredPosition: {x: -1.5, y: 0.5}
+  m_SizeDelta: {x: 1.0290527, y: 1.0267944}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &355848618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355848616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 355848619}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &355848619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355848616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -2718338029609815685, guid: e874732a4eb6fd34d89d26b8c71f0e0e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &355848620
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355848616}
+  m_CullTransparentMesh: 1
+--- !u!1 &427052963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 427052964}
+  - component: {fileID: 427052966}
+  - component: {fileID: 427052965}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &427052964
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427052963}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1054083006}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &427052965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427052963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Skip
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4290301402
+  m_fontColor: {r: 0.854902, g: 0.80392164, b: 0.72156864, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &427052966
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427052963}
+  m_CullTransparentMesh: 1
+--- !u!1001 &467084153
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1801875804860600276, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_Name
+      value: 'Pause Menu '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801875804860600276, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5155794579294083824, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+--- !u!1 &467084154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1801875804860600276, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+  m_PrefabInstance: {fileID: 467084153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &467084155 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6787098620575508675, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+  m_PrefabInstance: {fileID: 467084153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &467084156 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 746654325249808972, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+  m_PrefabInstance: {fileID: 467084153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!114 &467084157 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9181611726502393066, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+  m_PrefabInstance: {fileID: 467084153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &576765164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 576765165}
+  - component: {fileID: 576765168}
+  - component: {fileID: 576765167}
+  - component: {fileID: 576765166}
+  m_Layer: 5
+  m_Name: BackButt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &576765165
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576765164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 960930157}
+  m_Father: {fileID: 1880298251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.90123785, y: 0.049000002}
+  m_AnchorMax: {x: 0.94165045, y: 0.1994986}
+  m_AnchoredPosition: {x: -0.6999512, y: 0.5}
+  m_SizeDelta: {x: 1.0290527, y: 1.0267944}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &576765166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576765164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 576765167}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &576765167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576765164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -2718338029609815685, guid: e874732a4eb6fd34d89d26b8c71f0e0e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &576765168
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576765164}
+  m_CullTransparentMesh: 1
+--- !u!1 &593881456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 593881457}
+  - component: {fileID: 593881459}
+  - component: {fileID: 593881458}
+  m_Layer: 5
+  m_Name: Alysia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &593881457
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593881456}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1737317345}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -347, y: 465}
+  m_SizeDelta: {x: 521.22644, y: 979.8777}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &593881458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593881456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 2100000, guid: 8c75ec7f5c8dd614091e640f2fd19919, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 162896220825074607, guid: a31e422551c5d2a4ca1c09547ea20724, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &593881459
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593881456}
+  m_CullTransparentMesh: 1
+--- !u!114 &686624474 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3435763994980435934, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
+  m_PrefabInstance: {fileID: 467084153}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &691522166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691522168}
+  - component: {fileID: 691522167}
+  - component: {fileID: 691522169}
+  - component: {fileID: 691522170}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &691522167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691522166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c3d98b0d8f74a47a9bbbdc4f44dabe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem
+  dialogueText: {fileID: 1260320158}
+  nameText: {fileID: 268708125}
+  dialogueHolder: {fileID: 1082544905}
+  nextButton: {fileID: 299717645}
+  choiceA: {fileID: 1954220180}
+  choiceB: {fileID: 1635728704}
+  backButton: {fileID: 576765166}
+  skipButton: {fileID: 1054083007}
+  autoButton: {fileID: 355848618}
+  typingSpeed: 0.05
+  currentIndex: 0
+--- !u!4 &691522168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691522166}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &691522169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691522166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e69c51441140248a8de02e3871fd95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MainMenu
+  pauseMenuUI: {fileID: 467084154}
+  _MainMenu: {fileID: 467084157}
+  Quit_Game: {fileID: 467084155}
+  Resume_: {fileID: 467084156}
+  SaveGameBtn: {fileID: 686624474}
+  SaveGameMainBtn: {fileID: 103737794}
+  player: {fileID: 1019526048}
+  dialogueSystem: {fileID: 691522167}
+--- !u!114 &691522170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691522166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2107253aa03657447bbd827180a3eff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueHolder
+  prologue:
+  - "ALYSIA|Jestem osob\u0105, kt\xF3ra pyta.\nNie potrafi\u0119 inaczej, nigdy nie
+    potrafi\u0142am."
+  - "ALYSIA|Pytam o wszystko, jakby kto\u015B zapisa\u0142 we mnie wewn\u0119trzny
+    przymus aby zrozumie\u0107 niezrozumia\u0142e. \nPoci\u0105ga mnie to co jeszcze
+    nienazwane, niewypowiedziane, o kt\xF3rych inni boj\u0105 si\u0119 nawet pomy\u015Ble\u0107."
+  - "ALYSIA|Znale\u017Ali go na wybrze\u017Cu, gdzie spacerowali.\nNigdy nie dowiedzia\u0142am
+    si\u0119 kto go tam porzuci\u0142 i dlaczego.\nAle to niewa\u017Cne."
+  - "ALYSIA|Liczy\u0142o si\u0119 dla mnie tylko to, \u017Ce zosta\u0142.\nDo\u0142\u0105czy\u0142
+    do naszej rodziny jako jej pe\u0142noprawna cz\u0119\u015B\u0107.\n"
+  - "ALYSIA|Nie rozumiem tego, co wydarzy\u0142o si\u0119 p\xF3\u017Aniej.\nPrzecie\u017C
+    by\u0142o idealnie.\nAle wtedy rodzice postanowili wyruszy\u0107 w Nico\u015B\u0107.\nBez
+    wyja\u015Bnie\u0144 i bez po\u017Cegna\u0144.\n"
+  - "ALYSIA|Poszli tam, gdzie nikt si\u0119 nie zapuszcza.\nPo co?\nW ko\u0144cu
+    jeszcze nikt stamt\u0105d nie wr\xF3ci\u0142.\n"
+  - "ALYSIA|To wydarzenie strzaska\u0142o moj\u0105 potrzeb\u0119 rozumienia wszystkiego.\nOto
+    bowiem sta\u0142o si\u0119 co\u015B, czego zrozumie\u0107 nie mog\u0142am i nadal
+    nie mog\u0119.\n"
+  - "ALYSIA|Mo\u017Ce to okrutne, ale uwa\u017Cam, \u017Ce moi rodzice nigdy nie
+    my\u015Bleli trze\u017Awo.\nCho\u0107 jestem im za to wdzi\u0119czna, zabrali
+    do domu obce dziecko i potraktowali jak w\u0142asne.\nKto normalny tak robi?!\n"
+  - "ALYSIA|Zawsze wszystko robili po swojemu.\nNasze wychowanie nie odbiega\u0142o
+    od dziwnego schematu, w kt\xF3rym postanowili uczy\u0107 nas samodzielnie w domu
+    zamiast pos\u0142a\u0107 do szko\u0142y.\n"
+  - "ALYSIA|Gdy sko\u0144czy\u0142am cztery wiosny uczyli nas zielarstwa i podstawowej
+    pierwszej pomocy.\nGdy sko\u0144czy\u0142am sz\xF3st\u0105 wiosn\u0119 umia\u0142am
+    ju\u017C polowa\u0107 i przyrz\u0105dza\u0107 zwierz\u0119ta.\n"
+  - "ALYSIA|Na G\xF3rze nie mia\u0142am nikogo, rodzice przyp\u0142yn\u0119li tu
+    z kontynentu.\nZostali\u015Bmy wi\u0119c zupe\u0142nie sami.\nWyl\u0105dowali\u015Bmy
+    w sieroci\u0144cu.\n"
+  - "ALYSIA|By\u0142o to dobre i bezpieczne miejsce, a nasi opiekunowie pe\u0142ni
+    pasji i mi\u0142o\u015Bci do dzieci.\nAle nie byli NIMI.\nSamotno\u015B\u0107
+    i poczucie opuszczenia po\u017Cera\u0142y nas od \u015Brodka.\nDobrze, \u017Ce
+    mieli\u015Bmy cho\u0107 siebie.\n"
+  - "ALYSIA|Ju\u017C dosy\u0107 wcze\u015Bnie interesowa\u0142am si\u0119 prac\u0105
+    spo\u0142eczn\u0105 i pomaganiem innym.\nZacz\u0119\u0142am si\u0119 przygl\u0105da\u0107,
+    a potem uczestniczy\u0107 w opiece nad innymi dzie\u0107mi.\nStopniowo dochodzi\u0142am
+    do siebie.\n"
+  - "ALYSIA|Dorastaj\u0105c zn\xF3w czu\u0142am poci\u0105g do zdobywania wiedzy,
+    by potem dzieli\u0107 si\u0119 ni\u0105 z innymi.\nBy\u0142o wi\u0119c oczywiste,
+    \u017Ce zostan\u0119 nauczycielk\u0105.\n"
+  - "ALYSIA|Wiedza jest bezcenna - bo pozwala oswoi\u0107 strach.\n"
+  - "ALYSIA|Za\u015B co do Dratoca\u2026\nZnikni\u0119cie rodzic\xF3w zmieni\u0142o
+    go.\nNie zauwa\u017Cy\u0142am tego od razu.\n"
+  - "ALYSIA|Co\u015B w nim p\u0119k\u0142o.\nZ czasem ta szczelina ros\u0142a i ros\u0142a,
+    a\u017C poch\u0142on\u0119\u0142a go w ca\u0142o\u015Bci.\nZamyka\u0142 si\u0119
+    w sobie, odcina\u0142.\n"
+  - "ALYSIA|Przerazi\u0142o mnie, gdy pewnego dnia stwierdzi\u0142, \u017Ce nie ma
+    go ju\u017C.\n\u017Be nie istnieje.\n"
+  - "ALYSIA|O\u015Bwiadczy\u0142 te\u017C, \u017Ce przesta\u0142 by\u0107 Dratocem,
+    a zacz\u0105\u0142\u2026\n"
+  - ALYSIA|Cotardem.
+  - "ALYSIA|Reagowa\u0142 wy\u0142\u0105cznie na swoje nowe imi\u0119.\nPr\xF3bowa\u0142am
+    walczy\u0107, ale co mog\u0142am zrobi\u0107?\n"
+  - "ALYSIA|Mog\u0142am si\u0119 z nim porozumie\u0107 tylko wtedy, gdy ulega\u0142am
+    i zwraca\u0142am si\u0119 do niego tak, jak chcia\u0142.\nInni o dziwo nie zwracali
+    uwagi.\nNie obchodzi\u0142o to ich tak, jak mnie.\n"
+  - "ALYSIA|Sta\u0142 si\u0119 ch\u0142odny. Cichy."
+  - "ALYSIA|Nie by\u0142 ju\u017C dzieckiem, kt\xF3re pozna\u0142am i uzna\u0142am
+    za swojego ma\u0142ego braciszka.\nDawniej potrafi\u0142 gada\u0107 bez ko\u0144ca,
+    topi\u0142 mnie w potoku s\u0142\xF3w.\n"
+  - "ALYSIA|Ale ju\u017C nie.\nOdzywa si\u0119 tylko wtedy, gdy uzna to za konieczne.\nCzyli
+    prawie nigdy.\n"
+  - "ALYSIA|Ale wci\u0105\u017C uwa\u017Cam go za mojego brata.\nZawsze b\u0119d\u0119.
+    Kocham go ca\u0142ym sercem.\n"
+  - "ALYSIA|To post\u0119puje.\nZmuszam go do posi\u0142k\xF3w, sam najch\u0119tniej
+    nic by nie jad\u0142.\nTwierdzi, \u017Ce nie potrzebuje jedzenia.\n"
+  - "ALYSIA|Tylko moje \u0142zy i b\u0142agania skutkuj\u0105.\nCho\u0107 do straszne,
+    znajduj\u0119 w tym pocieszenie - oznacza bowiem, \u017Ce m\xF3j brat nadal czuje
+    emocje. Nadal mu zale\u017Cy.\nTo dla mnie znaczy wszystko.\n"
+  - "ALYSIA|Ubrania zu\u017Cywaj\u0105 si\u0119 na nim jak drewno w ognisku.\nWrzucam
+    je potajemnie, \u017Ceby nie zobaczy\u0142 zaschni\u0119tych \u015Blad\xF3w krwi
+    i oderwanych kawa\u0142k\xF3w sk\xF3ry.\n"
+  - "ALYSIA|Przera\u017Ca mnie to.\nCotard ropieje, jego sk\xF3ra p\u0119ka, pokrywa
+    si\u0119 p\u0119cherzami i liszajem.\nNie m\xF3wi mi sk\u0105d si\u0119 to bierze.\n"
+  - 'ALYSIA|Ale ja wiem.
+
+'
+  - "ALYSIA|Kiedy pr\xF3buje zdecynferkowa\u0107 jego rany, on spokojnie odmawia.\nM\xF3wi,
+    \u017Ce tego nie potrzebuje.\n"
+  - "ALYSIA|Tutaj m\xF3j p\u0142acz nie pomaga."
+  - 'ALYSIA|NIC nie pomaga.
+
+'
+  - 'ALYSIA|NIC.
+
+'
+  - "ALYSIA|Nigdy nie chodzi z nami do gor\u0105cych \u017Ar\xF3de\u0142.\nPyta\u0142am,
+    czy chodzi o rany, ale stwierdzi\u0142, \u017Ce nie.\nPo prostu nie chce.\n"
+  - "ALYSIA|My\u015Bli, \u017Ce nie widz\u0119 jego reakcji na wod\u0119.\nUnika
+    jej jak trucizny. \nNie myje si\u0119."
+  - "ALYSIA|Cuchnie chorob\u0105, ale o dziwo nie jest chory.\nO co w tym chodzi\u2026\n"
+  - "ALYSIA|Pije tylko grzybowy napar. Dobrze, \u017Ce chocia\u017C tyle.\n"
+  - "ALYSIA|Wiem ju\u017C na pewno, ale nikomu nie powiem.\nOn chodzi do Nico\u015Bci.\n"
+  - "ALYSIA|Jest jedynym, kt\xF3ry w Niej by\u0142 i wr\xF3ci\u0142.\nPr\xF3bowa\u0142am
+    go o to pyta\u0107, ale udaje, \u017Ce nie s\u0142yszy.\n"
+  - "ALYSIA|Zamyka si\u0119 zupe\u0142nie i mnie odcina,\nNie zaprzecza.\nPo prostu
+    stawia przede mn\u0105 mur.\n"
+  - "ALYSIA|Praca w prosektorium mu pomaga. \nMa\u0142o kto go tam ogl\u0105da, a
+    sam Cotard dobrze si\u0119 czuje w\u015Br\xF3d zmar\u0142ych.\nZupe\u0142nie,
+    jakby by\u0142 jednym z nich.\n"
+  - "ALYSIA|Dopiero po czasie zrozumia\u0142am, \u017Ce Cotard nie ma w\u0119chu.\n"
+  - "ALYSIA|Do domu wraca u\u015Bmiechni\u0119ty, zadowolony.\nZamyka si\u0119 w
+    szopie i siedzi w niej do nast\u0119pnego dnia.\nRano idzie do pracy. I tak dzie\u0144
+    w dzie\u0144.\n"
+  - "ALYSIA|Nieraz pr\xF3bowa\u0142am si\u0119 w\u0142ama\u0107 do jego kryj\xF3wki,
+    ale nic z tego.\nK\u0142\xF3dka jest mocna, a \u0142a\u0144cuchy dobrej jako\u015Bci.
+    Drzwi mocne.\n"
+  - "ALYSIA|Z wn\u0119trza dobiega dziwny j\u0119k.\n"
+  - "ALYSIA|Boj\u0119 si\u0119.\n"
+  - "ALYSIA|Ludzie dziwnie na nas patrz\u0105.\nGdyby tylko umieli w nim dostrzec,
+    co ja\u2026\n"
+  - "ALYSIA|Wczoraj spyta\u0142am go co robi w tej swojej szopie\n"
+  - "ALYSIA|Powiedzia\u0142am, \u017Ce chc\u0119 wiedzie\u0107 BO MAM PRAWO.\n"
+  - "ALYSIA|U\u015Bmiechn\u0105\u0142 si\u0119 tylko i odpar\u0142, \u017Ce to niespodzianka.\n"
+  - 'ALYSIA|NIESPODZIANKA?
+
+'
+  - "ALYSIA|Ile lat to ju\u017C trwa\n"
+  - 'ALYSIA|PO CO?
+
+'
+  - 'ALYSIA|DLA KOGO?
+
+'
+  - "ALYSIA|Pog\u0142aska\u0142 mnie po g\u0142owie m\xF3wi\u0105c: \u201CJu\u017C
+    nied\u0142ugo siostrzyczko. Zobaczysz. Ju\u017C nied\u0142ugo\u201D\n"
+  - "ALYSIA|Zacz\u0119\u0142am p\u0142aka\u0107.\n"
+  Chapter1d1:
+  - NARRATOR|Dziennik Alysii Wpis 001
+  - "ALYSIA|Dla moich uczni\xF3w"
+  - "ALYSIA|Je\u015Bli czytacie te s\u0142owa, to wiecie ju\u017C, \u017Ce jestem
+    w miejscu, do kt\xF3rego nikt nie powinien wchodzi\u0107."
+  - "ALYSIA|On\u2026 m\xF3wi\u0142 mi, \u017Cebym tego nie robi\u0142a.\n\u017Be
+    nie wszystko jest do odkrycia.\n\u017Be niekt\xF3re tajemnice istniej\u0105 tylko
+    po to, by pozosta\u0107 tajemnicami."
+  - "ALYSIA|Ale je\u015Bli \u015Bwiat ma sens, to musi istnie\u0107 jego \u017Ar\xF3d\u0142o."
+  - "ALYSIA|A je\u015Bli go nie ma\u2026\n\u2026to chc\u0119 wiedzie\u0107 dlaczego.\n"
+  - "ALYSIA|Nie id\u0119 tam jako bohaterka.\nId\u0119 jako nauczycielka, kt\xF3ra
+    nie potrafi znie\u015B\u0107 niewiedzy.\n"
+  - "ALYSIA|Chc\u0119 wiedzie\u0107, co si\u0119 sta\u0142o z moimi rodzicami.\n"
+  - "ALYSIA|I nie jestem sama.\nNie martwcie si\u0119.\nOn si\u0119 mn\u0105 zaopiekuje.\n"
+  Chapter1d2:
+  - "NARRATOR|Wiatr\u2026 jest dziwnie cichy\nNie zimny. Nie ciep\u0142y.\nPo prostu\u2026
+    czu\u0107, \u017Ce pochodzi z Nico\u015Bci."
+  - "NARRATOR|Ogromny krater ci\u0105gnie si\u0119 w d\xF3\u0142, jakby \u015Bwiat
+    zosta\u0142 wyrwany z w\u0142asnego cia\u0142a."
+  - "NARRATOR|Alyssia staje na kraw\u0119dzi.\nA obok niej \nCotard.\n"
+  - "ALYSIA|\u2026to tutaj.\n"
+  - 'COTARD|Nie.
+
+'
+  - "COTARD|\u2026\n"
+  - 'COTARD|Tu Nic nie ma.
+
+'
+  - "NARRATOR|Alyssia wybucha lekkim \u015Bmiechem\n"
+  - "ALYSIA|W\u0142a\u015Bnie dlatego tu jeste\u015Bmy.\n"
+  - "NARRATOR|Cotard patrzy w d\xF3\u0142.\n"
+  - "NARRATOR|D\u0142ugo.\n"
+  - "NARRATOR|Zbyt d\u0142ugo.\n"
+  - "COTARD|Nie czuj\u0119 strachu.\n"
+  - "COTARD|\u2026\n"
+  - 'COTARD|To nie jest odwaga.
+
+'
+  Chapter1ch1d2:
+  - "ALYSIA|Wiem, to g\u0142upota."
+  - "COTARD|To dobrze.\nPrzynajmniej to si\u0119 nie zmieni\u0142o"
+  Chapter1ch2d2:
+  - "ALYSIA|Dlaczego tak m\xF3wisz?"
+  - "COTARD|Bo ja i tak nie istniej\u0119.\nA jednak nadal potrafi\u0119 pope\u0142nia\u0107
+    b\u0142\u0119dy."
+  Chapter1d3:
+  - "NARRATOR|Pierwszy krok.\nZiemia nie wydaje d\u017Awi\u0119ku."
+  - "ALYSIA|S\u0142yszysz to?"
+  - COTARD|Nie
+  - "COTARD|\u2026i w\u0142a\u015Bnie to powinno ci\u0119 martwi\u0107.\n"
+  - "ALYSIA|Jeste\u015B jedyn\u0105 osob\u0105, kt\xF3ra mo\u017Ce tam wej\u015B\u0107
+    i wr\xF3ci\u0107.\n"
+  - "NARRATOR|Cotard przekrzywia g\u0142ow\u0119 jakby analizowa\u0142 co\u015B czego
+    nie da si\u0119 zrozumie\u0107\n"
+  - "COTARD|Boje si\u0119, jak na Ciebie zadzia\u0142a to otoczenie.\n"
+  Chapter1ch1d3:
+  - "ALYSIA|Te\u017C si\u0119 martwi\u0119."
+  - "ALYSIA|Boj\u0119 si\u0119, \u017Ce nagle co\u015B si\u0119 zmieni i Nico\u015B\u0107
+    zacznie dzia\u0142a\u0107 r\xF3wnie\u017C na ciebie.\n\u017Be odbierze mi nawet
+    t\u0119 pewno\u015B\u0107, kt\xF3r\u0105 teraz mam.\n"
+  - "ALYSIA|Ale\u2026 przekonamy si\u0119, gdy dojdziemy do Kwiecistej Nico\u015Bci."
+  - "NARRATOR|Cotard patrzy na ni\u0105 d\u0142ugo.\nJego twarz pozostaje niemal
+    nieruchoma, ale g\u0142os staje si\u0119 cichszy.\n"
+  - "COTARD|\u2026"
+  - "COTARD|Nie martw si\u0119 o mnie."
+  - "COTARD|Na mnie ju\u017C Nico\u015B\u0107 wypr\xF3bowa\u0142a wszystko, co mog\u0142a."
+  - "ALYSIA|\u2026"
+  - "ALYSIA|Nieprawda.\nGdyby zrobi\u0142a wszystko, nie szed\u0142by\u015B teraz
+    obok mnie.\n"
+  - "NARRATOR|Cotard milknie.\nJakby nie potrafi\u0142 znale\u017A\u0107 odpowiedzi.\nPo
+    chwili rusza dalej.\n"
+  - "COTARD|\u2026to nie jest argument.\n"
+  - "NARRATOR|Alyssia lekko si\u0119 u\u015Bmiecha.\n"
+  - 'ALYSIA|Jest.
+
+'
+  Chapter1ch2d3:
+  - "ALYSIA|Przekonamy si\u0119 z czasem.\n"
+  - "ALYSIA|Mam nadziej\u0119, \u017Ce po prostu nic nam si\u0119 nie stanie\nMo\u017Ce
+    to miejsce tylko tylko pr\xF3buje nas przestraszy\u0107.\n"
+  - "NARRATOR|Spogl\u0105da w nico\u015B\u0107\n"
+  - 'COTARD|Dziwne.
+
+'
+  - "COTARD|Ludzie zawsze pr\xF3buj\u0105 nada\u0107 sens temu, czego si\u0119 boj\u0105."
+  - "COTARD|Jakby nazwanie l\u0119ku czyni\u0142o go mniejszym."
+  - "ALYSIA|A ty?\nNa czym budujesz sw\xF3j spok\xF3j\n"
+  - COTARD|Na pustce.
+  - "COTARD|Nie oczekuj\u0119 ju\u017C niczego dobrego.\n"
+  - "ALYSIA|A ja w\u0142a\u015Bnie odwrotnie.\nOczekuje, \u017Ce damy sobie rad\u0119.\nDlatego
+    dobrze, \u017Ce idziemy razem.\n"
+  Chapter1d4:
+  - "COTARD|Nie odwracaj si\u0119.\n"
+  - "COTARD|Ju\u017C tego nie ma."
+  - ALYSIA|Czego?
+  - "COTARD|G\xF3ry.\n"
+  - "COTARD|Zapomnia\u0142em jak wygl\u0105da\u0142a.\n"
+  Chapter1ch1d4:
+  - "ALYSIA|Co?! To si\u0119 dzieje za szybko\u2026\n"
+  - 'COTARD|Nie przesadzaj
+
+    To normalne.
+
+'
+  Chapter1ch2d4:
+  - "ALYSIA|Zauwa\u017Cy\u0142am ju\u017C\u2026 i to mnie przera\u017Ca.\n"
+  - "COTARD|To normalne.\nPrzyzwyczaisz si\u0119.\n"
+  Chapter1d5:
+  - "NARRATOR|Po tych s\u0142owach Cotard rusza dalej.\nJego kroki s\u0105 ciche.\nNie
+    dlatego, \u017Ce stawia je lekko,\n"
+  - "NARRATOR|Po prostu Nico\u015B\u0107 nie oddaje d\u017Awi\u0119ku\nAlyssia idzie
+    tu\u017C za nim\nIm ni\u017Cej schodz\u0105, tym bardziej powietrze staje si\u0119\u2026\n"
+  - 'NARRATOR|inne
+
+'
+  - "NARRATOR|Nie ci\u0119\u017Csze.\n"
+  - 'NARRATOR|Nie rzadsze.
+
+'
+  - "NARRATOR|Po prostu obce.\nJakby nie nale\u017Ca\u0142o do \u015Bwiata.\n"
+  - "ALYSIA|Cotard\u2026\nCzy to tylko mi sie wydaje, czy powietrze tutaj pachnie
+    inaczej?\n"
+  - "NARRATOR|Cotard zatrzymuje si\u0119 na moment \n"
+  - "NARRATOR|Unosi g\u0142ow\u0119.\n"
+  - COTARD|Tak.
+  - "COTARD|Wszystko zaczyna si\u0119 tutaj."
+  - ALYSIA|Co takiego?
+  - "COTARD|Pierwszy poziom.\nKwiecista Nico\u015B\u0107."
+  - "NARRATOR|Powietrze robi si\u0119 s\u0142odkie.\n"
+  - "NARRATOR|Zbyt s\u0142odkie.\n"
+  - "NARRATOR|Dusz\u0105ce.\n"
+  - "NARRATOR|W oddali zaczynaj\u0105 si\u0119 wy\u0142ania\u0107 pierwsze kwiaty."
+  - NARRATOR|Delikatne.
+  - "NARRATOR|Bia\u0142e.\n"
+  - "NARRATOR|Ich p\u0142atki poruszaj\u0105 si\u0119 mimo, \u017Ce nie ma wiatru\n"
+  - "ALYSIA|Och\u2026\nCotard!\nsp\xF3jrz tylko\nJak tu pi\u0119knie!\n"
+  - "NARRATOR|Na jej twarzy pojawia si\u0119 prawdziwy, ciep\u0142y u\u015Bmiech.\nPierwszy
+    od wej\u015Bcia.\n"
+  - "COTARD|Nie podchod\u017A!\n"
+  Chapter1ch1d5:
+  - "ALYSIA|Dlaczego?\nS\u0105 niebezpieczne?\n"
+  - 'NARRATOR|Cotard patrzy na kwiaty.
+
+'
+  - "NARRATOR|Jeden z p\u0142atk\xF3w dr\u017Cy\nPotem cofa si\u0119.\nJakby czas
+    na moment si\u0119 za\u0142ama\u0142.\n"
+  - COTARD|Nie.
+  - COTARD|Gorzej.
+  - "COTARD|Chc\u0105, aby\u015B zosta\u0142a.\n"
+  - 'ALYSIA|Kwiaty?
+
+'
+  - COTARD|Nie.
+  - "COTARD|Ca\u0142e to miejsce.\n"
+  Chapter1ch2d5:
+  - "ALYSIA|Chcesz powiedzie\u0107, \u017Ce to\u2026?\n"
+  - "NARRATOR|Dotyka jednego z kwiat\xF3w.\n"
+  - "NARRATOR|Jeden z p\u0142atk\xF3w dr\u017Cy\nPotem cofa si\u0119.\nJakby czas
+    na moment si\u0119 za\u0142ama\u0142.\n"
+  - "COTARD|Tak samo jak ja. \n"
+  - "COTARD|Te\u017C powoli znikam.\n"
+  - "ALYSIA|Nie m\xF3w tak.\n"
+  - 'COTARD|Dlaczego?
+
+'
+  - "COTARD|Ty jedyna nie pr\xF3bujesz mi wm\xF3wi\u0107, \u017Ce \u017Cyj\u0119.\n"
+  Chapter1d6:
+  - ALYSIA|Dziennik Alysii Wpis 002
+  - "ALYSIA|Kwiaty.\nNie potrafi\u0119 opisa\u0107 ich pi\u0119kna.\nS\u0105 zbyt
+    doskona\u0142e.\nA przez to nienaturalne.\n"
+  - "ALYSIA|Cotard twierdzi, \u017Ce nie s\u0105 prawdziwe.\nI co najgorsze\u2026\n"
+  - "ALYSIA|wierz\u0119 mu."
+  - "ALYSIA|Mam jednak dziwne wra\u017Cenie, \u017Ce to miejsce reaguje na emocje.\nNa
+    zachwyt.\nNa l\u0119k.\nNa wspomnienia.\n"
+  - "ALYSIA|Im bardziej chc\u0119 co\u015B zrozumie\u0107, tym bardziej rzeczywisto\u015B\u0107
+    wydaje si\u0119 mi\u0119kka.\nJakby mo\u017Cna j\u0105 by\u0142o rozerwa\u0107
+    palcami.\n"
+  Chapter1d7:
+  - "NARRATOR|Kwiaty dr\u017C\u0105.\n"
+  - "NARRATOR|Py\u0142 unosi si\u0119 w powietrzu jak z\u0142oty dym.\nZ g\u0142\u0119bi
+    \u0142\u0105ki dobiega d\u017Awi\u0119k.\nCo\u015B bardziej pomi\u0119dzy \u015Bmiechem
+    a buczeniem\n"
+  - 'UNKNOWN|PRRRRRRRRRRR.
+
+'
+  - "NARRATOR|Co\u015B ma\u0142ego przelatuje tu\u017C przed twarz\u0105 Alysii.\nOdruchowo
+    cofa si\u0119 o krok."
+  - 'NARRATOR|Przed nimi zawisa drobna istota.
+
+'
+  - "BEE|Prrr\u2013prrrr!\nOoooOOOO, go\u015Bcie!\n\u017Bywi go\u015Bcie!\n"
+  - "BEE|Przekrzywia g\u0142ow\u0119.\nPatrzy na Cotarda.\n"
+  - "COTARD|\u2026"
+  - 'BEE|Hhahahahahahahahha
+
+    A nie.
+
+    nie wszyscy
+
+    PRRRR.
+
+'
+  - "NARRATOR|Zaczyna lata\u0107 wok\xF3\u0142 niego.\n"
+  - "BEE|Ty \u015Bmierdzisz!\nFuj FUJ FUUUJJJ"
+  - "BEE|Jak stare li\u015Bcie.\nJak mokry gr\xF3b.\nJak co\u015B, co ju\u017C dawno
+    powinno zosta\u0107 na dole."
+  - 'BEE|Prawda Cotard?
+
+'
+  - "NARRATOR|Cotard patrzy na ni\u0105 pustym wzrokiem.\n"
+  - "COTARD|Odejd\u017A."
+  - "BEE|Oooodejd\u017A.\nOoooo odeeejd\u017A\u017A\nPrrrrrrr.\n"
+  - "NARRATOR|Alysia mimowolnie si\u0119 u\u015Bmiecha.\nTroch\u0119 nerwowo\nTroch\u0119
+    rozbawiona\n"
+  - "ALYSIA|Jeste\u015B\u2026 mieszkank\u0105 tego miejsca?\n"
+  - "BEE|A ty jeste\u015B \u015Bmieszna.\nPrrr.\n"
+  - "BEE|Pytasz tak, jakby to miejsce mia\u0142o mieszka\u0144c\xF3w.\nTo miejsce
+    ma tylko to, co zosta\u0142o\nI to jest SUUUUUUUUUUUUPER\n"
+  - "ALYSIA|A co to znaczy\u2026 \u201C to, co zosta\u0142o\u201D?\n"
+  - "BEE|To, czego Nico\u015B\u0107 nie po\u0142kn\u0119\u0142a.\n"
+  - BEE|Jeszcze.
+  - "BEE|Wspomnienia\u2026 \u017Cale\nResztki ludzi.\n"
+  - "NARRATOR|Pszcz\xF3\u0142ka zn\xF3w patrzy na Cotarda\n"
+  - "BEE|Albo resztki \u017Cycia.\nPrrrrrrrrrrrr\n"
+  - "ALYSIA|Przepraszam, \u017Ce spytam ale\u2026\nWidzia\u0142a\u015B mo\u017Ce
+    naszych rodzic\xF3w?\n"
+  - 'ALYSIA|Badaczy.
+
+    Byli tu lata temu
+
+'
+  - 'BEE|OoooooOOOo.
+
+    Tych.
+
+    Prrrrr.
+
+'
+  - "BEE|Tak.\nWidzia\u0142am.\n"
+  - "ALYSIA|Co?! Naprawd\u0119?!\n"
+  - 'ALYSIA|Gdzie?!
+
+'
+  - "ALYSIA|Co si\u0119 z nimi sta\u0142o?!"
+  - "NARRATOR|Pszcz\xF3\u0142ka wykonuje kilka chaotycznych obrot\xF3w w powietrzu.\n"
+  - 'BEE|Pachniesz jak oni.
+
+'
+  - "BEE|Zeszli ni\u017Cej.\n"
+  - "BEE|Ni\u017Cej.\nNi\u017Cej.\n"
+  - "BEE|Zawsze ni\u017Cej.\n"
+  - 'BEE|Szukali.
+
+    tak jak ty.
+
+'
+  - "BEE|\u2026\n"
+  - 'BEE|Aleeee
+
+'
+  - BEE|PRRRR
+  - "BEE|\u0179r\xF3d\u0142o patrzy te\u017C w g\xF3r\u0119.\n"
+  - "NARRATOR|Cotard patrzy na ni\u0105 ch\u0142odno."
+  - "COTARD|Wiesz co\u015B wi\u0119cej o rodzicach?.\n"
+  - "NARRATOR|Pszcz\xF3\u0142ka \u015Bmieje si\u0119.\n"
+  - "BEE|Prr.\nCzyli jednak ci zale\u017Cy.\n"
+  - "COTARD|\u2026\n"
+  - "BEE|Przeszli przez \u0142\u0105k\u0119.\nK\u0142\xF3cili si\u0119.\n"
+  - "BEE|O to, kt\xF3re z nich zacz\u0119\u0142o znika\u0107 pierwsze.\n"
+  - "NARRATOR|Cotard spogl\u0105da na Alyssie.\nW jego oczach po raz pierwszy pojawia
+    si\u0119 cie\u0144 napi\u0119cia.\n"
+  - 'COTARD|Kiedy?
+
+'
+  - 'BEE|Tutaj?
+
+    Tu czas nie istnieje.
+
+    Prr.
+
+'
+  - 'BEE|Ale dla Was?
+
+'
+  - BEE|DAWNO.
+  - "BEE|Mi\u0142o si\u0119 gada\u0142o, lec\u0119 zapyla\u0107 kwiatkiiiii!!!!\nPrrrrrrrrr!\n"
+  - "NARRATOR|Pszcz\xF3\u0142ka odlatuje i znika w oddali.\n"
+  - "NARRATOR|Alyssia i Cotard stoj\u0105 d\u0142u\u017Csz\u0105 chwil\u0119 w ciszy.\n"
+  - "NARRATOR|\u2026"
+  - "NARRATOR|Patrz\u0105 na siebie\nAlysia przerywa cisz\u0119\nZaciska notes przy
+    piersi.\n"
+  - "ALYSIA|Wi\u0119c\u2026\nNaprawd\u0119 tu byli\n"
+  - "NARRATOR|Cotard patrzy na ni\u0105.\n"
+  - "COTARD|Albo to miejsce chce, \u017Ceby\u015B w to uwierzy\u0142a.\n"
+  - "ALYSIA|A je\u015Bli cho\u0107 raz nie masz racji?\n"
+  - "COTARD|\u2026\n"
+  - "NARRATOR|Nagle zn\xF3w s\u0142ycha\u0107 bzyczenie\n"
+  - "BEE|Prrrrr!\nJe\u015Bli chcecie znale\u017A\u0107 odpowiedzi\u2026\nschod\u017Acie
+    ni\u017Cej.\n"
+  - "BEE|Ale uwa\u017Cajcie.\nNa nast\u0119pnym poziomie Nico\u015B\u0107 nie pokazuje
+    ju\u017C kwiat\xF3w.\n"
+  - "BEE|Pokazuje prawd\u0119.\nCzyli to, czego najbardziej si\u0119 boicie.\n"
+  - "NARRATOR|Nie zd\u0105\u017Cyli zareagowa\u0107.\nOdlecia\u0142a.\n"
+  Chapter1d8:
+  - "NARRATOR|Z g\u0142\u0119bi \u0142\u0105ki dobiega \u015Bmiech.\n"
+  - "NARRATOR|Dzieci\u0119cy."
+  - NARRATOR|Znajomy.
+  - NARRATOR|Alyssia zamiera.
+  - 'UNKNOWN|Pani Alysio!
+
+'
+  - "NARRATOR|Na ko\u0144cu \u015Bcie\u017Cki stoj\u0105 dzieci.\nJej uczniowie.\n"
+  - "STUDENTS|Wr\xF3ci Pani?\n"
+  - "STUDENTS|Brakuje nam Pani\u2026\n"
+  - "NARRATOR|Cotard gwa\u0142townie \u0142apie j\u0105 za nadgarstek\nJego d\u0142o\u0144
+    jest lodowata.\n"
+  - 'COTARD|Nie patrz na nich!
+
+'
+  - "ALYSIA|To moi uczniowie!\nMusieli si\u0119 o mnie martwi\u0107!\n"
+  - "NARRATOR|Alysia pr\xF3buje si\u0119 wyrwa\u0107.\nCotard zaciska d\u0142o\u0144
+    mocniej.\n"
+  - "ALYSIA|Pu\u015B\u0107 mnie Cotard!!!\n"
+  - "NARRATOR|Pierwszy raz w jego g\u0142osie s\u0142ycha\u0107\u2026 GNIEW.\n"
+  - 'COTARD|NIE.
+
+'
+  - 'COTARD|to nie oni
+
+'
+  - "COTARD|NICO\u015A\u0106 wie, czego najbardziej ci brakuje.\nI u\u017Cyje tego
+    przeciwko tobie.\n"
+  - "NARRATOR|G\u0142os.\nRozbrzmiewa wsz\u0119dzie.\n"
+  - "UNKNOWN|Jedno.\nMusi.\nZnikn\u0105\u0107.\n"
+  - 'NARRATOR|Alysia patrzy na Cotarda.
+
+'
+  - "ALYSIA|S\u0142yszysz to?\n"
+  - 'COTARD|Tak.
+
+'
+  - "COTARD|\u2026\n"
+  - "COTARD|To nie g\u0142os.\n"
+  - "COTARD|To brak czego\u015B, co powinno istnie\u0107.\n"
+  - "NARRATOR|Wszystko cichnie.\nNawet kwiaty przestaj\u0105 dr\u017Ce\u0107.\n"
+  - "NARRATOR|Przed nimi ziemia p\u0119ka na dwie \u015Bcie\u017Cki\nLewa - sk\u0105pana
+    w jasnym mi\u0119kkim \u015Bwietle\nPrawa - ciemna, pozbawiona koloru.\n"
+  - "UNKNOWN|Lewo - Zosta\u0144. "
+  - "UNKNOWN|Prawo - Zejd\u017A ni\u017Cej. Ale stracisz.\n"
+  - "UNKNOWN|Alysio.\nDecyzja zale\u017Cy od Ciebie."
+  - 'NARRATOR|Zapada cisza.
+
+'
+  - "NARRATOR|Alysia patrzy na swoje d\u0142onie.\nDr\u017C\u0105.\n"
+  - "COTARD|Alysio, musisz odpocz\u0105\u0107.\n"
+  - "ALYSIA|Ja\u2026\n"
+  - "ALYSIA|Nie wiem, co mam zrobi\u0107,\nNie wiem, czy to w og\xF3le jest wyb\xF3r.\nAle
+    czuj\u0119, \u017Ce nie ma tu dobrej decyzji.\nNie chc\u0119 ich straci\u0107\u2026\n"
+  - "NARRATOR|Cotard patrzy na iluzje uczni\xF3w.\nNa twarzy Alysii maluje si\u0119
+    b\xF3l.\n"
+  - "ALYSIA|Nie mog\u0119.\nNie mog\u0119 ich tak po prostu usun\u0105\u0107!\n"
+  - COTARD|To nie oni!
+  - "ALYSIA|Sk\u0105d wiesz?!!!"
+  - "COTARD|Bo Nico\u015B\u0107 nie daje.\nOna tylko odbiera.\nNie tworzy \u017Cycia."
+  - "ALYSIA|A je\u015Bli odbierze mi ich wspomnienia?!"
+  - "COTARD|Ju\u017C zacz\u0119\u0142a.\n"
+  - "COTARD|Pami\u0119tasz ich twarze?!\n"
+  - "COTARD|Pami\u0119tasz jak wygl\u0105da\u0142a g\xF3ra?!"
+  - "NARRATOR|Alysia milknie.\nOczy jej dr\u017C\u0105.\n"
+  - "NARRATOR|Pr\xF3buje sobie przypomnie\u0107.\nI nie potrafi.\nTo j\u0105 \u0142amie.\n"
+  - "ALYSIA|\u2026\n"
+  - ALYSIA|nie.
+  - "COTARD|No w\u0142a\u015Bnie."
+  - "ALYSIA|M\xF3wisz, \u017Ce Oni nie istniej\u0105\u2026\nTo dlaczego o sobie m\xF3wisz
+    to samo?"
+  Chapter1ch1d8:
+  - "NARRATOR|Alysia patrzy na swoich uczni\xF3w.\nIch g\u0142osy s\u0105 mi\u0119kkie.\n"
+  - "NARRATOR|Znajome.\nPe\u0142ne ciep\u0142a\n"
+  - "NARRATOR|Dotyka \u015Bwietlistej chmury.\nW tej samej chwili \u015Bwiat mi\u0119knie.\nKwiaty
+    rozkwitaj\u0105 gwa\u0142townie.\n"
+  - "NARRATOR|\u015Awiat\u0142o zalewa jej wizje\nJej twarz rozlu\u017Ania si\u0119.\nU\u015Bmiecha\n"
+  - "STUDENTS|Gdzie pani by\u0142a?\nMartwili\u015Bmy si\u0119.\n"
+  - "ALYSIA|Ja\u2026\n"
+  - "ALYSIA|chyba si\u0119 zgubi\u0142am.\nAle ju\u017C wszystko dobrze.\nMo\u017Cemy
+    wraca\u0107.\n"
+  - "NARRATOR|Powoli siada na \u0142\u0105ce.\nK\u0142adzie si\u0119 mi\u0119dzy
+    kwiatami.\nOczy same si\u0119 zamykaj\u0105.\n"
+  - "NARRATOR|Cotard rzuca si\u0119 do Alysii\nPo raz pierwszy jego g\u0142os\ndr\u017Cy.\n"
+  - "COTARD|Alysia\u2026\n"
+  - "COTARD|Nie\u2026\n"
+  - "COTARD|Prosz\u0119\u2026"
+  - "NARRATOR|Po jego policzku sp\u0142ywa \u0142za.\n"
+  - 'COTARD|Nie zostawiaj mnie tutaj samego
+
+'
+  - "COTARD|\u2026\n"
+  - COTARD|Nie znikaj.
+  - "NARRATOR|Alysia nie odpowiada.\nZostaje na \u0142\u0105ce.\nU\u015Bpiona przez
+    Nico\u015B\u0107.\n"
+  - "NARRATOR|Cotard zaczyna p\u0142aka\u0107.\n"
+  Chapter1ch2d8:
+  - "NARRATOR|Alysia zamyka oczy.\n\u0141zy zbieraj\u0105 si\u0119 pod powiekami.\n"
+  - 'COTARD|To nie oni.
+
+'
+  - "NARRATOR|Iluzja zaczyna p\u0119ka\u0107.\n\u015Awiat\u0142o przygasa.\nSylwetki
+    uczni\xF3w powoli znikaj\u0105\n"
+  - "STUDENTS|Pani Alysio\u2026 dlaczego\u2026?\n"
+  - "NARRATOR|Alysia odwraca wzrok\nNie potrafi patrze\u0107.\n"
+  - "ALYSIA|Przepraszam\u2026\n"
+  - "NARRATOR|Uczniowie znikaj\u0105.\nZaczyna p\u0142aka\u0107\n"
+  - "NARRATOR|\u015Awiat wok\xF3\u0142 nich traci kolory.\nKwiaty staj\u0105 si\u0119
+    niemal szare.\n"
+  - 'COTARD|Dobrze
+
+'
+  - "COTARD|\u2026\n"
+  - COTARD|To jest prawdziwe.
+  - 'ALYSIA|Co?
+
+'
+  - "COTARD|To, \u017Ce ich nie ma\nWola\u0142em si\u0119 upewni\u0107.\n"
+  - "COTARD|\u2026 Chod\u017A.\nIdziemy ni\u017Cej\n"
+  - "NARRATOR|Alysia ociera \u0142zy.\n"
+  - "ALYSIA|Zaczynam rozumie\u0107, dlaczego ludzie nie chc\u0105 wiedzie\u0107.\nJe\u015Bli
+    ka\u017Cde zej\u015Bcie wymaga po\u015Bwi\u0119cenia to\u2026\n"
+  - "ALYSIA|ile z naszych wspomnie\u0144 zostanie na ko\u0144cu?\nA je\u015Bli na
+    samym ko\u0144cu nie zostanie nic?\nto kim b\u0119d\u0119.\n"
+--- !u!1 &733236591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 733236592}
+  - component: {fileID: 733236594}
+  - component: {fileID: 733236593}
+  m_Layer: 5
+  m_Name: Cotard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &733236592
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733236591}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1737317345}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 394.70044, y: 501.2}
+  m_SizeDelta: {x: 947.2018, y: 2160}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &733236593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733236591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 2100000, guid: 8c75ec7f5c8dd614091e640f2fd19919, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e32747ed779141248bed7ac8f0686037, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &733236594
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733236591}
+  m_CullTransparentMesh: 1
+--- !u!1 &748114489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 748114490}
+  - component: {fileID: 748114492}
+  - component: {fileID: 748114491}
+  m_Layer: 5
+  m_Name: BackGround
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &748114490
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748114489}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1737317345}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 10.744141}
+  m_SizeDelta: {x: 0, y: 22.482}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &748114491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748114489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -7971910899110234391, guid: 6d398470a2e3599479d58983359d0ec9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &748114492
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748114489}
+  m_CullTransparentMesh: 1
+--- !u!1 &832283669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 832283670}
+  - component: {fileID: 832283673}
+  - component: {fileID: 832283672}
+  - component: {fileID: 832283671}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &832283670
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832283669}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1737317345}
+  - {fileID: 1880298251}
+  - {fileID: 1954220177}
+  - {fileID: 1635728707}
+  - {fileID: 299717642}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &832283671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832283669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &832283672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832283669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0.5
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &832283673
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832283669}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!1 &960930156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 960930157}
+  - component: {fileID: 960930159}
+  - component: {fileID: 960930158}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &960930157
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960930156}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 576765165}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &960930158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960930156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Back
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4290301402
+  m_fontColor: {r: 0.854902, g: 0.80392164, b: 0.72156864, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &960930159
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960930156}
+  m_CullTransparentMesh: 1
+--- !u!1 &1019526045
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1019526048}
+  - component: {fileID: 1019526047}
+  - component: {fileID: 1019526046}
+  - component: {fileID: 1019526049}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1019526046
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019526045}
+  m_Enabled: 1
+--- !u!20 &1019526047
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019526045}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1019526048
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019526045}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1019526049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019526045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
+--- !u!1 &1054083005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1054083006}
+  - component: {fileID: 1054083009}
+  - component: {fileID: 1054083008}
+  - component: {fileID: 1054083007}
+  m_Layer: 5
+  m_Name: SkipButt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1054083006
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054083005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 427052964}
+  m_Father: {fileID: 1880298251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.80500007, y: 0.049000002}
+  m_AnchorMax: {x: 0.8465874, y: 0.1994986}
+  m_AnchoredPosition: {x: 0.2857666, y: 0.5}
+  m_SizeDelta: {x: 0.0009765625, y: 1.0267944}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1054083007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054083005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1054083008}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1054083008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054083005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -2718338029609815685, guid: e874732a4eb6fd34d89d26b8c71f0e0e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1054083009
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054083005}
+  m_CullTransparentMesh: 1
+--- !u!1 &1082544904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1082544906}
+  - component: {fileID: 1082544905}
+  m_Layer: 0
+  m_Name: DialogueHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1082544905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082544904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2107253aa03657447bbd827180a3eff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueHolder
+  prologue:
+  - "ALYSIA|Jestem osob\u0105, kt\xF3ra pyta.\nNie potrafi\u0119 inaczej, nigdy nie
+    potrafi\u0142am."
+  - "ALYSIA|Pytam o wszystko, jakby kto\u015B zapisa\u0142 we mnie wewn\u0119trzny
+    przymus aby zrozumie\u0107 niezrozumia\u0142e. \nPoci\u0105ga mnie to co jeszcze
+    nienazwane, niewypowiedziane, o kt\xF3rych inni boj\u0105 si\u0119 nawet pomy\u015Ble\u0107."
+  - "ALYSIA|Znale\u017Ali go na wybrze\u017Cu, gdzie spacerowali.\nNigdy nie dowiedzia\u0142am
+    si\u0119 kto go tam porzuci\u0142 i dlaczego.\nAle to niewa\u017Cne."
+  - "ALYSIA|Liczy\u0142o si\u0119 dla mnie tylko to, \u017Ce zosta\u0142.\nDo\u0142\u0105czy\u0142
+    do naszej rodziny jako jej pe\u0142noprawna cz\u0119\u015B\u0107.\n"
+  - "ALYSIA|Nie rozumiem tego, co wydarzy\u0142o si\u0119 p\xF3\u017Aniej.\nPrzecie\u017C
+    by\u0142o idealnie.\nAle wtedy rodzice postanowili wyruszy\u0107 w Nico\u015B\u0107.\nBez
+    wyja\u015Bnie\u0144 i bez po\u017Cegna\u0144.\n"
+  - "ALYSIA|Poszli tam, gdzie nikt si\u0119 nie zapuszcza.\nPo co?\nW ko\u0144cu
+    jeszcze nikt stamt\u0105d nie wr\xF3ci\u0142.\n"
+  - "ALYSIA|To wydarzenie strzaska\u0142o moj\u0105 potrzeb\u0119 rozumienia wszystkiego.\nOto
+    bowiem sta\u0142o si\u0119 co\u015B, czego zrozumie\u0107 nie mog\u0142am i nadal
+    nie mog\u0119.\n"
+  - "ALYSIA|Mo\u017Ce to okrutne, ale uwa\u017Cam, \u017Ce moi rodzice nigdy nie
+    my\u015Bleli trze\u017Awo.\nCho\u0107 jestem im za to wdzi\u0119czna, zabrali
+    do domu obce dziecko i potraktowali jak w\u0142asne.\nKto normalny tak robi?!\n"
+  - "ALYSIA|Zawsze wszystko robili po swojemu.\nNasze wychowanie nie odbiega\u0142o
+    od dziwnego schematu, w kt\xF3rym postanowili uczy\u0107 nas samodzielnie w domu
+    zamiast pos\u0142a\u0107 do szko\u0142y.\n"
+  - "ALYSIA|Gdy sko\u0144czy\u0142am cztery wiosny uczyli nas zielarstwa i podstawowej
+    pierwszej pomocy.\nGdy sko\u0144czy\u0142am sz\xF3st\u0105 wiosn\u0119 umia\u0142am
+    ju\u017C polowa\u0107 i przyrz\u0105dza\u0107 zwierz\u0119ta.\n"
+  - "ALYSIA|Na G\xF3rze nie mia\u0142am nikogo, rodzice przyp\u0142yn\u0119li tu
+    z kontynentu.\nZostali\u015Bmy wi\u0119c zupe\u0142nie sami.\nWyl\u0105dowali\u015Bmy
+    w sieroci\u0144cu.\n"
+  - "ALYSIA|By\u0142o to dobre i bezpieczne miejsce, a nasi opiekunowie pe\u0142ni
+    pasji i mi\u0142o\u015Bci do dzieci.\nAle nie byli NIMI.\nSamotno\u015B\u0107
+    i poczucie opuszczenia po\u017Cera\u0142y nas od \u015Brodka.\nDobrze, \u017Ce
+    mieli\u015Bmy cho\u0107 siebie.\n"
+  - "ALYSIA|Ju\u017C dosy\u0107 wcze\u015Bnie interesowa\u0142am si\u0119 prac\u0105
+    spo\u0142eczn\u0105 i pomaganiem innym.\nZacz\u0119\u0142am si\u0119 przygl\u0105da\u0107,
+    a potem uczestniczy\u0107 w opiece nad innymi dzie\u0107mi.\nStopniowo dochodzi\u0142am
+    do siebie.\n"
+  - "ALYSIA|Dorastaj\u0105c zn\xF3w czu\u0142am poci\u0105g do zdobywania wiedzy,
+    by potem dzieli\u0107 si\u0119 ni\u0105 z innymi.\nBy\u0142o wi\u0119c oczywiste,
+    \u017Ce zostan\u0119 nauczycielk\u0105.\n"
+  - "ALYSIA|Wiedza jest bezcenna - bo pozwala oswoi\u0107 strach.\n"
+  - "ALYSIA|Za\u015B co do Dratoca\u2026\nZnikni\u0119cie rodzic\xF3w zmieni\u0142o
+    go.\nNie zauwa\u017Cy\u0142am tego od razu.\n"
+  - "ALYSIA|Co\u015B w nim p\u0119k\u0142o.\nZ czasem ta szczelina ros\u0142a i ros\u0142a,
+    a\u017C poch\u0142on\u0119\u0142a go w ca\u0142o\u015Bci.\nZamyka\u0142 si\u0119
+    w sobie, odcina\u0142.\n"
+  - "ALYSIA|Przerazi\u0142o mnie, gdy pewnego dnia stwierdzi\u0142, \u017Ce nie ma
+    go ju\u017C.\n\u017Be nie istnieje.\n"
+  - "ALYSIA|O\u015Bwiadczy\u0142 te\u017C, \u017Ce przesta\u0142 by\u0107 Dratocem,
+    a zacz\u0105\u0142\u2026\n"
+  - ALYSIA|Cotardem.
+  - "ALYSIA|Reagowa\u0142 wy\u0142\u0105cznie na swoje nowe imi\u0119.\nPr\xF3bowa\u0142am
+    walczy\u0107, ale co mog\u0142am zrobi\u0107?\n"
+  - "ALYSIA|Mog\u0142am si\u0119 z nim porozumie\u0107 tylko wtedy, gdy ulega\u0142am
+    i zwraca\u0142am si\u0119 do niego tak, jak chcia\u0142.\nInni o dziwo nie zwracali
+    uwagi.\nNie obchodzi\u0142o to ich tak, jak mnie.\n"
+  - "ALYSIA|Sta\u0142 si\u0119 ch\u0142odny. Cichy."
+  - "ALYSIA|Nie by\u0142 ju\u017C dzieckiem, kt\xF3re pozna\u0142am i uzna\u0142am
+    za swojego ma\u0142ego braciszka.\nDawniej potrafi\u0142 gada\u0107 bez ko\u0144ca,
+    topi\u0142 mnie w potoku s\u0142\xF3w.\n"
+  - "ALYSIA|Ale ju\u017C nie.\nOdzywa si\u0119 tylko wtedy, gdy uzna to za konieczne.\nCzyli
+    prawie nigdy.\n"
+  - "ALYSIA|Ale wci\u0105\u017C uwa\u017Cam go za mojego brata.\nZawsze b\u0119d\u0119.
+    Kocham go ca\u0142ym sercem.\n"
+  - "ALYSIA|To post\u0119puje.\nZmuszam go do posi\u0142k\xF3w, sam najch\u0119tniej
+    nic by nie jad\u0142.\nTwierdzi, \u017Ce nie potrzebuje jedzenia.\n"
+  - "ALYSIA|Tylko moje \u0142zy i b\u0142agania skutkuj\u0105.\nCho\u0107 do straszne,
+    znajduj\u0119 w tym pocieszenie - oznacza bowiem, \u017Ce m\xF3j brat nadal czuje
+    emocje. Nadal mu zale\u017Cy.\nTo dla mnie znaczy wszystko.\n"
+  - "ALYSIA|Ubrania zu\u017Cywaj\u0105 si\u0119 na nim jak drewno w ognisku.\nWrzucam
+    je potajemnie, \u017Ceby nie zobaczy\u0142 zaschni\u0119tych \u015Blad\xF3w krwi
+    i oderwanych kawa\u0142k\xF3w sk\xF3ry.\n"
+  - "ALYSIA|Przera\u017Ca mnie to.\nCotard ropieje, jego sk\xF3ra p\u0119ka, pokrywa
+    si\u0119 p\u0119cherzami i liszajem.\nNie m\xF3wi mi sk\u0105d si\u0119 to bierze.\n"
+  - 'ALYSIA|Ale ja wiem.
+
+'
+  - "ALYSIA|Kiedy pr\xF3buje zdecynferkowa\u0107 jego rany, on spokojnie odmawia.\nM\xF3wi,
+    \u017Ce tego nie potrzebuje.\n"
+  - "ALYSIA|Tutaj m\xF3j p\u0142acz nie pomaga."
+  - 'ALYSIA|NIC nie pomaga.
+
+'
+  - 'ALYSIA|NIC.
+
+'
+  - "ALYSIA|Nigdy nie chodzi z nami do gor\u0105cych \u017Ar\xF3de\u0142.\nPyta\u0142am,
+    czy chodzi o rany, ale stwierdzi\u0142, \u017Ce nie.\nPo prostu nie chce.\n"
+  - "ALYSIA|My\u015Bli, \u017Ce nie widz\u0119 jego reakcji na wod\u0119.\nUnika
+    jej jak trucizny. \nNie myje si\u0119."
+  - "ALYSIA|Cuchnie chorob\u0105, ale o dziwo nie jest chory.\nO co w tym chodzi\u2026\n"
+  - "ALYSIA|Pije tylko grzybowy napar. Dobrze, \u017Ce chocia\u017C tyle.\n"
+  - "ALYSIA|Wiem ju\u017C na pewno, ale nikomu nie powiem.\nOn chodzi do Nico\u015Bci.\n"
+  - "ALYSIA|Jest jedynym, kt\xF3ry w Niej by\u0142 i wr\xF3ci\u0142.\nPr\xF3bowa\u0142am
+    go o to pyta\u0107, ale udaje, \u017Ce nie s\u0142yszy.\n"
+  - "ALYSIA|Zamyka si\u0119 zupe\u0142nie i mnie odcina,\nNie zaprzecza.\nPo prostu
+    stawia przede mn\u0105 mur.\n"
+  - "ALYSIA|Praca w prosektorium mu pomaga. \nMa\u0142o kto go tam ogl\u0105da, a
+    sam Cotard dobrze si\u0119 czuje w\u015Br\xF3d zmar\u0142ych.\nZupe\u0142nie,
+    jakby by\u0142 jednym z nich.\n"
+  - "ALYSIA|Dopiero po czasie zrozumia\u0142am, \u017Ce Cotard nie ma w\u0119chu.\n"
+  - "ALYSIA|Do domu wraca u\u015Bmiechni\u0119ty, zadowolony.\nZamyka si\u0119 w
+    szopie i siedzi w niej do nast\u0119pnego dnia.\nRano idzie do pracy. I tak dzie\u0144
+    w dzie\u0144.\n"
+  - "ALYSIA|Nieraz pr\xF3bowa\u0142am si\u0119 w\u0142ama\u0107 do jego kryj\xF3wki,
+    ale nic z tego.\nK\u0142\xF3dka jest mocna, a \u0142a\u0144cuchy dobrej jako\u015Bci.
+    Drzwi mocne.\n"
+  - "ALYSIA|Z wn\u0119trza dobiega dziwny j\u0119k.\n"
+  - "ALYSIA|Boj\u0119 si\u0119.\n"
+  - "ALYSIA|Ludzie dziwnie na nas patrz\u0105.\nGdyby tylko umieli w nim dostrzec,
+    co ja\u2026\n"
+  - "ALYSIA|Wczoraj spyta\u0142am go co robi w tej swojej szopie\n"
+  - "ALYSIA|Powiedzia\u0142am, \u017Ce chc\u0119 wiedzie\u0107 BO MAM PRAWO.\n"
+  - "ALYSIA|U\u015Bmiechn\u0105\u0142 si\u0119 tylko i odpar\u0142, \u017Ce to niespodzianka.\n"
+  - 'ALYSIA|NIESPODZIANKA?
+
+'
+  - "ALYSIA|Ile lat to ju\u017C trwa\n"
+  - 'ALYSIA|PO CO?
+
+'
+  - 'ALYSIA|DLA KOGO?
+
+'
+  - "ALYSIA|Pog\u0142aska\u0142 mnie po g\u0142owie m\xF3wi\u0105c: \u201CJu\u017C
+    nied\u0142ugo siostrzyczko. Zobaczysz. Ju\u017C nied\u0142ugo\u201D\n"
+  - "ALYSIA|Zacz\u0119\u0142am p\u0142aka\u0107.\n"
+  Chapter1d1:
+  - NARRATOR|Dziennik Alysii Wpis 001
+  - "ALYSIA|Dla moich uczni\xF3w"
+  - "ALYSIA|Je\u015Bli czytacie te s\u0142owa, to wiecie ju\u017C, \u017Ce jestem
+    w miejscu, do kt\xF3rego nikt nie powinien wchodzi\u0107."
+  - "ALYSIA|On\u2026 m\xF3wi\u0142 mi, \u017Cebym tego nie robi\u0142a.\n\u017Be
+    nie wszystko jest do odkrycia.\n\u017Be niekt\xF3re tajemnice istniej\u0105 tylko
+    po to, by pozosta\u0107 tajemnicami."
+  - "ALYSIA|Ale je\u015Bli \u015Bwiat ma sens, to musi istnie\u0107 jego \u017Ar\xF3d\u0142o."
+  - "ALYSIA|A je\u015Bli go nie ma\u2026\n\u2026to chc\u0119 wiedzie\u0107 dlaczego.\n"
+  - "ALYSIA|Nie id\u0119 tam jako bohaterka.\nId\u0119 jako nauczycielka, kt\xF3ra
+    nie potrafi znie\u015B\u0107 niewiedzy.\n"
+  - "ALYSIA|Chc\u0119 wiedzie\u0107, co si\u0119 sta\u0142o z moimi rodzicami.\n"
+  - "ALYSIA|I nie jestem sama.\nNie martwcie si\u0119.\nOn si\u0119 mn\u0105 zaopiekuje.\n"
+  Chapter1d2:
+  - "NARRATOR|Wiatr\u2026 jest dziwnie cichy\nNie zimny. Nie ciep\u0142y.\nPo prostu\u2026
+    czu\u0107, \u017Ce pochodzi z Nico\u015Bci."
+  - "NARRATOR|Ogromny krater ci\u0105gnie si\u0119 w d\xF3\u0142, jakby \u015Bwiat
+    zosta\u0142 wyrwany z w\u0142asnego cia\u0142a."
+  - "NARRATOR|Alyssia staje na kraw\u0119dzi.\nA obok niej \nCotard.\n"
+  - "ALYSIA|\u2026to tutaj.\n"
+  - 'COTARD|Nie.
+
+'
+  - "COTARD|\u2026\n"
+  - 'COTARD|Tu Nic nie ma.
+
+'
+  - "NARRATOR|Alyssia wybucha lekkim \u015Bmiechem\n"
+  - "ALYSIA|W\u0142a\u015Bnie dlatego tu jeste\u015Bmy.\n"
+  - "NARRATOR|Cotard patrzy w d\xF3\u0142.\n"
+  - "NARRATOR|D\u0142ugo.\n"
+  - "NARRATOR|Zbyt d\u0142ugo.\n"
+  - "COTARD|Nie czuj\u0119 strachu.\n"
+  - "COTARD|\u2026\n"
+  - 'COTARD|To nie jest odwaga.
+
+'
+  Chapter1ch1d2:
+  - "ALYSIA|Wiem, to g\u0142upota."
+  - "COTARD|To dobrze.\nPrzynajmniej to si\u0119 nie zmieni\u0142o"
+  Chapter1ch2d2:
+  - "ALYSIA|Dlaczego tak m\xF3wisz?"
+  - "COTARD|Bo ja i tak nie istniej\u0119.\nA jednak nadal potrafi\u0119 pope\u0142nia\u0107
+    b\u0142\u0119dy."
+  Chapter1d3:
+  - "NARRATOR|Pierwszy krok.\nZiemia nie wydaje d\u017Awi\u0119ku."
+  - "ALYSIA|S\u0142yszysz to?"
+  - COTARD|Nie
+  - "COTARD|\u2026i w\u0142a\u015Bnie to powinno ci\u0119 martwi\u0107.\n"
+  - "ALYSIA|Jeste\u015B jedyn\u0105 osob\u0105, kt\xF3ra mo\u017Ce tam wej\u015B\u0107
+    i wr\xF3ci\u0107.\n"
+  - "NARRATOR|Cotard przekrzywia g\u0142ow\u0119 jakby analizowa\u0142 co\u015B czego
+    nie da si\u0119 zrozumie\u0107\n"
+  - "COTARD|Boje si\u0119, jak na Ciebie zadzia\u0142a to otoczenie.\n"
+  Chapter1ch1d3:
+  - "ALYSIA|Te\u017C si\u0119 martwi\u0119."
+  - "ALYSIA|Boj\u0119 si\u0119, \u017Ce nagle co\u015B si\u0119 zmieni i Nico\u015B\u0107
+    zacznie dzia\u0142a\u0107 r\xF3wnie\u017C na ciebie.\n\u017Be odbierze mi nawet
+    t\u0119 pewno\u015B\u0107, kt\xF3r\u0105 teraz mam.\n"
+  - "ALYSIA|Ale\u2026 przekonamy si\u0119, gdy dojdziemy do Kwiecistej Nico\u015Bci."
+  - "NARRATOR|Cotard patrzy na ni\u0105 d\u0142ugo.\nJego twarz pozostaje niemal
+    nieruchoma, ale g\u0142os staje si\u0119 cichszy.\n"
+  - "COTARD|\u2026"
+  - "COTARD|Nie martw si\u0119 o mnie."
+  - "COTARD|Na mnie ju\u017C Nico\u015B\u0107 wypr\xF3bowa\u0142a wszystko, co mog\u0142a."
+  - "ALYSIA|\u2026"
+  - "ALYSIA|Nieprawda.\nGdyby zrobi\u0142a wszystko, nie szed\u0142by\u015B teraz
+    obok mnie.\n"
+  - "NARRATOR|Cotard milknie.\nJakby nie potrafi\u0142 znale\u017A\u0107 odpowiedzi.\nPo
+    chwili rusza dalej.\n"
+  - "COTARD|\u2026to nie jest argument.\n"
+  - "NARRATOR|Alyssia lekko si\u0119 u\u015Bmiecha.\n"
+  - 'ALYSIA|Jest.
+
+'
+  Chapter1ch2d3:
+  - "ALYSIA|Przekonamy si\u0119 z czasem.\n"
+  - "ALYSIA|Mam nadziej\u0119, \u017Ce po prostu nic nam si\u0119 nie stanie\nMo\u017Ce
+    to miejsce tylko tylko pr\xF3buje nas przestraszy\u0107.\n"
+  - "NARRATOR|Spogl\u0105da w nico\u015B\u0107\n"
+  - 'COTARD|Dziwne.
+
+'
+  - "COTARD|Ludzie zawsze pr\xF3buj\u0105 nada\u0107 sens temu, czego si\u0119 boj\u0105."
+  - "COTARD|Jakby nazwanie l\u0119ku czyni\u0142o go mniejszym."
+  - "ALYSIA|A ty?\nNa czym budujesz sw\xF3j spok\xF3j\n"
+  - COTARD|Na pustce.
+  - "COTARD|Nie oczekuj\u0119 ju\u017C niczego dobrego.\n"
+  - "ALYSIA|A ja w\u0142a\u015Bnie odwrotnie.\nOczekuje, \u017Ce damy sobie rad\u0119.\nDlatego
+    dobrze, \u017Ce idziemy razem.\n"
+  Chapter1d4:
+  - "COTARD|Nie odwracaj si\u0119.\n"
+  - "COTARD|Ju\u017C tego nie ma."
+  - ALYSIA|Czego?
+  - "COTARD|G\xF3ry.\n"
+  - "COTARD|Zapomnia\u0142em jak wygl\u0105da\u0142a.\n"
+  Chapter1ch1d4:
+  - "ALYSIA|Co?! To si\u0119 dzieje za szybko\u2026\n"
+  - 'COTARD|Nie przesadzaj
+
+    To normalne.
+
+'
+  Chapter1ch2d4:
+  - "ALYSIA|Zauwa\u017Cy\u0142am ju\u017C\u2026 i to mnie przera\u017Ca.\n"
+  - "COTARD|To normalne.\nPrzyzwyczaisz si\u0119.\n"
+  Chapter1d5:
+  - "NARRATOR|Po tych s\u0142owach Cotard rusza dalej.\nJego kroki s\u0105 ciche.\nNie
+    dlatego, \u017Ce stawia je lekko,\n"
+  - "NARRATOR|Po prostu Nico\u015B\u0107 nie oddaje d\u017Awi\u0119ku\nAlyssia idzie
+    tu\u017C za nim\nIm ni\u017Cej schodz\u0105, tym bardziej powietrze staje si\u0119\u2026\n"
+  - 'NARRATOR|inne
+
+'
+  - "NARRATOR|Nie ci\u0119\u017Csze.\n"
+  - 'NARRATOR|Nie rzadsze.
+
+'
+  - "NARRATOR|Po prostu obce.\nJakby nie nale\u017Ca\u0142o do \u015Bwiata.\n"
+  - "ALYSIA|Cotard\u2026\nCzy to tylko mi sie wydaje, czy powietrze tutaj pachnie
+    inaczej?\n"
+  - "NARRATOR|Cotard zatrzymuje si\u0119 na moment \n"
+  - "NARRATOR|Unosi g\u0142ow\u0119.\n"
+  - COTARD|Tak.
+  - "COTARD|Wszystko zaczyna si\u0119 tutaj."
+  - ALYSIA|Co takiego?
+  - "COTARD|Pierwszy poziom.\nKwiecista Nico\u015B\u0107."
+  - "NARRATOR|Powietrze robi si\u0119 s\u0142odkie.\n"
+  - "NARRATOR|Zbyt s\u0142odkie.\n"
+  - "NARRATOR|Dusz\u0105ce.\n"
+  - "NARRATOR|W oddali zaczynaj\u0105 si\u0119 wy\u0142ania\u0107 pierwsze kwiaty."
+  - NARRATOR|Delikatne.
+  - "NARRATOR|Bia\u0142e.\n"
+  - "NARRATOR|Ich p\u0142atki poruszaj\u0105 si\u0119 mimo, \u017Ce nie ma wiatru\n"
+  - "ALYSIA|Och\u2026\nCotard!\nsp\xF3jrz tylko\nJak tu pi\u0119knie!\n"
+  - "NARRATOR|Na jej twarzy pojawia si\u0119 prawdziwy, ciep\u0142y u\u015Bmiech.\nPierwszy
+    od wej\u015Bcia.\n"
+  - "COTARD|Nie podchod\u017A!\n"
+  Chapter1ch1d5:
+  - "ALYSIA|Dlaczego?\nS\u0105 niebezpieczne?\n"
+  - 'NARRATOR|Cotard patrzy na kwiaty.
+
+'
+  - "NARRATOR|Jeden z p\u0142atk\xF3w dr\u017Cy\nPotem cofa si\u0119.\nJakby czas
+    na moment si\u0119 za\u0142ama\u0142.\n"
+  - COTARD|Nie.
+  - COTARD|Gorzej.
+  - "COTARD|Chc\u0105, aby\u015B zosta\u0142a.\n"
+  - 'ALYSIA|Kwiaty?
+
+'
+  - COTARD|Nie.
+  - "COTARD|Ca\u0142e to miejsce.\n"
+  Chapter1ch2d5:
+  - "ALYSIA|Chcesz powiedzie\u0107, \u017Ce to\u2026?\n"
+  - "NARRATOR|Dotyka jednego z kwiat\xF3w.\n"
+  - "NARRATOR|Jeden z p\u0142atk\xF3w dr\u017Cy\nPotem cofa si\u0119.\nJakby czas
+    na moment si\u0119 za\u0142ama\u0142.\n"
+  - "COTARD|Tak samo jak ja. \n"
+  - "COTARD|Te\u017C powoli znikam.\n"
+  - "ALYSIA|Nie m\xF3w tak.\n"
+  - 'COTARD|Dlaczego?
+
+'
+  - "COTARD|Ty jedyna nie pr\xF3bujesz mi wm\xF3wi\u0107, \u017Ce \u017Cyj\u0119.\n"
+  Chapter1d6:
+  - ALYSIA|Dziennik Alysii Wpis 002
+  - "ALYSIA|Kwiaty.\nNie potrafi\u0119 opisa\u0107 ich pi\u0119kna.\nS\u0105 zbyt
+    doskona\u0142e.\nA przez to nienaturalne.\n"
+  - "ALYSIA|Cotard twierdzi, \u017Ce nie s\u0105 prawdziwe.\nI co najgorsze\u2026\n"
+  - "ALYSIA|wierz\u0119 mu."
+  - "ALYSIA|Mam jednak dziwne wra\u017Cenie, \u017Ce to miejsce reaguje na emocje.\nNa
+    zachwyt.\nNa l\u0119k.\nNa wspomnienia.\n"
+  - "ALYSIA|Im bardziej chc\u0119 co\u015B zrozumie\u0107, tym bardziej rzeczywisto\u015B\u0107
+    wydaje si\u0119 mi\u0119kka.\nJakby mo\u017Cna j\u0105 by\u0142o rozerwa\u0107
+    palcami.\n"
+  Chapter1d7:
+  - "NARRATOR|Kwiaty dr\u017C\u0105.\n"
+  - "NARRATOR|Py\u0142 unosi si\u0119 w powietrzu jak z\u0142oty dym.\nZ g\u0142\u0119bi
+    \u0142\u0105ki dobiega d\u017Awi\u0119k.\nCo\u015B bardziej pomi\u0119dzy \u015Bmiechem
+    a buczeniem\n"
+  - 'UNKNOWN|PRRRRRRRRRRR.
+
+'
+  - "NARRATOR|Co\u015B ma\u0142ego przelatuje tu\u017C przed twarz\u0105 Alysii.\nOdruchowo
+    cofa si\u0119 o krok."
+  - 'NARRATOR|Przed nimi zawisa drobna istota.
+
+'
+  - "BEE|Prrr\u2013prrrr!\nOoooOOOO, go\u015Bcie!\n\u017Bywi go\u015Bcie!\n"
+  - "BEE|Przekrzywia g\u0142ow\u0119.\nPatrzy na Cotarda.\n"
+  - "COTARD|\u2026"
+  - 'BEE|Hhahahahahahahahha
+
+    A nie.
+
+    nie wszyscy
+
+    PRRRR.
+
+'
+  - "NARRATOR|Zaczyna lata\u0107 wok\xF3\u0142 niego.\n"
+  - "BEE|Ty \u015Bmierdzisz!\nFuj FUJ FUUUJJJ"
+  - "BEE|Jak stare li\u015Bcie.\nJak mokry gr\xF3b.\nJak co\u015B, co ju\u017C dawno
+    powinno zosta\u0107 na dole."
+  - 'BEE|Prawda Cotard?
+
+'
+  - "NARRATOR|Cotard patrzy na ni\u0105 pustym wzrokiem.\n"
+  - "COTARD|Odejd\u017A."
+  - "BEE|Oooodejd\u017A.\nOoooo odeeejd\u017A\u017A\nPrrrrrrr.\n"
+  - "NARRATOR|Alysia mimowolnie si\u0119 u\u015Bmiecha.\nTroch\u0119 nerwowo\nTroch\u0119
+    rozbawiona\n"
+  - "ALYSIA|Jeste\u015B\u2026 mieszkank\u0105 tego miejsca?\n"
+  - "BEE|A ty jeste\u015B \u015Bmieszna.\nPrrr.\n"
+  - "BEE|Pytasz tak, jakby to miejsce mia\u0142o mieszka\u0144c\xF3w.\nTo miejsce
+    ma tylko to, co zosta\u0142o\nI to jest SUUUUUUUUUUUUPER\n"
+  - "ALYSIA|A co to znaczy\u2026 \u201C to, co zosta\u0142o\u201D?\n"
+  - "BEE|To, czego Nico\u015B\u0107 nie po\u0142kn\u0119\u0142a.\n"
+  - BEE|Jeszcze.
+  - "BEE|Wspomnienia\u2026 \u017Cale\nResztki ludzi.\n"
+  - "NARRATOR|Pszcz\xF3\u0142ka zn\xF3w patrzy na Cotarda\n"
+  - "BEE|Albo resztki \u017Cycia.\nPrrrrrrrrrrrr\n"
+  - "ALYSIA|Przepraszam, \u017Ce spytam ale\u2026\nWidzia\u0142a\u015B mo\u017Ce
+    naszych rodzic\xF3w?\n"
+  - 'ALYSIA|Badaczy.
+
+    Byli tu lata temu
+
+'
+  - 'BEE|OoooooOOOo.
+
+    Tych.
+
+    Prrrrr.
+
+'
+  - "BEE|Tak.\nWidzia\u0142am.\n"
+  - "ALYSIA|Co?! Naprawd\u0119?!\n"
+  - 'ALYSIA|Gdzie?!
+
+'
+  - "ALYSIA|Co si\u0119 z nimi sta\u0142o?!"
+  - "NARRATOR|Pszcz\xF3\u0142ka wykonuje kilka chaotycznych obrot\xF3w w powietrzu.\n"
+  - 'BEE|Pachniesz jak oni.
+
+'
+  - "BEE|Zeszli ni\u017Cej.\n"
+  - "BEE|Ni\u017Cej.\nNi\u017Cej.\n"
+  - "BEE|Zawsze ni\u017Cej.\n"
+  - 'BEE|Szukali.
+
+    tak jak ty.
+
+'
+  - "BEE|\u2026\n"
+  - 'BEE|Aleeee
+
+'
+  - BEE|PRRRR
+  - "BEE|\u0179r\xF3d\u0142o patrzy te\u017C w g\xF3r\u0119.\n"
+  - "NARRATOR|Cotard patrzy na ni\u0105 ch\u0142odno."
+  - "COTARD|Wiesz co\u015B wi\u0119cej o rodzicach?.\n"
+  - "NARRATOR|Pszcz\xF3\u0142ka \u015Bmieje si\u0119.\n"
+  - "BEE|Prr.\nCzyli jednak ci zale\u017Cy.\n"
+  - "COTARD|\u2026\n"
+  - "BEE|Przeszli przez \u0142\u0105k\u0119.\nK\u0142\xF3cili si\u0119.\n"
+  - "BEE|O to, kt\xF3re z nich zacz\u0119\u0142o znika\u0107 pierwsze.\n"
+  - "NARRATOR|Cotard spogl\u0105da na Alyssie.\nW jego oczach po raz pierwszy pojawia
+    si\u0119 cie\u0144 napi\u0119cia.\n"
+  - 'COTARD|Kiedy?
+
+'
+  - 'BEE|Tutaj?
+
+    Tu czas nie istnieje.
+
+    Prr.
+
+'
+  - 'BEE|Ale dla Was?
+
+'
+  - BEE|DAWNO.
+  - "BEE|Mi\u0142o si\u0119 gada\u0142o, lec\u0119 zapyla\u0107 kwiatkiiiii!!!!\nPrrrrrrrrr!\n"
+  - "NARRATOR|Pszcz\xF3\u0142ka odlatuje i znika w oddali.\n"
+  - "NARRATOR|Alyssia i Cotard stoj\u0105 d\u0142u\u017Csz\u0105 chwil\u0119 w ciszy.\n"
+  - "NARRATOR|\u2026"
+  - "NARRATOR|Patrz\u0105 na siebie\nAlysia przerywa cisz\u0119\nZaciska notes przy
+    piersi.\n"
+  - "ALYSIA|Wi\u0119c\u2026\nNaprawd\u0119 tu byli\n"
+  - "NARRATOR|Cotard patrzy na ni\u0105.\n"
+  - "COTARD|Albo to miejsce chce, \u017Ceby\u015B w to uwierzy\u0142a.\n"
+  - "ALYSIA|A je\u015Bli cho\u0107 raz nie masz racji?\n"
+  - "COTARD|\u2026\n"
+  - "NARRATOR|Nagle zn\xF3w s\u0142ycha\u0107 bzyczenie\n"
+  - "BEE|Prrrrr!\nJe\u015Bli chcecie znale\u017A\u0107 odpowiedzi\u2026\nschod\u017Acie
+    ni\u017Cej.\n"
+  - "BEE|Ale uwa\u017Cajcie.\nNa nast\u0119pnym poziomie Nico\u015B\u0107 nie pokazuje
+    ju\u017C kwiat\xF3w.\n"
+  - "BEE|Pokazuje prawd\u0119.\nCzyli to, czego najbardziej si\u0119 boicie.\n"
+  - "NARRATOR|Nie zd\u0105\u017Cyli zareagowa\u0107.\nOdlecia\u0142a.\n"
+  Chapter1d8:
+  - "NARRATOR|Z g\u0142\u0119bi \u0142\u0105ki dobiega \u015Bmiech.\n"
+  - "NARRATOR|Dzieci\u0119cy."
+  - NARRATOR|Znajomy.
+  - NARRATOR|Alyssia zamiera.
+  - 'UNKNOWN|Pani Alysio!
+
+'
+  - "NARRATOR|Na ko\u0144cu \u015Bcie\u017Cki stoj\u0105 dzieci.\nJej uczniowie.\n"
+  - "STUDENTS|Wr\xF3ci Pani?\n"
+  - "STUDENTS|Brakuje nam Pani\u2026\n"
+  - "NARRATOR|Cotard gwa\u0142townie \u0142apie j\u0105 za nadgarstek\nJego d\u0142o\u0144
+    jest lodowata.\n"
+  - 'COTARD|Nie patrz na nich!
+
+'
+  - "ALYSIA|To moi uczniowie!\nMusieli si\u0119 o mnie martwi\u0107!\n"
+  - "NARRATOR|Alysia pr\xF3buje si\u0119 wyrwa\u0107.\nCotard zaciska d\u0142o\u0144
+    mocniej.\n"
+  - "ALYSIA|Pu\u015B\u0107 mnie Cotard!!!\n"
+  - "NARRATOR|Pierwszy raz w jego g\u0142osie s\u0142ycha\u0107\u2026 GNIEW.\n"
+  - 'COTARD|NIE.
+
+'
+  - 'COTARD|to nie oni
+
+'
+  - "COTARD|NICO\u015A\u0106 wie, czego najbardziej ci brakuje.\nI u\u017Cyje tego
+    przeciwko tobie.\n"
+  - "NARRATOR|G\u0142os.\nRozbrzmiewa wsz\u0119dzie.\n"
+  - "UNKNOWN|Jedno.\nMusi.\nZnikn\u0105\u0107.\n"
+  - 'NARRATOR|Alysia patrzy na Cotarda.
+
+'
+  - "ALYSIA|S\u0142yszysz to?\n"
+  - 'COTARD|Tak.
+
+'
+  - "COTARD|\u2026\n"
+  - "COTARD|To nie g\u0142os.\n"
+  - "COTARD|To brak czego\u015B, co powinno istnie\u0107.\n"
+  - "NARRATOR|Wszystko cichnie.\nNawet kwiaty przestaj\u0105 dr\u017Ce\u0107.\n"
+  - "NARRATOR|Przed nimi ziemia p\u0119ka na dwie \u015Bcie\u017Cki\nLewa - sk\u0105pana
+    w jasnym mi\u0119kkim \u015Bwietle\nPrawa - ciemna, pozbawiona koloru.\n"
+  - "UNKNOWN|Lewo - Zosta\u0144. "
+  - "UNKNOWN|Prawo - Zejd\u017A ni\u017Cej. Ale stracisz.\n"
+  - "UNKNOWN|Alysio.\nDecyzja zale\u017Cy od Ciebie."
+  - 'NARRATOR|Zapada cisza.
+
+'
+  - "NARRATOR|Alysia patrzy na swoje d\u0142onie.\nDr\u017C\u0105.\n"
+  - "COTARD|Alysio, musisz odpocz\u0105\u0107.\n"
+  - "ALYSIA|Ja\u2026\n"
+  - "ALYSIA|Nie wiem, co mam zrobi\u0107,\nNie wiem, czy to w og\xF3le jest wyb\xF3r.\nAle
+    czuj\u0119, \u017Ce nie ma tu dobrej decyzji.\nNie chc\u0119 ich straci\u0107\u2026\n"
+  - "NARRATOR|Cotard patrzy na iluzje uczni\xF3w.\nNa twarzy Alysii maluje si\u0119
+    b\xF3l.\n"
+  - "ALYSIA|Nie mog\u0119.\nNie mog\u0119 ich tak po prostu usun\u0105\u0107!\n"
+  - COTARD|To nie oni!
+  - "ALYSIA|Sk\u0105d wiesz?!!!"
+  - "COTARD|Bo Nico\u015B\u0107 nie daje.\nOna tylko odbiera.\nNie tworzy \u017Cycia."
+  - "ALYSIA|A je\u015Bli odbierze mi ich wspomnienia?!"
+  - "COTARD|Ju\u017C zacz\u0119\u0142a.\n"
+  - "COTARD|Pami\u0119tasz ich twarze?!\n"
+  - "COTARD|Pami\u0119tasz jak wygl\u0105da\u0142a g\xF3ra?!"
+  - "NARRATOR|Alysia milknie.\nOczy jej dr\u017C\u0105.\n"
+  - "NARRATOR|Pr\xF3buje sobie przypomnie\u0107.\nI nie potrafi.\nTo j\u0105 \u0142amie.\n"
+  - "ALYSIA|\u2026\n"
+  - ALYSIA|nie.
+  - "COTARD|No w\u0142a\u015Bnie."
+  - "ALYSIA|M\xF3wisz, \u017Ce Oni nie istniej\u0105\u2026\nTo dlaczego o sobie m\xF3wisz
+    to samo?"
+  Chapter1ch1d8:
+  - "NARRATOR|Alysia patrzy na swoich uczni\xF3w.\nIch g\u0142osy s\u0105 mi\u0119kkie.\n"
+  - "NARRATOR|Znajome.\nPe\u0142ne ciep\u0142a\n"
+  - "NARRATOR|Dotyka \u015Bwietlistej chmury.\nW tej samej chwili \u015Bwiat mi\u0119knie.\nKwiaty
+    rozkwitaj\u0105 gwa\u0142townie.\n"
+  - "NARRATOR|\u015Awiat\u0142o zalewa jej wizje\nJej twarz rozlu\u017Ania si\u0119.\nU\u015Bmiecha\n"
+  - "STUDENTS|Gdzie pani by\u0142a?\nMartwili\u015Bmy si\u0119.\n"
+  - "ALYSIA|Ja\u2026\n"
+  - "ALYSIA|chyba si\u0119 zgubi\u0142am.\nAle ju\u017C wszystko dobrze.\nMo\u017Cemy
+    wraca\u0107.\n"
+  - "NARRATOR|Powoli siada na \u0142\u0105ce.\nK\u0142adzie si\u0119 mi\u0119dzy
+    kwiatami.\nOczy same si\u0119 zamykaj\u0105.\n"
+  - "NARRATOR|Cotard rzuca si\u0119 do Alysii\nPo raz pierwszy jego g\u0142os\ndr\u017Cy.\n"
+  - "COTARD|Alysia\u2026\n"
+  - "COTARD|Nie\u2026\n"
+  - "COTARD|Prosz\u0119\u2026"
+  - "NARRATOR|Po jego policzku sp\u0142ywa \u0142za.\n"
+  - 'COTARD|Nie zostawiaj mnie tutaj samego
+
+'
+  - "COTARD|\u2026\n"
+  - COTARD|Nie znikaj.
+  - "NARRATOR|Alysia nie odpowiada.\nZostaje na \u0142\u0105ce.\nU\u015Bpiona przez
+    Nico\u015B\u0107.\n"
+  - "NARRATOR|Cotard zaczyna p\u0142aka\u0107.\n"
+  Chapter1ch2d8:
+  - "NARRATOR|Alysia zamyka oczy.\n\u0141zy zbieraj\u0105 si\u0119 pod powiekami.\n"
+  - 'COTARD|To nie oni.
+
+'
+  - "NARRATOR|Iluzja zaczyna p\u0119ka\u0107.\n\u015Awiat\u0142o przygasa.\nSylwetki
+    uczni\xF3w powoli znikaj\u0105\n"
+  - "STUDENTS|Pani Alysio\u2026 dlaczego\u2026?\n"
+  - "NARRATOR|Alysia odwraca wzrok\nNie potrafi patrze\u0107.\n"
+  - "ALYSIA|Przepraszam\u2026\n"
+  - "NARRATOR|Uczniowie znikaj\u0105.\nZaczyna p\u0142aka\u0107\n"
+  - "NARRATOR|\u015Awiat wok\xF3\u0142 nich traci kolory.\nKwiaty staj\u0105 si\u0119
+    niemal szare.\n"
+  - 'COTARD|Dobrze
+
+'
+  - "COTARD|\u2026\n"
+  - COTARD|To jest prawdziwe.
+  - 'ALYSIA|Co?
+
+'
+  - "COTARD|To, \u017Ce ich nie ma\nWola\u0142em si\u0119 upewni\u0107.\n"
+  - "COTARD|\u2026 Chod\u017A.\nIdziemy ni\u017Cej\n"
+  - "NARRATOR|Alysia ociera \u0142zy.\n"
+  - "ALYSIA|Zaczynam rozumie\u0107, dlaczego ludzie nie chc\u0105 wiedzie\u0107.\nJe\u015Bli
+    ka\u017Cde zej\u015Bcie wymaga po\u015Bwi\u0119cenia to\u2026\n"
+  - "ALYSIA|ile z naszych wspomnie\u0144 zostanie na ko\u0144cu?\nA je\u015Bli na
+    samym ko\u0144cu nie zostanie nic?\nto kim b\u0119d\u0119.\n"
+--- !u!4 &1082544906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082544904}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 878.7495, y: 570.55804, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1147576194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1147576195}
+  - component: {fileID: 1147576197}
+  - component: {fileID: 1147576196}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1147576195
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147576194}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1635728707}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1147576196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147576194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "wyb\xF3r 2"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1147576197
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147576194}
+  m_CullTransparentMesh: 1
+--- !u!1 &1260320155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1260320156}
+  - component: {fileID: 1260320157}
+  - component: {fileID: 1260320158}
+  m_Layer: 5
+  m_Name: DialogueText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1260320156
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260320155}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.1391, y: 3.1391, z: 3.1391}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1880298251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -5.7856445, y: 99}
+  m_SizeDelta: {x: -1247.36, y: 38.942}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!222 &1260320157
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260320155}
+  m_CullTransparentMesh: 1
+--- !u!114 &1260320158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260320155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 13
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 8
+  m_fontSizeMax: 13
+  m_fontStyle: 2
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &1635728703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1635728707}
+  - component: {fileID: 1635728706}
+  - component: {fileID: 1635728705}
+  - component: {fileID: 1635728704}
+  m_Layer: 5
+  m_Name: Choice B
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1635728704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635728703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1635728705}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1635728705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635728703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1022822829255870515, guid: 1d25216739703c3408f5a132bb2ff942, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1635728706
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635728703}
+  m_CullTransparentMesh: 1
+--- !u!224 &1635728707
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635728703}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.1391, y: 3.1391, z: 3.1391}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1147576195}
+  m_Father: {fileID: 832283670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 194.39}
+  m_SizeDelta: {x: 160, y: 39.817}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1672783579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1672783580}
+  - component: {fileID: 1672783582}
+  - component: {fileID: 1672783581}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1672783580
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672783579}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 103737793}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1672783581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672783579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Save
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4290301402
+  m_fontColor: {r: 0.854902, g: 0.80392164, b: 0.72156864, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1672783582
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672783579}
+  m_CullTransparentMesh: 1
+--- !u!1 &1680098309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680098310}
+  - component: {fileID: 1680098312}
+  - component: {fileID: 1680098311}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1680098310
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680098309}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 355848617}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1680098311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680098309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Auto
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4290301402
+  m_fontColor: {r: 0.854902, g: 0.80392164, b: 0.72156864, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1680098312
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680098309}
+  m_CullTransparentMesh: 1
+--- !u!1 &1737317344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1737317345}
+  m_Layer: 5
+  m_Name: Scene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1737317345
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737317344}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 748114490}
+  - {fileID: 733236592}
+  - {fileID: 593881457}
+  m_Father: {fileID: 832283670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -18.499878}
+  m_SizeDelta: {x: 0, y: 3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1787943881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787943882}
+  - component: {fileID: 1787943884}
+  - component: {fileID: 1787943883}
+  m_Layer: 5
+  m_Name: NameTexTBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1787943882
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787943881}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.3534999, y: 1.3534999, z: 1.3534999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 268708124}
+  m_Father: {fileID: 1880298251}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.06041259, y: 0.92700005}
+  m_AnchorMax: {x: 0.20776227, y: 1}
+  m_AnchoredPosition: {x: -0.78564453, y: 21.276123}
+  m_SizeDelta: {x: -64.2628, y: 47.9357}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1787943883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787943881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 3228345756358628918, guid: c4ba83ec2c0b0e047852e60c4a83272a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1787943884
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787943881}
+  m_CullTransparentMesh: 1
+--- !u!1 &1880298250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1880298251}
+  - component: {fileID: 1880298253}
+  - component: {fileID: 1880298252}
+  m_Layer: 5
+  m_Name: DialogueTextBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1880298251
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880298250}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1260320156}
+  - {fileID: 1787943882}
+  - {fileID: 1054083006}
+  - {fileID: 355848617}
+  - {fileID: 576765165}
+  - {fileID: 103737793}
+  m_Father: {fileID: 832283670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -22.669434, y: 152.79004}
+  m_SizeDelta: {x: -217.621, y: 285.83}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1880298252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880298250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9411765}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 667856776226961401, guid: 6efdb9e1b6d74124693978b426ee3a90, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1880298253
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880298250}
+  m_CullTransparentMesh: 1
+--- !u!1 &1921130050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1921130051}
+  - component: {fileID: 1921130053}
+  - component: {fileID: 1921130052}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1921130051
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921130050}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 299717642}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1921130052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921130050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Button
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1921130053
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921130050}
+  m_CullTransparentMesh: 1
+--- !u!1 &1954220176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1954220177}
+  - component: {fileID: 1954220179}
+  - component: {fileID: 1954220178}
+  - component: {fileID: 1954220180}
+  m_Layer: 5
+  m_Name: Choice A
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1954220177
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954220176}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.1391, y: 3.1391, z: 3.1391}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 159856119}
+  m_Father: {fileID: 832283670}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 324.202}
+  m_SizeDelta: {x: 160, y: 37.507}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1954220178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954220176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1022822829255870515, guid: 1d25216739703c3408f5a132bb2ff942, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1954220179
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954220176}
+  m_CullTransparentMesh: 1
+--- !u!114 &1954220180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954220176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1954220178}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 1019526048}
+  - {fileID: 832283670}
+  - {fileID: 219490820}
+  - {fileID: 691522168}
+  - {fileID: 1082544906}
+  - {fileID: 467084153}

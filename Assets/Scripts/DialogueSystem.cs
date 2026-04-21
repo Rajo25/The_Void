@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -247,6 +248,11 @@ public class DialogueSystem : MonoBehaviour
             choiceB.gameObject.SetActive(true);
             return;
         }
+        else if (currentNode == "Chapter1ch1d8" || currentNode == "Chapter1ch2d8")
+        {
+            LoadNextScene(SceneManager.GetActiveScene().buildIndex + 1);
+            return;
+        }
 
         DialogueHolder.index = 0;
         history.Clear();
@@ -419,6 +425,24 @@ public class DialogueSystem : MonoBehaviour
             }
 
             Next();
+        }
+    }
+    void LoadNextScene(int sceneIndex)
+    {
+        if (sceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            PlayerPrefs.SetInt("SceneIndex", sceneIndex);
+            PlayerPrefs.SetInt("dialogueIndex", 0);
+            PlayerPrefs.Save();
+
+            Debug.Log("Loading next scene: " + sceneIndex);
+
+            SceneManager.LoadScene(sceneIndex);
+        }
+        else
+        {
+            Debug.Log("Chapter 2 jeszcze nie istnieje (brak sceny w Build Settings)");
+            
         }
     }
 }
