@@ -101,8 +101,7 @@ public class DialogueSystem : MonoBehaviour
         
 
         UpdateSpeaker(line);
-
-        // BACKGROUND TAG FIX
+        
         if (line.Contains("[BG"))
         {
             int start = line.IndexOf("[BG");

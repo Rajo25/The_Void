@@ -1349,6 +1349,13 @@ MonoBehaviour:
   dialogueText: {fileID: 1260320158}
   nameText: {fileID: 268708125}
   dialogueHolder: {fileID: 1082544905}
+  backgroundImage: {fileID: 748114491}
+  backgrounds:
+  - {fileID: -7641719358306010726, guid: d3403f9f5357bd449a57fa3ed74615d7, type: 3}
+  - {fileID: -404831464305871985, guid: 2b10317858092b44b993767ea62aa907, type: 3}
+  - {fileID: -7971910899110234391, guid: 6d398470a2e3599479d58983359d0ec9, type: 3}
+  - {fileID: 4262878892220668383, guid: adbbbbbe0c9731c4ab8239967efc2559, type: 3}
+  - {fileID: 169579734508854348, guid: 86a798307df4c9d42a4311f1c20732ed, type: 3}
   nextButton: {fileID: 299717645}
   choiceA: {fileID: 1954220180}
   choiceB: {fileID: 1635728704}
