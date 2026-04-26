@@ -539,12 +539,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMin: 10
+  m_fontSizeMax: 40
   m_fontStyle: 3
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 2100000, guid: 8c75ec7f5c8dd614091e640f2fd19919, type: 2}
+  m_Material: {fileID: 2100000, guid: f71b1e048141dcc45abc863b229b0a8c, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1960,6 +1960,221 @@ MonoBehaviour:
     ka\u017Cde zej\u015Bcie wymaga po\u015Bwi\u0119cenia to\u2026\n"
   - "ALYSIA|ile z naszych wspomnie\u0144 zostanie na ko\u0144cu?\nA je\u015Bli na
     samym ko\u0144cu nie zostanie nic?\nto kim b\u0119d\u0119.\n"
+  chapter2d1:
+  - "NARRATOR|Powoli schodz\u0105 po schodach.\nKamienna pod\u0142oga stopniowo przekszta\u0142ca
+    si\u0119 w lodow\u0105 tafl\u0119 pokryt\u0105 paj\u0119czyn\u0105 p\u0119kni\u0119\u0107.\nWyczuwaj\u0105
+    pod stopami delikatny ruch. \n"
+  - "ALYSIA|\nCotard\u2026 \nZimno mi.\nAle\u2026 Ale nie w cia\u0142o \n.Dziwne\u2026"
+  - "NARRATOR|Cotard patrzy na swoje d\u0142onie.\nNie dr\u017C\u0105."
+  - COTARD|To nie jest zimno.
+  - "COTARD|To efekt Nico\u015Bci."
+  - "NARRATOR|Oddech Alyssi staje si\u0119 spokojniejszy."
+  - "ALYSIA|Czy to normalne, \u017Ce przestaj\u0119 si\u0119 ba\u0107?"
+  - "ALYSIA|Przecie\u017C powinnam.\nWiem o tym."
+  - "ALYSIA|Ale\u2026"
+  - "ALYSIA|Jakby kto\u015B wyciszy\u0142 mnie w \u015Brodku."
+  - NARRATOR|Alyssia dotyka klatki piersiowej.
+  - "ALYSIA|Jakby moje w\u0142asne serce by\u0142o gdzie\u015B daleko st\u0105d.
+    ."
+  - "ALYSIA|Powinnam si\u0119 ba\u0107\u2026\nA jako\u015B\u2026"
+  - "ALYSIA|Nie potrafi\u0119."
+  - "ALYSIA|To chyba \u017Ale? Prawda?"
+  - "NARRATOR|Cotard patrzy przed siebie.\nIdzie nie zatrzymuj\u0105c si\u0119.\nMilczy."
+  - "NARRATOR|Docieraj\u0105 na sam d\xF3\u0142 schod\xF3w."
+  - "NARRATOR|Przed nimi rozpo\u015Bciera si\u0119 nieko\u0144cz\u0105ca si\u0119
+    jaskinia."
+  - "COTARD|Ten l\xF3d nie jest przezroczysty."
+  - COTARD|Jest zapisany wspomnieniami.
+  - "COTARD|Tu by\u0142em najni\u017Cej, nie wiem co jest dalej."
+  - "NARRATOR|Spod tafli lodu s\u0142ycha\u0107 szepty."
+  - "NARRATOR|Nie pojedyncze g\u0142osy.\nDziesi\u0105tki. Setki.\nNak\u0142adaj\u0105
+    si\u0119 na siebie.\nRezonuj\u0105 w narastaj\u0105cy krzyk rozpaczy."
+  - "UNKNOWN|\u2026wr\xF3\u0107\u2026"
+  - "UNKNOWN|\u2026nie pami\u0119tasz mnie\u2026"
+  - "UNKNOWN|\u2026zosta\u0144\u2026"
+  - "UNKNOWN|\u2026to boli\u2026"
+  - "ALYSIA|To s\u0105 ludzie."
+  - ALYSIA|To ich wspomnienia
+  - COTARD|Nie.
+  - "COTARD|To s\u0105 resztki wspomnie\u0144, tych co byli w Nico\u015Bci."
+  - "NARRATOR|Dwie ogromne bry\u0142y lodu z hukiem przebijaj\u0105 powierzchni\u0119.\nS\u0105
+    idealnie g\u0142adkie.\nAle ich wn\u0119trze\u2026 \u017Byje."
+  - "LEFT_ICEBLOCK|Ma\u0142y dom."
+  - "LEFT_ICEBLOCK|Ciep\u0142e \u015Bwiat\u0142o."
+  - "LEFT_ICEBLOCK|\u015Amiech."
+  - "LEFT_ICEBLOCK|Ma\u0142a Alyssia ucieka z poduszk\u0105."
+  - "LEFT_ICEBLOCK|Ma\u0142y Cotard goni j\u0105, wyra\u017Anie zirytowany."
+  - "RIGHT_ICEBLOCK|St\xF3\u0142."
+  - "RIGHT_ICEBLOCK|Roz\u0142o\u017Cona mapa Nico\u015Bci."
+  - "RIGHT_ICEBLOCK|Rodzice k\u0142\xF3c\u0105 si\u0119."
+  - "RIGHT_ICEBLOCK|Atmosfera napi\u0119ta."
+  - RIGHT_ICEBLOCK|Strach.
+  - "ALYSIA|To\u2026 my."
+  - "ALYSIA|To naprawd\u0119 my."
+  - "COTARD|Wydaje mi si\u0119, \u017Ce to zapis tego co by\u0142o."
+  - "COTARD|Albo tego, co Nico\u015B\u0107 chc\u0119 \u017Ceby\u015B pami\u0119ta\u0142a."
+  - "NARRATOR|Alyssia wyci\u0105ga r\u0119k\u0119."
+  - NARRATOR|Dotyka lodu.
+  - NARRATOR|Nic.
+  - NARRATOR|Patrzy na Cotarda.
+  - 'ALYSIA|Musimy razem.
+
+    Prawda?'
+  - "NARRATOR|Cotard przez chwile si\u0119 nie rusza.\nPotem przyk\u0142ada d\u0142o\u0144"
+  Chapter2ch1d1:
+  - "NARRATOR|L\xF3d p\u0119ka\n\u015Awiat zmienia si\u0119 natychmiast."
+  - "NARRATOR|Ciep\u0142o."
+  - NARRATOR|Zapach drewna.
+  - "NARRATOR|\u015Awiat\u0142o ognia."
+  - LIL_ALYSIA|Oddaj! To moja poduszka!
+  - "LIL_COTARD|Nie jest twoja!\nZabra\u0142a\u015B mi j\u0105 pierwsza."
+  - "NARRATOR|Cotard rzuca poduszk\u0105 w Alyssie.\nAlyssia piszczy i \u015Bmieje
+    si\u0119."
+  - "LIL_COTARD|Przesta\u0144 si\u0119 \u015Bmia\u0107!\nTo nie jest \u015Bmieszne!"
+  - "NARRATOR|Alyssia rzuca kolejn\u0105 poduszk\u0105.\nTrafia go.\nCotard si\u0119
+    zatrzymuje"
+  - "NARRATOR|Przez sekund\u0119 wygl\u0105da jakby mia\u0142 si\u0119 rozp\u0142aka\u0107.\nAle
+    zamiast tego\u2026"
+  - "NARRATOR|Rzuca ksi\u0105\u017Ck\u0105."
+  - "ALYSIA|To by\u0142 ten moment\u2026"
+  - ALYSIA|Siniak.
+  - "ALYSIA|Ukrywali\u015Bmy to przed rodzicami.\nBa\u0142am si\u0119, \u017Ce zamkn\u0105
+    biuro."
+  - "COTARD|Ba\u0142a\u015B si\u0119 bardziej kary, czy tego, \u017Ce stracisz dost\u0119p
+    do wiedzy?"
+  - NARRATOR|Alyssia patrzy na niego zaskoczona
+  - "ALYSIA|\u2026 obu."
+  - "COTARD|To nie by\u0142o ca\u0142e wspomnienie."
+  - COTARD|Tylko fragment.
+  - "ALYSIA|\u2026"
+  Chapter2ch2d1:
+  - "NARRATOR|L\xF3d p\u0119ka.\nZimno uderza natychmiast."
+  - "NARRATOR|St\xF3\u0142."
+  - "NARRATOR|Mapa Nico\u015Bci."
+  - NARRATOR|Zaznaczone poziomy.
+  - "NARRATOR|Niekt\xF3re przekre\u015Blone."
+  - FATHER|To nie jest tylko struktura!
+  - FATHER|To system!
+  - MOTHER|System?!
+  - 'MOTHER|Czego?!
+
+    Znikania?!'
+  - "FATHER|Ka\u017Cdy poziom co\u015B zabiera!"
+  - "FATHER|Najpierw zmys\u0142y!\nPotem pami\u0119\u0107!\nPotem\u2026"
+  - "MOTHER|A je\u015Bli to miejsce nie odbiera\u2026\ntylko ods\u0142ania?"
+  - "ALYSIA|Oni wiedzieli\u2026\nwi\u0119cej ni\u017C m\xF3wili\u2026"
+  - COTARD|Dobrze wiedzieli, co ich czeka.
+  chapter2d2:
+  - "NARRATOR|Obydwie bry\u0142y lodu zosta\u0142y zniszczone. \nNa ich miejscu pojawi\u0142y
+    si\u0119 jedna, nowa."
+  - "NARRATOR|Sala. \nDziesi\u0105tki ludzi. \nZatrzymani w ruchu."
+  - "NARRATOR|Cotard i Alysia dotykaj\u0105 razem bry\u0142\u0119 lodu. \nL\xF3d
+    p\u0119ka."
+  - "NARRATOR|Sala. \nDziesi\u0105tki ludzi."
+  - "MAN_1|To nie jest teoria. \nMamy dow\xF3d."
+  - "WOMAN_1|Nie powinni\u015Bmy byli go sprowadzac z powrotem."
+  - "OLD_MAN|Musieli\u015Bmy.\nTo jedyna osoba, kt\xF3ra wr\xF3ci\u0142a."
+  - MAN_2|To NIE jest osoba.
+  - "WOMAN_2|Nie ma reakcji emocjonalnych. \nNie reaguje na bod\u017Ace. \nNie rozpoznaje
+    cz\u0119\u015Bci w\u0142asnych wspomnie\u0144."
+  - "MAN_1|Twierdzi, \u017Ce nie istnieje."
+  - "WOMAN_2|To klasyczny rozpad to\u017Csamo\u015Bci."
+  - OLD_MAN|Nie.
+  - "NARRATOR|Wszyscy milkn\u0105"
+  - OLD_MAN|To adaptacja.
+  - MAN_2|Adaptacja?!
+  - MAN_2|Czego?!
+  - "OLD_MAN|Milcze\u0107!"
+  - "OLD_MAN|Spe\u0142ni\u0142 to czego Nico\u015B\u0107 wymaga \nStraci\u0142 emocje.
+    \nStraci\u0142 poczucie istnienia."
+  - "OLD_MAN|Ale dzi\u0119ki temu\u2026"
+  - "OLD_MAN|Przetrwa\u0142."
+  - "OLD_MAN|Musimy wys\u0142a\u0107 kogo\u015B g\u0142\u0119biej."
+  - "NARRATOR|Bry\u0142a si\u0119 nie rozpad\u0142a, jest zmieniona."
+  - "NARRATOR|Dotykaj\u0105 jej ponownie."
+  - "NARRATOR|Na ziemi le\u017Cy blade, rozk\u0142adaj\u0105ce si\u0119 cia\u0142o."
+  - NARRATOR|To Cotard.
+  - COTARD|To ten moment,
+  - "COTARD|w kt\xF3rym przesta\u0142em istnie\u0107."
+  - "ALYSIA|Nie mo\u017Cesz tak m\xF3wi\u0107!"
+  - "ALYSIA|Przecie\u017C stoisz tutaj! \nOddychasz!!!"
+  - COTARD|Nie.
+  - "COTARD|To co widzisz\u2026\nTo kontynuacja mojej \u015Bmierci."
+  - "COTARD|Po tym\u2026 "
+  - "COTARD|Nagle zn\xF3w mog\u0142em si\u0119 rusza\u0107\u2026"
+  - "ALYSIA|Je\u015Bli to wspomnienie jest prawdziwe\u2026to kim jeste\u015B?"
+  - "NARRATOR|Cotard patrzy na ni\u0105 bez emocji."
+  - NARRATOR|Cotard jest w sali narad.
+  - "MAN_1|\u2026 on nie oddycha."
+  - WOMAN_1|Nie ma pulsu
+  - "MAN_2|Wi\u0119c o czym my w og\xF3le rozmawiamy?"
+  - "MAN_2|To cia\u0142o."
+  - OLD_MAN|Milcz.
+  - OLD_MAN|Notuj.
+  - "OLD_MAN|Brak reakcji na bod\u017Ace."
+  - "OLD_MAN|Brak funkcji \u017Cyciowych."
+  - NARRATOR|Nagle palec martwego Cotarda drga.
+  - "WOMAN_1|Widzieli\u015Bcie to?!"
+  - NARRATOR|Martwy Cotard otwiera oczy.
+  - "NARRATOR|Nie \u0142apie oddechu."
+  - NARRATOR|Nie reaguje.
+  - "NARRATOR|Nie porusza si\u0119 gwa\u0142townie."
+  - "NARRATOR|Po prostu\u2026"
+  - NARRATOR|Patrzy.
+  - "MAN_1|\u2026czy on nas widzi?"
+  - "NARRATOR|Cotard powoli podnosi g\u0142ow\u0119. \nSiada."
+  - "COTARD|\u2026 to nie ma znaczenia."
+  - "WOMAN_1|On\u2026 m\xF3wi"
+  - MAN_2|Nie.
+  - "MAN_2|Nie, nie nie\u2026"
+  - OLD_MAN|Cisza!
+  - "OLD_MAN|NARRATOR|Starszy m\u0119\u017Cczyzna podchodzi do Cotarda. \nPatrzy
+    mu prosto w oczy."
+  - "OLD_MAN|Jak si\u0119 nazywasz?"
+  - COTARD|To nie ma znaczenia.
+  - "OLD_MAN|To dziecko spe\u0142ni\u0142o warunek. \nOdda\u0142 wszystko, co by\u0142o
+    zb\u0119dne."
+  - "NARRATOR|Musimy spr\xF3bowa\u0107 ponownie. \nZobaczy\u0107 co si\u0119 stanie."
+  - "WOMAN_1|Oszala\u0142e\u015B?!"
+  - "OLD_MAN|Musimy, inaczej nie dowiemy si\u0119 dlaczego."
+  - "COTARD|Ja tego nie pami\u0119tam."
+  - "COTARD|Nie wiem kim s\u0105 ci ludzie."
+  - "ALYSIA|Oni\u2026 patrzyli na Ciebie jak na narz\u0119dzie. \nM\xF3wili o tobie
+    jak o wyniku. \nNie jak o cz\u0142owieku."
+  - "COTARD|Bo cz\u0142owiekiem przesta\u0142em by\u0107 dla nich w momencie, kiedy
+    przesta\u0142em reagowa\u0107."
+  - "COTARD|Dla siebie r\xF3wnie\u017C."
+  - "ALYSIA|Pami\u0119tasz swoje pierwsze zej\u015Bcie do Nico\u015Bci?"
+  - COTARD|Nie.
+  - "ALYSIA|Dlaczego tam chodzi\u0142e\u015B, jak ju\u017C sta\u0142e\u015B si\u0119
+    sob\u0105?"
+  - "COTARD|Bo ja nie wiem, co trac\u0119."
+  - "COTARD|Wi\u0119c nie mam czego \u017Ca\u0142owa\u0107."
+  - "NARRATOR|Ha\u0142as wok\xF3\u0142 nich milknie, \n\u017Badnych szept\xF3w. \n\u017Badnych
+    ruch\xF3w."
+  - "NARRATOR|Jakby wszystko\u2026 \nZosta\u0142o ju\u017C zapisane \ni zamkni\u0119te."
+  - "ALYSIA|Cotard\u2026"
+  - "ALYSIA|Co si\u0119 teraz stanie?"
+  - NARRATOR|Nie odpowiada od razu.
+  - "COTARD|\u2026"
+  - "COTARD|My\u015Bl\u0119, \u017Ce to moment\u2026"
+  - "COTARD|W kt\xF3rym jeste\u015Bmy sprawdzani."
+  - "NARRATOR|L\xF3d pod ich stopami zaczyna dr\u017Ce\u0107. \nNie p\u0119ka. \nNie
+    rozpada si\u0119."
+  - "UNKNOWN|Wystarczaj\u0105co.\nOddali\u015Bcie."
+  - "ALYSIA|Nie chcieli\u015Bmy niczego oddawa\u0107."
+  - "UNKNOWN|Nie ma r\xF3\u017Cnicy."
+  - "NARRATOR|Te s\u0142owa\u2026 \nUderzaj\u0105 mocniej ni\u017C powinny."
+  - "NARRATOR|Cotard stoi spokojnie \nJakby wszystko by\u0142o logiczne"
+  - "NARRATOR|L\xF3d przed nimi topi si\u0119, a rozgrzana woda paruje. \nPojawia
+    si\u0119 tunel do wn\u0119trza wodnej czelu\u015Bci."
+  - "UNKNOWN|Mo\u017Cecie zej\u015B\u0107 ni\u017Cej."
+  - "ALYSIA|Ile jeszcze\u2026"
+  - "UNKNOWN|Tyle ile pozosta\u0142o."
+  - "NARRATOR|Ruszaj\u0105"
+  - "NARRATOR|L\xF3d zamyka si\u0119 nad nimi. \nCisza wraca. \nJakby nic nigdy si\u0119
+    tu nie wydarzy\u0142o."
+  - "DZI\u0118KUJ\u0118 ZA OGRANIE \nDO ZOBACZENA W AKCIE TRZECIM"
 --- !u!1 &733236591
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,7 +2224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 2100000, guid: 8c75ec7f5c8dd614091e640f2fd19919, type: 2}
+  m_Material: {fileID: 2100000, guid: f71b1e048141dcc45abc863b229b0a8c, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -3195,6 +3410,221 @@ MonoBehaviour:
     ka\u017Cde zej\u015Bcie wymaga po\u015Bwi\u0119cenia to\u2026\n"
   - "ALYSIA|ile z naszych wspomnie\u0144 zostanie na ko\u0144cu?\nA je\u015Bli na
     samym ko\u0144cu nie zostanie nic?\nto kim b\u0119d\u0119.\n"
+  chapter2d1:
+  - "NARRATOR|Powoli schodz\u0105 po schodach.\nKamienna pod\u0142oga stopniowo przekszta\u0142ca
+    si\u0119 w lodow\u0105 tafl\u0119 pokryt\u0105 paj\u0119czyn\u0105 p\u0119kni\u0119\u0107.\nWyczuwaj\u0105
+    pod stopami delikatny ruch. \n"
+  - "ALYSIA|\nCotard\u2026 \nZimno mi.\nAle\u2026 Ale nie w cia\u0142o \n.Dziwne\u2026"
+  - "NARRATOR|Cotard patrzy na swoje d\u0142onie.\nNie dr\u017C\u0105."
+  - COTARD|To nie jest zimno.
+  - "COTARD|To efekt Nico\u015Bci."
+  - "NARRATOR|Oddech Alyssi staje si\u0119 spokojniejszy."
+  - "ALYSIA|Czy to normalne, \u017Ce przestaj\u0119 si\u0119 ba\u0107?"
+  - "ALYSIA|Przecie\u017C powinnam.\nWiem o tym."
+  - "ALYSIA|Ale\u2026"
+  - "ALYSIA|Jakby kto\u015B wyciszy\u0142 mnie w \u015Brodku."
+  - NARRATOR|Alyssia dotyka klatki piersiowej.
+  - "ALYSIA|Jakby moje w\u0142asne serce by\u0142o gdzie\u015B daleko st\u0105d.
+    ."
+  - "ALYSIA|Powinnam si\u0119 ba\u0107\u2026\nA jako\u015B\u2026"
+  - "ALYSIA|Nie potrafi\u0119."
+  - "ALYSIA|To chyba \u017Ale? Prawda?"
+  - "NARRATOR|Cotard patrzy przed siebie.\nIdzie nie zatrzymuj\u0105c si\u0119.\nMilczy."
+  - "NARRATOR|Docieraj\u0105 na sam d\xF3\u0142 schod\xF3w."
+  - "NARRATOR|Przed nimi rozpo\u015Bciera si\u0119 nieko\u0144cz\u0105ca si\u0119
+    jaskinia."
+  - "COTARD|Ten l\xF3d nie jest przezroczysty."
+  - COTARD|Jest zapisany wspomnieniami.
+  - "COTARD|Tu by\u0142em najni\u017Cej, nie wiem co jest dalej."
+  - "NARRATOR|Spod tafli lodu s\u0142ycha\u0107 szepty."
+  - "NARRATOR|Nie pojedyncze g\u0142osy.\nDziesi\u0105tki. Setki.\nNak\u0142adaj\u0105
+    si\u0119 na siebie.\nRezonuj\u0105 w narastaj\u0105cy krzyk rozpaczy."
+  - "UNKNOWN|\u2026wr\xF3\u0107\u2026"
+  - "UNKNOWN|\u2026nie pami\u0119tasz mnie\u2026"
+  - "UNKNOWN|\u2026zosta\u0144\u2026"
+  - "UNKNOWN|\u2026to boli\u2026"
+  - "ALYSIA|To s\u0105 ludzie."
+  - ALYSIA|To ich wspomnienia
+  - COTARD|Nie.
+  - "COTARD|To s\u0105 resztki wspomnie\u0144, tych co byli w Nico\u015Bci."
+  - "NARRATOR|Dwie ogromne bry\u0142y lodu z hukiem przebijaj\u0105 powierzchni\u0119.\nS\u0105
+    idealnie g\u0142adkie.\nAle ich wn\u0119trze\u2026 \u017Byje."
+  - "LEFT_ICEBLOCK|Ma\u0142y dom."
+  - "LEFT_ICEBLOCK|Ciep\u0142e \u015Bwiat\u0142o."
+  - "LEFT_ICEBLOCK|\u015Amiech."
+  - "LEFT_ICEBLOCK|Ma\u0142a Alyssia ucieka z poduszk\u0105."
+  - "LEFT_ICEBLOCK|Ma\u0142y Cotard goni j\u0105, wyra\u017Anie zirytowany."
+  - "RIGHT_ICEBLOCK|St\xF3\u0142."
+  - "RIGHT_ICEBLOCK|Roz\u0142o\u017Cona mapa Nico\u015Bci."
+  - "RIGHT_ICEBLOCK|Rodzice k\u0142\xF3c\u0105 si\u0119."
+  - "RIGHT_ICEBLOCK|Atmosfera napi\u0119ta."
+  - RIGHT_ICEBLOCK|Strach.
+  - "ALYSIA|To\u2026 my."
+  - "ALYSIA|To naprawd\u0119 my."
+  - "COTARD|Wydaje mi si\u0119, \u017Ce to zapis tego co by\u0142o."
+  - "COTARD|Albo tego, co Nico\u015B\u0107 chc\u0119 \u017Ceby\u015B pami\u0119ta\u0142a."
+  - "NARRATOR|Alyssia wyci\u0105ga r\u0119k\u0119."
+  - NARRATOR|Dotyka lodu.
+  - NARRATOR|Nic.
+  - NARRATOR|Patrzy na Cotarda.
+  - 'ALYSIA|Musimy razem.
+
+    Prawda?'
+  - "NARRATOR|Cotard przez chwile si\u0119 nie rusza.\nPotem przyk\u0142ada d\u0142o\u0144"
+  Chapter2ch1d1:
+  - "NARRATOR|L\xF3d p\u0119ka\n\u015Awiat zmienia si\u0119 natychmiast."
+  - "NARRATOR|Ciep\u0142o."
+  - NARRATOR|Zapach drewna.
+  - "NARRATOR|\u015Awiat\u0142o ognia."
+  - LIL_ALYSIA|Oddaj! To moja poduszka!
+  - "LIL_COTARD|Nie jest twoja!\nZabra\u0142a\u015B mi j\u0105 pierwsza."
+  - "NARRATOR|Cotard rzuca poduszk\u0105 w Alyssie.\nAlyssia piszczy i \u015Bmieje
+    si\u0119."
+  - "LIL_COTARD|Przesta\u0144 si\u0119 \u015Bmia\u0107!\nTo nie jest \u015Bmieszne!"
+  - "NARRATOR|Alyssia rzuca kolejn\u0105 poduszk\u0105.\nTrafia go.\nCotard si\u0119
+    zatrzymuje"
+  - "NARRATOR|Przez sekund\u0119 wygl\u0105da jakby mia\u0142 si\u0119 rozp\u0142aka\u0107.\nAle
+    zamiast tego\u2026"
+  - "NARRATOR|Rzuca ksi\u0105\u017Ck\u0105."
+  - "ALYSIA|To by\u0142 ten moment\u2026"
+  - ALYSIA|Siniak.
+  - "ALYSIA|Ukrywali\u015Bmy to przed rodzicami.\nBa\u0142am si\u0119, \u017Ce zamkn\u0105
+    biuro."
+  - "COTARD|Ba\u0142a\u015B si\u0119 bardziej kary, czy tego, \u017Ce stracisz dost\u0119p
+    do wiedzy?"
+  - NARRATOR|Alyssia patrzy na niego zaskoczona
+  - "ALYSIA|\u2026 obu."
+  - "COTARD|To nie by\u0142o ca\u0142e wspomnienie."
+  - COTARD|Tylko fragment.
+  - "ALYSIA|\u2026"
+  Chapter2ch2d1:
+  - "NARRATOR|L\xF3d p\u0119ka.\nZimno uderza natychmiast."
+  - "NARRATOR|St\xF3\u0142."
+  - "NARRATOR|Mapa Nico\u015Bci."
+  - NARRATOR|Zaznaczone poziomy.
+  - "NARRATOR|Niekt\xF3re przekre\u015Blone."
+  - FATHER|To nie jest tylko struktura!
+  - FATHER|To system!
+  - MOTHER|System?!
+  - 'MOTHER|Czego?!
+
+    Znikania?!'
+  - "FATHER|Ka\u017Cdy poziom co\u015B zabiera!"
+  - "FATHER|Najpierw zmys\u0142y!\nPotem pami\u0119\u0107!\nPotem\u2026"
+  - "MOTHER|A je\u015Bli to miejsce nie odbiera\u2026\ntylko ods\u0142ania?"
+  - "ALYSIA|Oni wiedzieli\u2026\nwi\u0119cej ni\u017C m\xF3wili\u2026"
+  - COTARD|Dobrze wiedzieli, co ich czeka.
+  chapter2d2:
+  - "NARRATOR|Obydwie bry\u0142y lodu zosta\u0142y zniszczone. \nNa ich miejscu pojawi\u0142y
+    si\u0119 jedna, nowa."
+  - "NARRATOR|Sala. \nDziesi\u0105tki ludzi. \nZatrzymani w ruchu."
+  - "NARRATOR|Cotard i Alysia dotykaj\u0105 razem bry\u0142\u0119 lodu. \nL\xF3d
+    p\u0119ka."
+  - "NARRATOR|Sala. \nDziesi\u0105tki ludzi."
+  - "MAN_1|To nie jest teoria. \nMamy dow\xF3d."
+  - "WOMAN_1|Nie powinni\u015Bmy byli go sprowadzac z powrotem."
+  - "OLD_MAN|Musieli\u015Bmy.\nTo jedyna osoba, kt\xF3ra wr\xF3ci\u0142a."
+  - MAN_2|To NIE jest osoba.
+  - "WOMAN_2|Nie ma reakcji emocjonalnych. \nNie reaguje na bod\u017Ace. \nNie rozpoznaje
+    cz\u0119\u015Bci w\u0142asnych wspomnie\u0144."
+  - "MAN_1|Twierdzi, \u017Ce nie istnieje."
+  - "WOMAN_2|To klasyczny rozpad to\u017Csamo\u015Bci."
+  - OLD_MAN|Nie.
+  - "NARRATOR|Wszyscy milkn\u0105"
+  - OLD_MAN|To adaptacja.
+  - MAN_2|Adaptacja?!
+  - MAN_2|Czego?!
+  - "OLD_MAN|Milcze\u0107!"
+  - "OLD_MAN|Spe\u0142ni\u0142 to czego Nico\u015B\u0107 wymaga \nStraci\u0142 emocje.
+    \nStraci\u0142 poczucie istnienia."
+  - "OLD_MAN|Ale dzi\u0119ki temu\u2026"
+  - "OLD_MAN|Przetrwa\u0142."
+  - "OLD_MAN|Musimy wys\u0142a\u0107 kogo\u015B g\u0142\u0119biej."
+  - "NARRATOR|Bry\u0142a si\u0119 nie rozpad\u0142a, jest zmieniona."
+  - "NARRATOR|Dotykaj\u0105 jej ponownie."
+  - "NARRATOR|Na ziemi le\u017Cy blade, rozk\u0142adaj\u0105ce si\u0119 cia\u0142o."
+  - NARRATOR|To Cotard.
+  - COTARD|To ten moment,
+  - "COTARD|w kt\xF3rym przesta\u0142em istnie\u0107."
+  - "ALYSIA|Nie mo\u017Cesz tak m\xF3wi\u0107!"
+  - "ALYSIA|Przecie\u017C stoisz tutaj! \nOddychasz!!!"
+  - COTARD|Nie.
+  - "COTARD|To co widzisz\u2026\nTo kontynuacja mojej \u015Bmierci."
+  - "COTARD|Po tym\u2026 "
+  - "COTARD|Nagle zn\xF3w mog\u0142em si\u0119 rusza\u0107\u2026"
+  - "ALYSIA|Je\u015Bli to wspomnienie jest prawdziwe\u2026to kim jeste\u015B?"
+  - "NARRATOR|Cotard patrzy na ni\u0105 bez emocji."
+  - NARRATOR|Cotard jest w sali narad.
+  - "MAN_1|\u2026 on nie oddycha."
+  - WOMAN_1|Nie ma pulsu
+  - "MAN_2|Wi\u0119c o czym my w og\xF3le rozmawiamy?"
+  - "MAN_2|To cia\u0142o."
+  - OLD_MAN|Milcz.
+  - OLD_MAN|Notuj.
+  - "OLD_MAN|Brak reakcji na bod\u017Ace."
+  - "OLD_MAN|Brak funkcji \u017Cyciowych."
+  - NARRATOR|Nagle palec martwego Cotarda drga.
+  - "WOMAN_1|Widzieli\u015Bcie to?!"
+  - NARRATOR|Martwy Cotard otwiera oczy.
+  - "NARRATOR|Nie \u0142apie oddechu."
+  - NARRATOR|Nie reaguje.
+  - "NARRATOR|Nie porusza si\u0119 gwa\u0142townie."
+  - "NARRATOR|Po prostu\u2026"
+  - NARRATOR|Patrzy.
+  - "MAN_1|\u2026czy on nas widzi?"
+  - "NARRATOR|Cotard powoli podnosi g\u0142ow\u0119. \nSiada."
+  - "COTARD|\u2026 to nie ma znaczenia."
+  - "WOMAN_1|On\u2026 m\xF3wi"
+  - MAN_2|Nie.
+  - "MAN_2|Nie, nie nie\u2026"
+  - OLD_MAN|Cisza!
+  - "OLD_MAN|NARRATOR|Starszy m\u0119\u017Cczyzna podchodzi do Cotarda. \nPatrzy
+    mu prosto w oczy."
+  - "OLD_MAN|Jak si\u0119 nazywasz?"
+  - COTARD|To nie ma znaczenia.
+  - "OLD_MAN|To dziecko spe\u0142ni\u0142o warunek. \nOdda\u0142 wszystko, co by\u0142o
+    zb\u0119dne."
+  - "NARRATOR|Musimy spr\xF3bowa\u0107 ponownie. \nZobaczy\u0107 co si\u0119 stanie."
+  - "WOMAN_1|Oszala\u0142e\u015B?!"
+  - "OLD_MAN|Musimy, inaczej nie dowiemy si\u0119 dlaczego."
+  - "COTARD|Ja tego nie pami\u0119tam."
+  - "COTARD|Nie wiem kim s\u0105 ci ludzie."
+  - "ALYSIA|Oni\u2026 patrzyli na Ciebie jak na narz\u0119dzie. \nM\xF3wili o tobie
+    jak o wyniku. \nNie jak o cz\u0142owieku."
+  - "COTARD|Bo cz\u0142owiekiem przesta\u0142em by\u0107 dla nich w momencie, kiedy
+    przesta\u0142em reagowa\u0107."
+  - "COTARD|Dla siebie r\xF3wnie\u017C."
+  - "ALYSIA|Pami\u0119tasz swoje pierwsze zej\u015Bcie do Nico\u015Bci?"
+  - COTARD|Nie.
+  - "ALYSIA|Dlaczego tam chodzi\u0142e\u015B, jak ju\u017C sta\u0142e\u015B si\u0119
+    sob\u0105?"
+  - "COTARD|Bo ja nie wiem, co trac\u0119."
+  - "COTARD|Wi\u0119c nie mam czego \u017Ca\u0142owa\u0107."
+  - "NARRATOR|Ha\u0142as wok\xF3\u0142 nich milknie, \n\u017Badnych szept\xF3w. \n\u017Badnych
+    ruch\xF3w."
+  - "NARRATOR|Jakby wszystko\u2026 \nZosta\u0142o ju\u017C zapisane \ni zamkni\u0119te."
+  - "ALYSIA|Cotard\u2026"
+  - "ALYSIA|Co si\u0119 teraz stanie?"
+  - NARRATOR|Nie odpowiada od razu.
+  - "COTARD|\u2026"
+  - "COTARD|My\u015Bl\u0119, \u017Ce to moment\u2026"
+  - "COTARD|W kt\xF3rym jeste\u015Bmy sprawdzani."
+  - "NARRATOR|L\xF3d pod ich stopami zaczyna dr\u017Ce\u0107. \nNie p\u0119ka. \nNie
+    rozpada si\u0119."
+  - "UNKNOWN|Wystarczaj\u0105co.\nOddali\u015Bcie."
+  - "ALYSIA|Nie chcieli\u015Bmy niczego oddawa\u0107."
+  - "UNKNOWN|Nie ma r\xF3\u017Cnicy."
+  - "NARRATOR|Te s\u0142owa\u2026 \nUderzaj\u0105 mocniej ni\u017C powinny."
+  - "NARRATOR|Cotard stoi spokojnie \nJakby wszystko by\u0142o logiczne"
+  - "NARRATOR|L\xF3d przed nimi topi si\u0119, a rozgrzana woda paruje. \nPojawia
+    si\u0119 tunel do wn\u0119trza wodnej czelu\u015Bci."
+  - "UNKNOWN|Mo\u017Cecie zej\u015B\u0107 ni\u017Cej."
+  - "ALYSIA|Ile jeszcze\u2026"
+  - "UNKNOWN|Tyle ile pozosta\u0142o."
+  - "NARRATOR|Ruszaj\u0105"
+  - "NARRATOR|L\xF3d zamyka si\u0119 nad nimi. \nCisza wraca. \nJakby nic nigdy si\u0119
+    tu nie wydarzy\u0142o."
+  - "DZI\u0118KUJ\u0118 ZA OGRANIE \nDO ZOBACZENA W AKCIE TRZECIM"
 --- !u!4 &1082544906
 Transform:
   m_ObjectHideFlags: 0
@@ -3380,8 +3810,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -5.7856445, y: 99}
-  m_SizeDelta: {x: -1247.36, y: 38.942}
+  m_AnchoredPosition: {x: 6.612549, y: 69.69684}
+  m_SizeDelta: {x: -1248.5682, y: 48.2769}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1260320157
 CanvasRenderer:
@@ -3438,14 +3868,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13
+  m_fontSize: 10
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 8
-  m_fontSizeMax: 13
+  m_fontSizeMin: 10
+  m_fontSizeMax: 10
   m_fontStyle: 2
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
