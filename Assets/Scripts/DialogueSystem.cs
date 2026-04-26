@@ -12,7 +12,12 @@ public class DialogueSystem : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI nameText;
     public DialogueHolder dialogueHolder;
+    [Header("Background System")]
+    public Image backgroundImage;
+    public Sprite[] backgrounds;
 
+    private Stack<int> backgroundHistory = new Stack<int>();
+    private int currentBackground = 0;
     public Button nextButton;
     public Button choiceA;
     public Button choiceB;
@@ -92,9 +97,32 @@ public class DialogueSystem : MonoBehaviour
 
     void StartTyping()
     {
-        string line = currentDialogue[DialogueHolder.index];
+        string line = currentDialogue[DialogueHolder.index]; 
+        
 
         UpdateSpeaker(line);
+
+        // BACKGROUND TAG FIX
+        if (line.Contains("[BG"))
+        {
+            int start = line.IndexOf("[BG");
+            int end = line.IndexOf("]", start);
+
+            if (start != -1 && end != -1)
+            {
+                string tag = line.Substring(start + 1, end - start - 1); // BG1
+
+                if (tag.StartsWith("BG") && int.TryParse(tag.Substring(2), out int bgIndex))
+                {
+                    Debug.Log("BG PARSED OK -> " + bgIndex);
+                    ChangeBackground(bgIndex);
+                }
+                else
+                {
+                    Debug.Log("BG parse failed: " + tag);
+                }
+            }
+        }
 
         typingCoroutine = StartCoroutine(TypeText(GetCleanText(line)));
     }
@@ -329,6 +357,12 @@ public class DialogueSystem : MonoBehaviour
 
         DialogueHolder.index = history.Pop();
 
+        if (backgroundHistory.Count > 0)
+        {
+            currentBackground = backgroundHistory.Pop();
+            backgroundImage.sprite = backgrounds[currentBackground];
+        }
+
         dialogueText.text = GetCleanText(currentDialogue[DialogueHolder.index]);
         UpdateSpeaker(currentDialogue[DialogueHolder.index]);
     }
@@ -515,6 +549,18 @@ public class DialogueSystem : MonoBehaviour
         {
             Debug.Log("Chapter 2 jeszcze nie istnieje (brak sceny w Build Settings)");
             
+        }
+    }
+    void ChangeBackground(int index)
+    {
+        Debug.Log("ZMIANA BG -> " + index);
+        if (index >= 0 && index < backgrounds.Length)
+        {
+            backgroundHistory.Push(currentBackground);
+            currentBackground = index;
+            backgroundImage.sprite = backgrounds[index];
+            backgroundImage.color = Color.white;
+            backgroundImage.SetNativeSize();
         }
     }
 }
