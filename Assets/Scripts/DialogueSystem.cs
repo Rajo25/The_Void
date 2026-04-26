@@ -134,6 +134,50 @@ public class DialogueSystem : MonoBehaviour
         {
             nameText.text = "Uczniowie";
         }
+        else if (speaker == "WOMAN_1")
+        {
+            nameText.text = "Pierwsza Kobieta";
+        }
+        else if (speaker == "WOMAN_2")
+        {
+            nameText.text = "Druga Kobieta";
+        }
+        else if (speaker == "MAN_1")
+        {
+            nameText.text = "Pierwszy Mężczyzna";
+        }
+        else if (speaker == "MAN_2")
+        {
+            nameText.text = "Drugi Mężczyzna";
+        }
+        else if (speaker == "OLD_MAN")
+        {
+            nameText.text = "Stary Mężczyzna";
+        }
+        else if (speaker == "LEFT_ICEBLOCK")
+        {
+            nameText.text = "Lawa Bryła";
+        }
+        else if (speaker == "RIGHT_ICEBLOCK")
+        {
+            nameText.text = "Prawy Bryła";
+        }
+        else if (speaker == "LIL_ALYSIA")
+        {
+            nameText.text = "Mała Alysia";
+        }
+        else if (speaker == "LIL_COTARD")
+        {
+            nameText.text = "Mały Cotard";
+        }
+        else if (speaker == "FATHER")
+        {
+            nameText.text = "Ojciec";
+        }
+        else if (speaker == "MOTHER")
+        {
+            nameText.text = "Matka";
+        }
     }
 
     string GetCleanText(string line)
@@ -250,7 +294,24 @@ public class DialogueSystem : MonoBehaviour
         }
         else if (currentNode == "Chapter1ch1d8" || currentNode == "Chapter1ch2d8")
         {
-            LoadNextScene(SceneManager.GetActiveScene().buildIndex + 1);
+            currentDialogue = dialogueHolder.chapter2d1;
+            currentNode = "chapter2d1";
+           // LoadNextScene(SceneManager.GetActiveScene().buildIndex + 1);
+           // return;
+        }
+        else if (currentNode == "chapter2d1")
+        {
+            choiceA.gameObject.SetActive(true);
+            choiceB.gameObject.SetActive(true);
+            return;
+        }
+        else if (currentNode == "Chapter2ch1d1" || currentNode == "Chapter2ch2d1")
+        {
+            currentDialogue = dialogueHolder.chapter2d1;
+            currentNode = "chapter2d2";
+        }
+        else if (currentNode == "chapter2d2")
+        {
             return;
         }
 
@@ -299,6 +360,11 @@ public class DialogueSystem : MonoBehaviour
             currentDialogue = dialogueHolder.Chapter1ch1d8;
             currentNode = "Chapter1ch1d8";
         }
+        else if (currentNode == "chapter2d1")
+        {
+            currentDialogue = dialogueHolder.Chapter2ch1d1;
+            currentNode = "Chapter2ch1d1";
+        }
 
         DialogueHolder.index = 0;
         history.Clear();
@@ -337,6 +403,11 @@ public class DialogueSystem : MonoBehaviour
             currentDialogue = dialogueHolder.Chapter1ch2d8;
             currentNode = "Chapter1ch2d8";
         }
+        else if (currentNode == "chapter2d1")
+        {
+            currentDialogue = dialogueHolder.Chapter2ch1d1;
+            currentNode = "Chapter2ch2d1";
+        }
 
         DialogueHolder.index = 0;
         history.Clear();
@@ -362,7 +433,8 @@ public class DialogueSystem : MonoBehaviour
                 currentNode == "Chapter1d3" ||
                 currentNode == "Chapter1d4" ||
                 currentNode == "Chapter1d5" ||
-                currentNode == "Chapter1d8")
+                currentNode == "Chapter1d8" ||
+                currentNode == "chapter2d1")
             {
                 break;
             }

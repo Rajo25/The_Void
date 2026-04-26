@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DialogueHolder : MonoBehaviour
 {
+    //PROLOGUE
     public static int index = 0;
     public string[] prologue =
     {
@@ -64,7 +65,9 @@ public class DialogueHolder : MonoBehaviour
         "ALYSIA|Pogłaskał mnie po głowie mówiąc: “Już niedługo siostrzyczko. Zobaczysz. Już niedługo”\n",
         "ALYSIA|Zaczęłam płakać.\n",
     };
+    //KONIEC PROLOGUE
     
+    //POCZĄTEK AKTU 1
     //Dziennik Alysii Wpis 001
     public string[] Chapter1d1 =
     {
@@ -421,4 +424,426 @@ public class DialogueHolder : MonoBehaviour
     };
     
     //KONIEC AKTU 1
+    
+    //POCZĄTEK AKTU 2
+    public string[] chapter2d1 =
+    {
+        "NARRATOR|Powoli schodzą po schodach.\nKamienna podłoga stopniowo przekształca się w lodową taflę pokrytą pajęczyną pęknięć.\nWyczuwają pod stopami delikatny ruch. \n",
+        //Alyssia:
+        "ALYSIA|\nCotard… \nZimno mi.\nAle… Ale nie w ciało \n.Dziwne…",
+
+        "NARRATOR|Cotard patrzy na swoje dłonie.\nNie drżą.",
+
+        //Cotard:
+        "COTARD|To nie jest zimno.",
+        "COTARD|To efekt Nicości.",
+
+        "NARRATOR|Oddech Alyssi staje się spokojniejszy.",
+
+        //Alyssia:
+
+        "ALYSIA|Czy to normalne, że przestaję się bać?",
+        "ALYSIA|Przecież powinnam.\nWiem o tym.",
+        "ALYSIA|Ale…",
+        "ALYSIA|Jakby ktoś wyciszył mnie w środku.",
+
+        "NARRATOR|Alyssia dotyka klatki piersiowej.",
+
+        //Alyssia:
+        "ALYSIA|Jakby moje własne serce było gdzieś daleko stąd. .",
+        "ALYSIA|Powinnam się bać…\nA jakoś…",
+        "ALYSIA|Nie potrafię.",
+        "ALYSIA|To chyba źle? Prawda?",
+
+        "NARRATOR|Cotard patrzy przed siebie.\nIdzie nie zatrzymując się.\nMilczy.",
+
+        "NARRATOR|Docierają na sam dół schodów.",
+        "NARRATOR|Przed nimi rozpościera się niekończąca się jaskinia.",
+
+        //Cotard:
+        "COTARD|Ten lód nie jest przezroczysty.",
+        "COTARD|Jest zapisany wspomnieniami.",
+        "COTARD|Tu byłem najniżej, nie wiem co jest dalej.",
+
+        "NARRATOR|Spod tafli lodu słychać szepty.",
+        "NARRATOR|Nie pojedyncze głosy.\nDziesiątki. Setki.\nNakładają się na siebie.\nRezonują w narastający krzyk rozpaczy.",
+
+        //SZEPTY:
+        "UNKNOWN|…wróć…",
+        "UNKNOWN|…nie pamiętasz mnie…",
+        "UNKNOWN|…zostań…",
+        "UNKNOWN|…to boli…",
+
+        //Alyssia:
+        "ALYSIA|To są ludzie.",
+        "ALYSIA|To ich wspomnienia",
+
+        //Cotard:
+        "COTARD|Nie.",
+        "COTARD|To są resztki wspomnień, tych co byli w Nicości.",
+
+        "NARRATOR|Dwie ogromne bryły lodu z hukiem przebijają powierzchnię.\nSą idealnie gładkie.\nAle ich wnętrze… Żyje.",
+
+        //Lewa Bryła:
+        "LEFT_ICEBLOCK|Mały dom.",
+        "LEFT_ICEBLOCK|Ciepłe światło.",
+        "LEFT_ICEBLOCK|Śmiech.",
+        "LEFT_ICEBLOCK|Mała Alyssia ucieka z poduszką.",
+        "LEFT_ICEBLOCK|Mały Cotard goni ją, wyraźnie zirytowany.",
+
+        //Prawa Bryła:
+        "RIGHT_ICEBLOCK|Stół.",
+        "RIGHT_ICEBLOCK|Rozłożona mapa Nicości.",
+        "RIGHT_ICEBLOCK|Rodzice kłócą się.",
+        "RIGHT_ICEBLOCK|Atmosfera napięta.",
+        "RIGHT_ICEBLOCK|Strach.",
+
+        //Alyssia:
+        "ALYSIA|To… my.",
+        "ALYSIA|To naprawdę my.",
+
+        //Cotard:
+        "COTARD|Wydaje mi się, że to zapis tego co było.",
+        "COTARD|Albo tego, co Nicość chcę żebyś pamiętała.",
+
+        "NARRATOR|Alyssia wyciąga rękę.",
+        "NARRATOR|Dotyka lodu.",
+        "NARRATOR|Nic.",
+        "NARRATOR|Patrzy na Cotarda.",
+
+        //Alyssia:
+        "ALYSIA|Musimy razem.\nPrawda?",
+
+        "NARRATOR|Cotard przez chwile się nie rusza.\nPotem przykłada dłoń",
+
+    };
+    //DZIECIŃSTWO
+    public string[] Chapter2ch1d1 =
+    {
+        "NARRATOR|Lód pęka\nŚwiat zmienia się natychmiast.",
+        "NARRATOR|Ciepło.",
+        "NARRATOR|Zapach drewna.",
+        "NARRATOR|Światło ognia.",
+
+        //<Czarne tło>
+
+        //Mała Alyssia:
+        "LIL_ALYSIA|Oddaj! To moja poduszka!",
+
+        //Mały Cotard:
+        "LIL_COTARD|Nie jest twoja!\nZabrałaś mi ją pierwsza.",
+
+        "NARRATOR|Cotard rzuca poduszką w Alyssie.\nAlyssia piszczy i śmieje się.",
+
+        //Mały Cotard:
+        "LIL_COTARD|Przestań się śmiać!\nTo nie jest śmieszne!",
+
+        "NARRATOR|Alyssia rzuca kolejną poduszką.\nTrafia go.\nCotard się zatrzymuje",
+        "NARRATOR|Przez sekundę wygląda jakby miał się rozpłakać.\nAle zamiast tego…",
+        "NARRATOR|Rzuca książką.",
+
+        //<Koniec czarnego tła>
+
+
+        //Alyssia:
+        "ALYSIA|To był ten moment…",
+        "ALYSIA|Siniak.",
+        "ALYSIA|Ukrywaliśmy to przed rodzicami.\nBałam się, że zamkną biuro.",
+
+        //Cotard:
+        "COTARD|Bałaś się bardziej kary, czy tego, że stracisz dostęp do wiedzy?",
+
+        "NARRATOR|Alyssia patrzy na niego zaskoczona",
+
+        //Alyssia:
+        "ALYSIA|… obu.",
+
+        //Cotard:
+        "COTARD|To nie było całe wspomnienie.",
+        "COTARD|Tylko fragment.",
+
+        //Alyssia:
+        "ALYSIA|…",
+
+    };
+    //RODZICE
+    public string[] Chapter2ch2d1 =
+    {
+        "NARRATOR|Lód pęka.\nZimno uderza natychmiast.",
+
+        //<Czarne tło>
+
+        "NARRATOR|Stół.",
+        "NARRATOR|Mapa Nicości.",
+        "NARRATOR|Zaznaczone poziomy.",
+        "NARRATOR|Niektóre przekreślone.",
+
+        //Ojciec:
+        "FATHER|To nie jest tylko struktura!",
+        "FATHER|To system!",
+
+
+        //Matka:
+        "MOTHER|System?!",
+        "MOTHER|Czego?!\nZnikania?!",
+
+        //Ojciec:
+        "FATHER|Każdy poziom coś zabiera!",
+        "FATHER|Najpierw zmysły!\nPotem pamięć!\nPotem…",
+
+
+        //<Koniec czarnego tła>
+        //<Czarne tło>
+
+        //Matka:
+        "MOTHER|A jeśli to miejsce nie odbiera…\ntylko odsłania?",
+
+
+        //<Koniec czarnego tła>
+
+
+        //Alyssia:
+        "ALYSIA|Oni wiedzieli…\nwięcej niż mówili…",
+
+        //Cotard:
+        "COTARD|Dobrze wiedzieli, co ich czeka.",
+
+    };
+
+    public string[] chapter2d2 =
+    {
+        "NARRATOR|Obydwie bryły lodu zostały zniszczone. \nNa ich miejscu pojawiły się jedna, nowa.",
+
+        //Bryła:
+        "NARRATOR|Sala. \nDziesiątki ludzi. \nZatrzymani w ruchu.",
+
+        "NARRATOR|Cotard i Alysia dotykają razem bryłę lodu. \nLód pęka.",
+
+        //<Czarne tło>
+        "NARRATOR|Sala. \nDziesiątki ludzi.",
+
+        //Mężczyzna 1:
+        "MAN_1|To nie jest teoria. \nMamy dowód.",
+
+        //Kobieta 1:
+        "WOMAN_1|Nie powinniśmy byli go sprowadzac z powrotem.",
+
+        //Starszy mężczyzna:
+        "OLD_MAN|Musieliśmy.\nTo jedyna osoba, która wróciła.",
+
+        //Mężczyzna 2:
+        "MAN_2|To NIE jest osoba.",
+
+        //Kobieta 2:
+        "WOMAN_2|Nie ma reakcji emocjonalnych. \nNie reaguje na bodźce. \nNie rozpoznaje części własnych wspomnień.",
+
+        //Mężczyzna 1:
+        "MAN_1|Twierdzi, że nie istnieje.",
+
+        //Kobieta 2:
+        "WOMAN_2|To klasyczny rozpad tożsamości.",
+
+        //Starszy Mężczyzna:
+        "OLD_MAN|Nie.",
+
+        "NARRATOR|Wszyscy milkną",
+
+        "OLD_MAN|To adaptacja.",
+
+
+        //Mężczyzna 2:
+        "MAN_2|Adaptacja?!",
+        "MAN_2|Czego?!",
+
+        //Starszy Mężczyzna:
+        "OLD_MAN|Milczeć!",
+        "OLD_MAN|Spełnił to czego Nicość wymaga \nStracił emocje. \nStracił poczucie istnienia.",
+        "OLD_MAN|Ale dzięki temu…",
+        "OLD_MAN|Przetrwał.",
+
+        "OLD_MAN|Musimy wysłać kogoś głębiej.",
+
+        //<Koniec czarnego tła>
+
+        "NARRATOR|Bryła się nie rozpadła, jest zmieniona.",
+
+
+        "NARRATOR|Dotykają jej ponownie.",
+
+        //<Czarne tło>
+
+        "NARRATOR|Na ziemi leży blade, rozkładające się ciało.",
+
+        "NARRATOR|To Cotard.",
+
+        //<Koniec czarnego tła>
+
+        //Cotard:
+        "COTARD|To ten moment,",
+        "COTARD|w którym przestałem istnieć.",
+
+        //Alyssia:
+        "ALYSIA|Nie możesz tak mówić!",
+        "ALYSIA|Przecież stoisz tutaj! \nOddychasz!!!",
+
+        //Cotard:
+        "COTARD|Nie.",
+        "COTARD|To co widzisz…\nTo kontynuacja mojej śmierci.",
+        "COTARD|Po tym… ",
+        "COTARD|Nagle znów mogłem się ruszać…",
+
+        //Alyssia:
+        "ALYSIA|Jeśli to wspomnienie jest prawdziwe…to kim jesteś?",
+
+        "NARRATOR|Cotard patrzy na nią bez emocji.",
+
+        //<Czarne tło>
+
+        "NARRATOR|Cotard jest w sali narad.",
+
+        //Mężczyzna 1:
+        "MAN_1|… on nie oddycha.",
+
+        //Kobieta 1:
+        "WOMAN_1|Nie ma pulsu",
+
+        //Mężczyzna 2:
+        "MAN_2|Więc o czym my w ogóle rozmawiamy?",
+        "MAN_2|To ciało.",
+
+        //Starszy Mężczyzna:
+        "OLD_MAN|Milcz.",
+
+        "OLD_MAN|Notuj.",
+        "OLD_MAN|Brak reakcji na bodźce.",
+        "OLD_MAN|Brak funkcji życiowych.",
+
+        "NARRATOR|Nagle palec martwego Cotarda drga.",
+
+        //Kobieta 1:
+        "WOMAN_1|Widzieliście to?!",
+
+        "NARRATOR|Martwy Cotard otwiera oczy.",
+
+        "NARRATOR|Nie łapie oddechu.",
+        "NARRATOR|Nie reaguje.",
+        "NARRATOR|Nie porusza się gwałtownie.",
+
+        "NARRATOR|Po prostu…",
+        "NARRATOR|Patrzy.",
+
+        //Mężczyzna 1:
+        "MAN_1|…czy on nas widzi?",
+
+        "NARRATOR|Cotard powoli podnosi głowę. \nSiada.",
+
+        //Cotard:
+        "COTARD|… to nie ma znaczenia.",
+
+        //Kobieta 1:
+        "WOMAN_1|On… mówi",
+
+        //Mężczyzna 2:
+        "MAN_2|Nie.",
+        "MAN_2|Nie, nie nie…",
+
+        //Starszy Mężczyzna:
+        "OLD_MAN|Cisza!",
+
+        "OLD_MAN|NARRATOR|Starszy mężczyzna podchodzi do Cotarda. \nPatrzy mu prosto w oczy.",
+
+        "OLD_MAN|Jak się nazywasz?",
+
+        //Cotard:
+        "COTARD|To nie ma znaczenia.",
+
+        //Starszy mężczyzna:
+        "OLD_MAN|To dziecko spełniło warunek. \nOddał wszystko, co było zbędne.",
+
+        "NARRATOR|Musimy spróbować ponownie. \nZobaczyć co się stanie.",
+
+        //Kobieta 1:
+        "WOMAN_1|Oszalałeś?!",
+
+        //Starszy Mężczyzna:
+        "OLD_MAN|Musimy, inaczej nie dowiemy się dlaczego.",
+
+
+        //<Koniec czarnego tła>
+
+
+        //Cotard:
+        "COTARD|Ja tego nie pamiętam.",
+        "COTARD|Nie wiem kim są ci ludzie.",
+
+        //Alysia:
+        "ALYSIA|Oni… patrzyli na Ciebie jak na narzędzie. \nMówili o tobie jak o wyniku. \nNie jak o człowieku.",
+
+        //Cotard:
+        "COTARD|Bo człowiekiem przestałem być dla nich w momencie, kiedy przestałem reagować.",
+        "COTARD|Dla siebie również.",
+
+        //Alysia:
+        "ALYSIA|Pamiętasz swoje pierwsze zejście do Nicości?",
+
+        //Cotard:
+        "COTARD|Nie.",
+
+        //Alyssia:
+        "ALYSIA|Dlaczego tam chodziłeś, jak już stałeś się sobą?",
+
+        //Cotard:
+        "COTARD|Bo ja nie wiem, co tracę.",
+        "COTARD|Więc nie mam czego żałować.",
+
+//—---------------------------------------------------------------------
+
+        "NARRATOR|Hałas wokół nich milknie, \nŻadnych szeptów. \nŻadnych ruchów.",
+
+        "NARRATOR|Jakby wszystko… \nZostało już zapisane \ni zamknięte.",
+
+        //Alysia:
+        "ALYSIA|Cotard…",
+        "ALYSIA|Co się teraz stanie?",
+
+        "NARRATOR|Nie odpowiada od razu.",
+
+        //Cotard:
+        "COTARD|…",
+        "COTARD|Myślę, że to moment…",
+        "COTARD|W którym jesteśmy sprawdzani.",
+
+        "NARRATOR|Lód pod ich stopami zaczyna drżeć. \nNie pęka. \nNie rozpada się.",
+
+        //Nicość:
+        "UNKNOWN|Wystarczająco.\nOddaliście.",
+
+        //Alysia:
+        "ALYSIA|Nie chcieliśmy niczego oddawać.",
+
+        //Nicość
+        "UNKNOWN|Nie ma różnicy.",
+
+        "NARRATOR|Te słowa… \nUderzają mocniej niż powinny.",
+
+        "NARRATOR|Cotard stoi spokojnie \nJakby wszystko było logiczne",
+
+        "NARRATOR|Lód przed nimi topi się, a rozgrzana woda paruje. \nPojawia się tunel do wnętrza wodnej czeluści.",
+
+        //Nicość:
+        "UNKNOWN|Możecie zejść niżej.",
+
+        //Alyssia:
+        "ALYSIA|Ile jeszcze…",
+
+        //Nicość:
+        "UNKNOWN|Tyle ile pozostało.",
+
+        "NARRATOR|Ruszają",
+
+        "NARRATOR|Lód zamyka się nad nimi. \nCisza wraca. \nJakby nic nigdy się tu nie wydarzyło.",
+        
+        "DZIĘKUJĘ ZA OGRANIE \nDO ZOBACZENA W AKCIE TRZECIM"
+    };
+    //KONIEC AKTU 2
 }
