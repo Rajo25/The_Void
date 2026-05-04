@@ -9,11 +9,14 @@ public class MainMenu : MonoBehaviour
     //public string nextSceneName = "GAME";
     private bool isPaused = false;
 
-    //public GameObject OptionsUI;
-    //public GameObject CreditsUI;
+    public GameObject OptionsUI;
+    public GameObject CreditsUI;
 
     public Button New_Game;
     public Button Quit_Game;
+    public Button Options_;
+    public Button Info_;
+    
 
     public Button Continue_Game; 
 
@@ -25,6 +28,8 @@ public class MainMenu : MonoBehaviour
 
         New_Game.onClick.AddListener(NewGame);
         Quit_Game.onClick.AddListener(QuitGame);
+        Info_.onClick.AddListener(Credits);
+        Options_.onClick.AddListener(Options);
 
         //Continue
         if (Continue_Game != null)
@@ -57,15 +62,15 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    //private void Credits()
-    //{
-    //    CreditsUI.SetActive(true);
-    //}
+    private void Credits()
+    {
+        CreditsUI.SetActive(true);
+    }
 
-    //private void Options()
-    //{
-    //    OptionsUI.SetActive(true);
-    //}
+    private void Options()
+    {
+        OptionsUI.SetActive(true);
+    }
 
     private void QuitGame()
     {

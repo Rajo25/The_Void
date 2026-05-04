@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+    public GameObject OptionsUI;
 
     private bool isPaused = false;
     
@@ -14,6 +15,7 @@ public class PauseMenu : MonoBehaviour
     public Button _MainMenu;
     public Button Quit_Game;
     public Button Resume_;
+    public Button Options_;
     public Button SaveGameBtn; 
     public Button SaveGameMainBtn;
 
@@ -27,6 +29,7 @@ public class PauseMenu : MonoBehaviour
         Quit_Game.onClick.AddListener(QuitGame);
         Resume_.onClick.AddListener(ResumeGame);
         SaveGameMainBtn.onClick.AddListener(SaveGame);
+        Options_.onClick.AddListener(Options);
 
         SaveGameBtn.onClick.AddListener(SaveGame); 
     }
@@ -67,10 +70,18 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(0);
         Time.timeScale = 1f;
         isPaused = false;
-        
+
         IsPaused = false;
 
         Cursor.visible = true;
+    }
+
+    private void Options()
+    {
+        pauseMenuUI.SetActive(false);
+        OptionsUI.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
     }
 
     private void QuitGame()
