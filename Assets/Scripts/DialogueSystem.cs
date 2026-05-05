@@ -12,8 +12,7 @@ public class DialogueSystem : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI nameText;
     public DialogueHolder dialogueHolder;
-    [Header("Background System")]
-    public Image backgroundImage;
+    [Header("Background System")] public Image backgroundImage;
     public Sprite[] backgrounds;
 
     private Stack<int> backgroundHistory = new Stack<int>();
@@ -24,6 +23,8 @@ public class DialogueSystem : MonoBehaviour
     public Button backButton;
     public Button skipButton;
     public Button autoButton;
+    public TextMeshProUGUI choiceAText;
+    public TextMeshProUGUI choiceBText;
 
     private bool isAuto = false;
     private Coroutine autoCoroutine;
@@ -33,12 +34,12 @@ public class DialogueSystem : MonoBehaviour
     private string[] currentDialogue;
     private Stack<int> history = new Stack<int>();
 
-    
+
     private bool isTyping = false;
     private Coroutine typingCoroutine;
 
     public float typingSpeed = 0.05f;
-    
+
     private string currentSpeaker = "";
     private string currentNode = "prologue";
 
@@ -46,6 +47,7 @@ public class DialogueSystem : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("DIALOGUE[0]: " + dialogueHolder.prologue[0]);
         currentDialogue = dialogueHolder.prologue;
         currentNode = "prologue";
 
@@ -97,30 +99,20 @@ public class DialogueSystem : MonoBehaviour
 
     void StartTyping()
     {
-        string line = currentDialogue[DialogueHolder.index]; 
-        
+        string line = currentDialogue[DialogueHolder.index];
+
 
         UpdateSpeaker(line);
-        
-        if (line.Contains("[BG"))
+
+        Debug.Log("LINE RAW: " + line);
+
+        var match = System.Text.RegularExpressions.Regex.Match(line, @"\[BG(\d+)\]");
+
+        if (match.Success)
         {
-            int start = line.IndexOf("[BG");
-            int end = line.IndexOf("]", start);
-
-            if (start != -1 && end != -1)
-            {
-                string tag = line.Substring(start + 1, end - start - 1); // BG1
-
-                if (tag.StartsWith("BG") && int.TryParse(tag.Substring(2), out int bgIndex))
-                {
-                    Debug.Log("BG PARSED OK -> " + bgIndex);
-                    ChangeBackground(bgIndex);
-                }
-                else
-                {
-                    Debug.Log("BG parse failed: " + tag);
-                }
-            }
+            int bgIndex = int.Parse(match.Groups[1].Value);
+            Debug.Log("BG FOUND -> " + bgIndex);
+            ChangeBackground(bgIndex - 1);
         }
 
         typingCoroutine = StartCoroutine(TypeText(GetCleanText(line)));
@@ -141,6 +133,7 @@ public class DialogueSystem : MonoBehaviour
         {
             nameText.text = "...";
         }
+
         if (speaker == "UNKNOWN")
         {
             nameText.text = "???";
@@ -209,11 +202,15 @@ public class DialogueSystem : MonoBehaviour
 
     string GetCleanText(string line)
     {
-        if (!line.Contains("|")) return line;
+        if (!line.Contains("|")) return RemoveBGTags(line);
 
-        return line.Split('|')[1];
+        string text = line.Split('|')[1];
+        return RemoveBGTags(text);
     }
-
+    string RemoveBGTags(string text)
+    {
+        return System.Text.RegularExpressions.Regex.Replace(text, @"\[BG\d+\]", "");
+    }
     IEnumerator TypeText(string text)
     {
         isTyping = true;
@@ -247,6 +244,7 @@ public class DialogueSystem : MonoBehaviour
             HandleDialogueEnd();
         }
     }
+
     void HandleDialogueEnd()
     {
         if (currentNode == "prologue")
@@ -261,6 +259,8 @@ public class DialogueSystem : MonoBehaviour
         }
         else if (currentNode == "Chapter1d2")
         {
+            choiceAText.text = "Wiem, to głupota";
+            choiceBText.text = "Dlaczego tak mówisz?";
             choiceA.gameObject.SetActive(true);
             choiceB.gameObject.SetActive(true);
             return;
@@ -272,6 +272,8 @@ public class DialogueSystem : MonoBehaviour
         }
         else if (currentNode == "Chapter1d3")
         {
+            choiceAText.text = "Zaufaj Alysii";
+            choiceBText.text = "Nie ufaj jej";
             choiceA.gameObject.SetActive(true);
             choiceB.gameObject.SetActive(true);
             return;
@@ -283,6 +285,8 @@ public class DialogueSystem : MonoBehaviour
         }
         else if (currentNode == "Chapter1d4")
         {
+            choiceAText.text = "Zaufaj Alysii";
+            choiceBText.text = "Nie ufaj jej";
             choiceA.gameObject.SetActive(true);
             choiceB.gameObject.SetActive(true);
             return;
@@ -294,6 +298,8 @@ public class DialogueSystem : MonoBehaviour
         }
         else if (currentNode == "Chapter1d5")
         {
+            choiceAText.text = "Zaufaj Alysii";
+            choiceBText.text = "Nie ufaj jej";
             choiceA.gameObject.SetActive(true);
             choiceB.gameObject.SetActive(true);
             return;
@@ -323,8 +329,8 @@ public class DialogueSystem : MonoBehaviour
         {
             currentDialogue = dialogueHolder.chapter2d1;
             currentNode = "chapter2d1";
-           // LoadNextScene(SceneManager.GetActiveScene().buildIndex + 1);
-           // return;
+            // LoadNextScene(SceneManager.GetActiveScene().buildIndex + 1);
+            // return;
         }
         else if (currentNode == "chapter2d1")
         {
@@ -451,44 +457,58 @@ public class DialogueSystem : MonoBehaviour
         StopAllCoroutines();
         StartTyping();
     }
+
     public int GetIndex()
     {
         return DialogueHolder.index;
     }
+
     void SkipDialogue()
     {
         StopAllCoroutines();
         isTyping = false;
-        
-        while (true)
+
+        int safety = 0;
+
+        while (safety < 1000)
         {
-            if (currentNode == "Chapter1d2" ||
-                currentNode == "Chapter1d3" ||
-                currentNode == "Chapter1d4" ||
-                currentNode == "Chapter1d5" ||
-                currentNode == "Chapter1d8" ||
-                currentNode == "chapter2d1")
-            {
+            safety++;
+
+            if (choiceA.gameObject.activeSelf)
                 break;
-            }
 
-            DialogueHolder.index++;
-
-            if (DialogueHolder.index >= currentDialogue.Length)
+            if (DialogueHolder.index >= currentDialogue.Length - 1)
             {
                 HandleDialogueEnd();
-                
+
                 if (choiceA.gameObject.activeSelf)
                     break;
+
+                if (currentNode == "chapter2d2")
+                    break;
+            }
+            else
+            {
+                DialogueHolder.index++;
             }
         }
+
+        if (DialogueHolder.index >= currentDialogue.Length)
+            DialogueHolder.index = currentDialogue.Length - 1;
 
         dialogueText.text = GetCleanText(currentDialogue[DialogueHolder.index]);
         UpdateSpeaker(currentDialogue[DialogueHolder.index]);
 
-        choiceA.gameObject.SetActive(true);
-        choiceB.gameObject.SetActive(true);
+        string line = currentDialogue[DialogueHolder.index];
+
+        var match = System.Text.RegularExpressions.Regex.Match(line, @"\[BG(\d+)\]");
+        if (match.Success)
+        {
+            int bgIndex = int.Parse(match.Groups[1].Value);
+            ChangeBackground(bgIndex - 1);
+        }
     }
+
     void ToggleAuto()
     {
         isAuto = !isAuto;
@@ -505,6 +525,7 @@ public class DialogueSystem : MonoBehaviour
                 StopCoroutine(autoCoroutine);
         }
     }
+
     IEnumerator AutoPlay()
     {
         while (isAuto)
@@ -522,7 +543,7 @@ public class DialogueSystem : MonoBehaviour
             }
 
             yield return new WaitForSeconds(1.5f);
-            
+
             if (choiceA.gameObject.activeSelf)
             {
                 isAuto = false;
@@ -532,6 +553,7 @@ public class DialogueSystem : MonoBehaviour
             Next();
         }
     }
+
     void LoadNextScene(int sceneIndex)
     {
         if (sceneIndex < SceneManager.sceneCountInBuildSettings)
@@ -547,19 +569,18 @@ public class DialogueSystem : MonoBehaviour
         else
         {
             Debug.Log("Chapter 2 jeszcze nie istnieje (brak sceny w Build Settings)");
-            
+
         }
     }
+
     void ChangeBackground(int index)
     {
-        Debug.Log("ZMIANA BG -> " + index);
+
         if (index >= 0 && index < backgrounds.Length)
         {
             backgroundHistory.Push(currentBackground);
             currentBackground = index;
             backgroundImage.sprite = backgrounds[index];
-            backgroundImage.color = Color.white;
-            backgroundImage.SetNativeSize();
         }
     }
 }

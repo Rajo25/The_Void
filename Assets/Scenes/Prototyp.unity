@@ -1378,6 +1378,8 @@ MonoBehaviour:
   backButton: {fileID: 576765166}
   skipButton: {fileID: 1054083007}
   autoButton: {fileID: 355848618}
+  choiceAText: {fileID: 159856120}
+  choiceBText: {fileID: 1147576196}
   typingSpeed: 0.05
   currentIndex: 0
 --- !u!4 &691522168
@@ -2880,9 +2882,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueHolder
   prologue:
-  - "ALYSIA|Jestem osob\u0105, kt\xF3ra pyta.\nNie potrafi\u0119 inaczej, nigdy nie
-    potrafi\u0142am."
-  - "ALYSIA|Pytam o wszystko, jakby kto\u015B zapisa\u0142 we mnie wewn\u0119trzny
+  - "ALYSIA|[BG2]Jestem osob\u0105, kt\xF3ra pyta.\nNie potrafi\u0119 inaczej, nigdy
+    nie potrafi\u0142am."
+  - "ALYSIA|[BG1]Pytam o wszystko, jakby kto\u015B zapisa\u0142 we mnie wewn\u0119trzny
     przymus aby zrozumie\u0107 niezrozumia\u0142e. \nPoci\u0105ga mnie to co jeszcze
     nienazwane, niewypowiedziane, o kt\xF3rych inni boj\u0105 si\u0119 nawet pomy\u015Ble\u0107."
   - "ALYSIA|Znale\u017Ali go na wybrze\u017Cu, gdzie spacerowali.\nNigdy nie dowiedzia\u0142am
@@ -3042,7 +3044,7 @@ MonoBehaviour:
   - "NARRATOR|Zbyt d\u0142ugo.\n"
   - "COTARD|Nie czuj\u0119 strachu.\n"
   - "COTARD|\u2026\n"
-  - 'COTARD|To nie jest odwaga.
+  - 'COTARD|[BG3]To nie jest odwaga.
 
 '
   Chapter1ch1d2:

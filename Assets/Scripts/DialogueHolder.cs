@@ -6,7 +6,7 @@ public class DialogueHolder : MonoBehaviour
     public static int index = 0;
     public string[] prologue =
     {
-        "ALYSIA|Jestem osobą, która pyta.\nNie potrafię inaczej, nigdy nie potrafiłam.[BG1]",
+        "ALYSIA|[BG1]Jestem osobą, która pyta.\nNie potrafię inaczej, nigdy nie potrafiłam.",
         "ALYSIA|Pytam o wszystko, jakby ktoś zapisał we mnie wewnętrzny przymus aby zrozumieć niezrozumiałe. \nPociąga mnie to co jeszcze nienazwane, niewypowiedziane, o których inni boją się nawet pomyśleć.[BG1]",
         "ALYSIA|Znaleźli go na wybrzeżu, gdzie spacerowali.\nNigdy nie dowiedziałam się kto go tam porzucił i dlaczego.\nAle to nieważne.[BG1]",
         "ALYSIA|Liczyło się dla mnie tylko to, że został.\nDołączył do naszej rodziny jako jej pełnoprawna część.\n",
