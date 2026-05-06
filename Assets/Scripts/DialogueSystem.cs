@@ -25,6 +25,9 @@ public class DialogueSystem : MonoBehaviour
     public Button autoButton;
     public TextMeshProUGUI choiceAText;
     public TextMeshProUGUI choiceBText;
+    public GameObject backlogPanel;
+    public Transform backlogContent;
+    public GameObject backlogButtonPrefab;
 
     private bool isAuto = false;
     private Coroutine autoCoroutine;
@@ -42,8 +45,19 @@ public class DialogueSystem : MonoBehaviour
 
     private string currentSpeaker = "";
     private string currentNode = "prologue";
+    [System.Serializable]
+    public class LogEntry
+    {
+        public string text;
+        public string node;
+        public string[] dialogue;
+        public int index;
+        public int background;
+        public int choiceId;
+    }
 
-    public int currentIndex;
+    private List<LogEntry> log = new List<LogEntry>();
+    
 
     void Start()
     {
@@ -116,6 +130,7 @@ public class DialogueSystem : MonoBehaviour
         }
 
         typingCoroutine = StartCoroutine(TypeText(GetCleanText(line)));
+        AddToLog();
     }
 
     void UpdateSpeaker(string line)
@@ -272,8 +287,8 @@ public class DialogueSystem : MonoBehaviour
         }
         else if (currentNode == "Chapter1d3")
         {
-            choiceAText.text = "Zaufaj Alysii";
-            choiceBText.text = "Nie ufaj jej";
+            choiceAText.text = "Też się martwię";
+            choiceBText.text = "Przekonamy się.";
             choiceA.gameObject.SetActive(true);
             choiceB.gameObject.SetActive(true);
             return;
@@ -285,8 +300,8 @@ public class DialogueSystem : MonoBehaviour
         }
         else if (currentNode == "Chapter1d4")
         {
-            choiceAText.text = "Zaufaj Alysii";
-            choiceBText.text = "Nie ufaj jej";
+            choiceAText.text = "Dlaczego?";
+            choiceBText.text = "Chcesz powiedzieć, że to…?";
             choiceA.gameObject.SetActive(true);
             choiceB.gameObject.SetActive(true);
             return;
@@ -321,6 +336,8 @@ public class DialogueSystem : MonoBehaviour
         }
         else if (currentNode == "Chapter1d8")
         {
+            choiceAText.text = "ZOSTAŃ";
+            choiceBText.text = "IDŹ DALEJ";
             choiceA.gameObject.SetActive(true);
             choiceB.gameObject.SetActive(true);
             return;
@@ -334,6 +351,8 @@ public class DialogueSystem : MonoBehaviour
         }
         else if (currentNode == "chapter2d1")
         {
+            choiceAText.text = "Zaufaj Alysii";
+            choiceBText.text = "Nie ufaj jej";
             choiceA.gameObject.SetActive(true);
             choiceB.gameObject.SetActive(true);
             return;
@@ -374,6 +393,7 @@ public class DialogueSystem : MonoBehaviour
 
     void ChooseA()
     {
+        AddChoiceToLog(1);
         if (currentNode == "Chapter1d2")
         {
             currentDialogue = dialogueHolder.Chapter1ch1d2;
@@ -417,6 +437,7 @@ public class DialogueSystem : MonoBehaviour
 
     void ChooseB()
     {
+        AddChoiceToLog(2);
         if (currentNode == "Chapter1d2")
         {
             currentDialogue = dialogueHolder.Chapter1ch2d2;
@@ -582,5 +603,89 @@ public class DialogueSystem : MonoBehaviour
             currentBackground = index;
             backgroundImage.sprite = backgrounds[index];
         }
+    }
+    void AddToLog()
+    {
+        log.Add(new LogEntry
+        {
+            text = RemoveBGTags(GetCleanText(currentDialogue[DialogueHolder.index])),
+            node = currentNode,
+            dialogue = currentDialogue,
+            index = DialogueHolder.index,
+            background = currentBackground,
+            choiceId = 0
+        });
+    }
+
+    void AddChoiceToLog(int choice)
+    {
+        log.Add(new LogEntry
+        {
+            text = "[WYBÓR]",
+            node = currentNode,
+            dialogue = currentDialogue,
+            index = DialogueHolder.index,
+            background = currentBackground,
+            choiceId = choice
+        });
+    }
+    public void ToggleBacklog()
+    {
+        backlogPanel.SetActive(!backlogPanel.activeSelf);
+
+        if (backlogPanel.activeSelf)
+            BuildBacklog();
+    }
+
+    void BuildBacklog()
+    {
+        foreach (Transform child in backlogContent)
+            Destroy(child.gameObject);
+
+        for (int i = 0; i < log.Count; i++)
+        {
+            int id = i;
+
+            GameObject btn = Instantiate(backlogButtonPrefab, backlogContent);
+
+            btn.GetComponentInChildren<TextMeshProUGUI>().text = log[i].text;
+
+            btn.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                JumpToLog(id);
+            });
+        }
+    }
+    void JumpToLog(int id)
+    {
+        var entry = log[id];
+
+        // 🔥 usuń przyszłość
+        log.RemoveRange(id + 1, log.Count - (id + 1));
+
+        currentNode = entry.node;
+        currentDialogue = entry.dialogue;
+        DialogueHolder.index = entry.index;
+
+        currentBackground = entry.background;
+        backgroundImage.sprite = backgrounds[currentBackground];
+
+        StopAllCoroutines();
+
+        if (entry.choiceId != 0)
+        {
+            ShowChoiceAgain();
+        }
+        else
+        {
+            StartTyping();
+        }
+
+        backlogPanel.SetActive(false);
+    }
+    void ShowChoiceAgain()
+    {
+        choiceA.gameObject.SetActive(true);
+        choiceB.gameObject.SetActive(true);
     }
 }
