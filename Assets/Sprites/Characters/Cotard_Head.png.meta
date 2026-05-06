@@ -1,0 +1,527 @@
+fileFormatVersion: 2
+guid: 6dc2fcff0ebcac0458aa996c5290ad49
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4132029530873570651
+    second: Cotard_Head_0
+  - first:
+      213: -2152313315929200630
+    second: Cotard_Head_1
+  - first:
+      213: -8028654021867555937
+    second: Cotard_Head_2
+  - first:
+      213: 6020289785055451894
+    second: Cotard_Head_3
+  - first:
+      213: 7233547858413246917
+    second: Cotard_Head_4
+  - first:
+      213: -2618917740636750712
+    second: Cotard_Head_5
+  - first:
+      213: -7249347881038737577
+    second: Cotard_Head_6
+  - first:
+      213: 2066479242022846443
+    second: Cotard_Head_7
+  - first:
+      213: 6879925417998092461
+    second: Cotard_Head_8
+  - first:
+      213: -3034223845458736243
+    second: Cotard_Head_9
+  - first:
+      213: -6753426582398050039
+    second: Cotard_Head_10
+  - first:
+      213: -4026143757122768294
+    second: Cotard_Head_11
+  - first:
+      213: -5450607504107412761
+    second: Cotard_Head_12
+  - first:
+      213: -330444269649138198
+    second: Cotard_Head_13
+  - first:
+      213: 1546020639140262775
+    second: Cotard_Head_14
+  - first:
+      213: 5024298071281616533
+    second: Cotard_Head_15
+  - first:
+      213: 2320600386832065409
+    second: Cotard_Head_16
+  - first:
+      213: 2903531222460022853
+    second: Cotard_Head_17
+  - first:
+      213: -4141818998507221052
+    second: Cotard_Head_18
+  - first:
+      213: 8915977862961904371
+    second: Cotard_Head_19
+  - first:
+      213: -7040574911632654532
+    second: Cotard_Head_20
+  - first:
+      213: 5868597800760296324
+    second: Cotard_Head_21
+  - first:
+      213: -1302970834723448473
+    second: Cotard_Head_22
+  - first:
+      213: -7868959841316112622
+    second: Cotard_Head_23
+  - first:
+      213: 7469839405096220053
+    second: Cotard_Head_24
+  - first:
+      213: -5145864515461571377
+    second: Cotard_Head_25
+  - first:
+      213: -2027707908898348478
+    second: Cotard_Head_26
+  - first:
+      213: -5057667990702186602
+    second: Cotard_Head_27
+  - first:
+      213: 2320994767751224499
+    second: Cotard_Head_28
+  - first:
+      213: -2850486957238892149
+    second: Cotard_Head_29
+  - first:
+      213: 5224306732790495273
+    second: Cotard_Head_30
+  - first:
+      213: 8916474229061739464
+    second: Cotard_Head_31
+  - first:
+      213: -4932319245620812407
+    second: Cotard_Head_32
+  - first:
+      213: 1280802446185355665
+    second: Cotard_Head_33
+  - first:
+      213: -3666612747620333265
+    second: Cotard_Head_34
+  - first:
+      213: -59353023885830195
+    second: Cotard_Head_35
+  - first:
+      213: 3107435106507061469
+    second: Cotard_Head_36
+  - first:
+      213: -6606299248052782437
+    second: Cotard_Head_37
+  - first:
+      213: -1518859190337667755
+    second: Cotard_Head_38
+  - first:
+      213: -827697501843944660
+    second: Cotard_Head_39
+  - first:
+      213: -3270043437090837713
+    second: Cotard_Head_40
+  - first:
+      213: 8328549922535849799
+    second: Cotard_Head_41
+  - first:
+      213: -66987014128125743
+    second: Cotard_Head_42
+  - first:
+      213: 2097211185171149362
+    second: Cotard_Head_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cotard_Head_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 502
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa5bdab80518a6c0800000000000000
+      internalID: -4132029530873570651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cotard_Head_1
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 0
+        width: 502
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0862be41727122e0800000000000000
+      internalID: -2152313315929200630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cotard_Head_2
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 0
+        width: 502
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f93b21a64bd749090800000000000000
+      internalID: -8028654021867555937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cotard_Head_3
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 0
+        width: 502
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fa9423a9ad5c8350800000000000000
+      internalID: 6020289785055451894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cotard_Head_4
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 0
+        width: 502
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c95286c379b26460800000000000000
+      internalID: 7233547858413246917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cotard_Head_5
+      rect:
+        serializedVersion: 2
+        x: 2510
+        y: 0
+        width: 502
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88cb065c03cb7abd0800000000000000
+      internalID: -2618917740636750712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cotard_Head_6
+      rect:
+        serializedVersion: 2
+        x: 3012
+        y: 0
+        width: 502
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75f8479c284256b90800000000000000
+      internalID: -7249347881038737577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cotard_Head_7
+      rect:
+        serializedVersion: 2
+        x: 3514
+        y: 0
+        width: 502
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bef7d740ceb9dac10800000000000000
+      internalID: 2066479242022846443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cotard_Head_8
+      rect:
+        serializedVersion: 2
+        x: 4016
+        y: 0
+        width: 502
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da805fc57b76a7f50800000000000000
+      internalID: 6879925417998092461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cotard_Head_9
+      rect:
+        serializedVersion: 2
+        x: 4518
+        y: 0
+        width: 502
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b89621d7544e5d0800000000000000
+      internalID: -3034223845458736243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cotard_Head_10
+      rect:
+        serializedVersion: 2
+        x: 5020
+        y: 0
+        width: 502
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901eb73fd420742a0800000000000000
+      internalID: -6753426582398050039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cotard_Head_11
+      rect:
+        serializedVersion: 2
+        x: 5522
+        y: 0
+        width: 502
+        height: 502
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a527a0695934028c0800000000000000
+      internalID: -4026143757122768294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c5f8bc1268cb36949a527943288defce
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":12.0,"y":1.0},"gridSpriteSize":{"x":502.0,"y":502.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Cotard_Head_0: -4132029530873570651
+      Cotard_Head_1: -2152313315929200630
+      Cotard_Head_10: -6753426582398050039
+      Cotard_Head_11: -4026143757122768294
+      Cotard_Head_2: -8028654021867555937
+      Cotard_Head_3: 6020289785055451894
+      Cotard_Head_4: 7233547858413246917
+      Cotard_Head_5: -2618917740636750712
+      Cotard_Head_6: -7249347881038737577
+      Cotard_Head_7: 2066479242022846443
+      Cotard_Head_8: 6879925417998092461
+      Cotard_Head_9: -3034223845458736243
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
