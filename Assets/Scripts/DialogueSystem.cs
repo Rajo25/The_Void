@@ -20,7 +20,6 @@ public class DialogueSystem : MonoBehaviour
     public Button nextButton;
     public Button choiceA;
     public Button choiceB;
-    public Button backButton;
     public Button skipButton;
     public Button autoButton;
     public TextMeshProUGUI choiceAText;
@@ -40,8 +39,7 @@ public class DialogueSystem : MonoBehaviour
 
     private bool isTyping = false;
     private Coroutine typingCoroutine;
-
-    public float typingSpeed = 0.05f;
+    private float typingSpeed;
 
     private string currentSpeaker = "";
     private string currentNode = "prologue";
@@ -70,7 +68,6 @@ public class DialogueSystem : MonoBehaviour
 
         choiceA.onClick.AddListener(ChooseA);
         choiceB.onClick.AddListener(ChooseB);
-        backButton.onClick.AddListener(GoBack);
         skipButton.onClick.AddListener(SkipDialogue);
         autoButton.onClick.AddListener(ToggleAuto);
 
@@ -78,7 +75,7 @@ public class DialogueSystem : MonoBehaviour
         {
             DialogueHolder.index = PlayerPrefs.GetInt("dialogueIndex");
         }
-
+        ApplySettings();
         StartTyping();
     }
 
@@ -89,7 +86,6 @@ public class DialogueSystem : MonoBehaviour
 
         if (Keyboard.current.bKey.wasPressedThisFrame)
         {
-            GoBack();
             return;
         }
 
@@ -113,9 +109,9 @@ public class DialogueSystem : MonoBehaviour
 
     void StartTyping()
     {
+        ApplySettings();
         string line = currentDialogue[DialogueHolder.index];
-
-
+        
         UpdateSpeaker(line);
 
         Debug.Log("LINE RAW: " + line);
@@ -371,26 +367,7 @@ public class DialogueSystem : MonoBehaviour
         history.Clear();
         StartTyping();
     }
-
-    void GoBack()
-    {
-        if (history.Count == 0) return;
-
-        StopAllCoroutines();
-        isTyping = false;
-
-        DialogueHolder.index = history.Pop();
-
-        if (backgroundHistory.Count > 0)
-        {
-            currentBackground = backgroundHistory.Pop();
-            backgroundImage.sprite = backgrounds[currentBackground];
-        }
-
-        dialogueText.text = GetCleanText(currentDialogue[DialogueHolder.index]);
-        UpdateSpeaker(currentDialogue[DialogueHolder.index]);
-    }
-
+    
     void ChooseA()
     {
         AddChoiceToLog(1);
@@ -532,6 +509,7 @@ public class DialogueSystem : MonoBehaviour
 
     void ToggleAuto()
     {
+        ApplySettings();
         isAuto = !isAuto;
 
         if (isAuto)
@@ -659,8 +637,7 @@ public class DialogueSystem : MonoBehaviour
     void JumpToLog(int id)
     {
         var entry = log[id];
-
-        // 🔥 usuń przyszłość
+        
         log.RemoveRange(id + 1, log.Count - (id + 1));
 
         currentNode = entry.node;
@@ -687,5 +664,24 @@ public class DialogueSystem : MonoBehaviour
     {
         choiceA.gameObject.SetActive(true);
         choiceB.gameObject.SetActive(true);
+    }
+    void ApplySettings()
+    {
+        if (GameSettings.Instance == null) return;
+
+        switch (GameSettings.Instance.autoSpeed)
+        {
+            case GameSettings.AutoSpeed.Slow:
+                typingSpeed = 0.08f;
+                break;
+
+            case GameSettings.AutoSpeed.Medium:
+                typingSpeed = 0.05f;
+                break;
+
+            case GameSettings.AutoSpeed.Fast:
+                typingSpeed = 0.02f;
+                break;
+        }
     }
 }

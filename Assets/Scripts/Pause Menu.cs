@@ -7,23 +7,30 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public GameObject OptionsUI;
-    
+
 
 
     private bool isPaused = false;
-    
+
     public static bool IsPaused = false;
 
     public Button _MainMenu;
     public Button Quit_Game;
     public Button Resume_;
     public Button Options_;
-    public Button SaveGameBtn; 
+    public Button SaveGameBtn;
     public Button SaveGameMainBtn;
+    public Button autoOnButton;
+    public Button autoOffButton;
+
+    public Button slowButton;
+    public Button mediumButton;
+    public Button fastButton;
 
     public Transform player;
 
     public DialogueSystem dialogueSystem;
+    public GameObject backlogPanel;
 
     private void Start()
     {
@@ -33,16 +40,31 @@ public class PauseMenu : MonoBehaviour
         SaveGameMainBtn.onClick.AddListener(SaveGame);
         Options_.onClick.AddListener(Options);
 
-        SaveGameBtn.onClick.AddListener(SaveGame); 
+        SaveGameBtn.onClick.AddListener(SaveGame);
     }
 
     void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (!Keyboard.current.escapeKey.wasPressedThisFrame)
+            return;
+
+        if (backlogPanel != null && backlogPanel.activeSelf)
         {
-            if (isPaused) ResumeGame();
-            else PauseGame();
+            backlogPanel.SetActive(false);
+            return;
         }
+
+        if (OptionsUI.activeSelf)
+        {
+            OptionsUI.SetActive(false);
+            pauseMenuUI.SetActive(true);
+            return;
+        }
+
+        if (isPaused)
+            ResumeGame();
+        else
+            PauseGame();
     }
 
     public void PauseGame()
@@ -50,7 +72,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
-        
+
         IsPaused = true;
 
         Cursor.visible = true;
@@ -63,7 +85,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
 
-        
+
         IsPaused = false;
     }
 
@@ -84,6 +106,8 @@ public class PauseMenu : MonoBehaviour
         OptionsUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+
+        InitSettingsButtons();
     }
 
     private void QuitGame()
@@ -91,11 +115,11 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Opuszczanie gry");
     }
-    
+
     private void SaveGame()
     {
         PlayerPrefs.SetInt("SceneIndex", SceneManager.GetActiveScene().buildIndex);
-        
+
         PlayerPrefs.SetFloat("PlayerX", player.position.x);
         PlayerPrefs.SetFloat("PlayerY", player.position.y);
         PlayerPrefs.SetFloat("PlayerZ", player.position.z);
@@ -120,9 +144,45 @@ public class PauseMenu : MonoBehaviour
             Debug.Log("Gra wczytana!");
         }
     }
+
     public void SaveGameGlobal()
     {
         SaveGame();
         Debug.Log("Save wykonany z UI (global)");
+    }
+
+    public void InitSettingsButtons()
+    {
+        if (autoOnButton == null || slowButton == null)
+        {
+            Debug.LogError("Buttons nie są przypisane w Inspectorze!");
+            return;
+        }
+
+        if (GameSettings.Instance == null)
+        {
+            GameSettings.EnsureInstance();
+        }
+
+        var gs = GameSettings.Instance;
+        if (gs == null)
+        {
+            Debug.LogError("GameSettings nadal null!");
+            return;
+        }
+
+        autoOnButton.onClick.RemoveAllListeners();
+        autoOffButton.onClick.RemoveAllListeners();
+
+        slowButton.onClick.RemoveAllListeners();
+        mediumButton.onClick.RemoveAllListeners();
+        fastButton.onClick.RemoveAllListeners();
+
+        autoOnButton.onClick.AddListener(gs.AutoOn);
+        autoOffButton.onClick.AddListener(gs.AutoOff);
+
+        slowButton.onClick.AddListener(gs.SpeedSlow);
+        mediumButton.onClick.AddListener(gs.SpeedMedium);
+        fastButton.onClick.AddListener(gs.SpeedFast);
     }
 }

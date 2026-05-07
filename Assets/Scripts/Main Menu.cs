@@ -61,14 +61,23 @@ public class MainMenu : MonoBehaviour
 
         SceneManager.LoadScene(1);
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            CloseSubMenus();
+        }
+    }
 
     private void Credits()
     {
+        OptionsUI.SetActive(false);
         CreditsUI.SetActive(true);
     }
 
     private void Options()
     {
+        CreditsUI.SetActive(false);
         OptionsUI.SetActive(true);
     }
 
@@ -76,5 +85,13 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Opuszczanie gry");
+    }
+    private void CloseSubMenus()
+    {
+        if (OptionsUI != null)
+            OptionsUI.SetActive(false);
+
+        if (CreditsUI != null)
+            CreditsUI.SetActive(false);
     }
 }
