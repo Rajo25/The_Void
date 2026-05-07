@@ -22,6 +22,7 @@ public class PauseMenu : MonoBehaviour
     public Button SaveGameMainBtn;
     public Button autoOnButton;
     public Button autoOffButton;
+    public Button backButton;
 
     public Button slowButton;
     public Button mediumButton;
@@ -39,7 +40,7 @@ public class PauseMenu : MonoBehaviour
         Resume_.onClick.AddListener(ResumeGame);
         SaveGameMainBtn.onClick.AddListener(SaveGame);
         Options_.onClick.AddListener(Options);
-
+        backButton.onClick.AddListener(BackFromOptions);
         SaveGameBtn.onClick.AddListener(SaveGame);
     }
 
@@ -184,5 +185,10 @@ public class PauseMenu : MonoBehaviour
         slowButton.onClick.AddListener(gs.SpeedSlow);
         mediumButton.onClick.AddListener(gs.SpeedMedium);
         fastButton.onClick.AddListener(gs.SpeedFast);
+    }
+    private void BackFromOptions()
+    {
+        OptionsUI.SetActive(false);
+        pauseMenuUI.SetActive(true);
     }
 }

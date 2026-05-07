@@ -691,6 +691,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433062531}
   m_CullTransparentMesh: 1
+--- !u!114 &798446790 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6643166256006272201, guid: c81d5806e618d3648947145a9cf60572, type: 3}
+  m_PrefabInstance: {fileID: 1310893369}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1115355419
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,6 +900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MeinMenu
   OptionsUI: {fileID: 1468025871}
   CreditsUI: {fileID: 2024608698}
+  Back_Button: {fileID: 798446790}
   New_Game: {fileID: 2129294513}
   Quit_Game: {fileID: 433062533}
   Options_: {fileID: 164909885}
@@ -1238,6 +1250,22 @@ PrefabInstance:
     - target: {fileID: 6584180336984633604, guid: c81d5806e618d3648947145a9cf60572, type: 3}
       propertyPath: m_Color.r
       value: 0.52156866
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643166256006272201, guid: c81d5806e618d3648947145a9cf60572, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643166256006272201, guid: c81d5806e618d3648947145a9cf60572, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643166256006272201, guid: c81d5806e618d3648947145a9cf60572, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1937168859}
+    - target: {fileID: 6643166256006272201, guid: c81d5806e618d3648947145a9cf60572, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7169045931177206472, guid: c81d5806e618d3648947145a9cf60572, type: 3}
       propertyPath: m_Color.b

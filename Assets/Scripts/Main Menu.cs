@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
 
     public GameObject OptionsUI;
     public GameObject CreditsUI;
-
+    public Button Back_Button;
     public Button New_Game;
     public Button Quit_Game;
     public Button Options_;
@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour
         Quit_Game.onClick.AddListener(QuitGame);
         Info_.onClick.AddListener(Credits);
         Options_.onClick.AddListener(Options);
-
+        Back_Button.onClick.AddListener(CloseSubMenus);
         //Continue
         if (Continue_Game != null)
             Continue_Game.onClick.AddListener(ContinueGame);
