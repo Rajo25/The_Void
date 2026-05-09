@@ -423,7 +423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.94723785, y: 0.049000002}
   m_AnchorMax: {x: 0.98741263, y: 0.1994986}
-  m_AnchoredPosition: {x: 1.0145874, y: 0.6008148}
+  m_AnchoredPosition: {x: 1.0146484, y: 0.6008148}
   m_SizeDelta: {x: 2.0290527, y: 1.0267944}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &103737794
@@ -1610,6 +1610,7 @@ GameObject:
   - component: {fileID: 593881457}
   - component: {fileID: 593881459}
   - component: {fileID: 593881458}
+  - component: {fileID: 593881460}
   m_Layer: 5
   m_Name: Alysia
   m_TagString: Untagged
@@ -1674,6 +1675,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593881456}
   m_CullTransparentMesh: 1
+--- !u!114 &593881460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593881456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafbcbed1e864cb41b0db9263f65a29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNCharacter
+  eyes: {fileID: 0}
+  mouth: {fileID: 0}
+  neutral:
+    eyes: {fileID: 0}
+    mouthClosed: {fileID: 0}
+    mouthOpen: {fileID: 0}
+  happy:
+    eyes: {fileID: 0}
+    mouthClosed: {fileID: 0}
+    mouthOpen: {fileID: 0}
+  angry:
+    eyes: {fileID: 0}
+    mouthClosed: {fileID: 0}
+    mouthOpen: {fileID: 0}
+  sad:
+    eyes: {fileID: 0}
+    mouthClosed: {fileID: 0}
+    mouthOpen: {fileID: 0}
 --- !u!114 &686624474 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3435763994980435934, guid: 4f93421ac4cedb54aae7c8355b7ce80d, type: 3}
@@ -1719,6 +1750,8 @@ MonoBehaviour:
   dialogueText: {fileID: 1260320158}
   nameText: {fileID: 268708125}
   dialogueHolder: {fileID: 1082544905}
+  alysia: {fileID: 593881460}
+  cotard: {fileID: 733236595}
   backgroundImage: {fileID: 748114491}
   backgrounds:
   - {fileID: -7641719358306010726, guid: d3403f9f5357bd449a57fa3ed74615d7, type: 3}
@@ -2710,6 +2743,7 @@ GameObject:
   - component: {fileID: 733236592}
   - component: {fileID: 733236594}
   - component: {fileID: 733236593}
+  - component: {fileID: 733236595}
   m_Layer: 5
   m_Name: Cotard
   m_TagString: Untagged
@@ -2776,6 +2810,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733236591}
   m_CullTransparentMesh: 1
+--- !u!114 &733236595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733236591}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafbcbed1e864cb41b0db9263f65a29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VNCharacter
+  eyes: {fileID: 1168884210}
+  mouth: {fileID: 143504997}
+  neutral:
+    eyes: {fileID: 7233547858413246917, guid: 6dc2fcff0ebcac0458aa996c5290ad49, type: 3}
+    mouthClosed: {fileID: -3144044846550293230, guid: e8e8d667d8db123448cc8cb506b73bad, type: 3}
+    mouthOpen: {fileID: 1948275128152594118, guid: e8e8d667d8db123448cc8cb506b73bad, type: 3}
+  happy:
+    eyes: {fileID: 6879925417998092461, guid: 6dc2fcff0ebcac0458aa996c5290ad49, type: 3}
+    mouthClosed: {fileID: 5103534890045669454, guid: e8e8d667d8db123448cc8cb506b73bad, type: 3}
+    mouthOpen: {fileID: 3385130714193850381, guid: e8e8d667d8db123448cc8cb506b73bad, type: 3}
+  angry:
+    eyes: {fileID: -4026143757122768294, guid: 6dc2fcff0ebcac0458aa996c5290ad49, type: 3}
+    mouthClosed: {fileID: -4207396710855184924, guid: e8e8d667d8db123448cc8cb506b73bad, type: 3}
+    mouthOpen: {fileID: -4871580901258354475, guid: e8e8d667d8db123448cc8cb506b73bad, type: 3}
+  sad:
+    eyes: {fileID: 2066479242022846443, guid: 6dc2fcff0ebcac0458aa996c5290ad49, type: 3}
+    mouthClosed: {fileID: 2581009784670959289, guid: e8e8d667d8db123448cc8cb506b73bad, type: 3}
+    mouthOpen: {fileID: 1948275128152594118, guid: e8e8d667d8db123448cc8cb506b73bad, type: 3}
 --- !u!1 &748114489
 GameObject:
   m_ObjectHideFlags: 0
@@ -3420,7 +3484,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.80500007, y: 0.049000002}
   m_AnchorMax: {x: 0.8465874, y: 0.1994986}
-  m_AnchoredPosition: {x: -12.899963, y: -0.5133972}
+  m_AnchoredPosition: {x: -12.899902, y: -0.5133972}
   m_SizeDelta: {x: 0.0009765625, y: 1.0267944}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1054083007
@@ -3535,9 +3599,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueHolder
   prologue:
-  - "ALYSIA|[BG2]Jestem osob\u0105, kt\xF3ra pyta.\nNie potrafi\u0119 inaczej, nigdy
-    nie potrafi\u0142am."
-  - "ALYSIA|[BG1]Pytam o wszystko, jakby kto\u015B zapisa\u0142 we mnie wewn\u0119trzny
+  - "ALYSIA|Jestem osob\u0105, kt\xF3ra pyta.\nNie potrafi\u0119 inaczej, nigdy nie
+    potrafi\u0142am."
+  - "ALYSIA|Pytam o wszystko, jakby kto\u015B zapisa\u0142 we mnie wewn\u0119trzny
     przymus aby zrozumie\u0107 niezrozumia\u0142e. \nPoci\u0105ga mnie to co jeszcze
     nienazwane, niewypowiedziane, o kt\xF3rych inni boj\u0105 si\u0119 nawet pomy\u015Ble\u0107."
   - "ALYSIA|Znale\u017Ali go na wybrze\u017Cu, gdzie spacerowali.\nNigdy nie dowiedzia\u0142am
@@ -3677,13 +3741,13 @@ MonoBehaviour:
   - "ALYSIA|Chc\u0119 wiedzie\u0107, co si\u0119 sta\u0142o z moimi rodzicami.\n"
   - "ALYSIA|I nie jestem sama.\nNie martwcie si\u0119.\nOn si\u0119 mn\u0105 zaopiekuje.\n"
   Chapter1d2:
-  - "NARRATOR|Wiatr\u2026 jest dziwnie cichy\nNie zimny. Nie ciep\u0142y.\nPo prostu\u2026
-    czu\u0107, \u017Ce pochodzi z Nico\u015Bci."
+  - "NARRATOR|[BG1]Wiatr\u2026 jest dziwnie cichy\nNie zimny. Nie ciep\u0142y.\nPo
+    prostu\u2026 czu\u0107, \u017Ce pochodzi z Nico\u015Bci."
   - "NARRATOR|Ogromny krater ci\u0105gnie si\u0119 w d\xF3\u0142, jakby \u015Bwiat
     zosta\u0142 wyrwany z w\u0142asnego cia\u0142a."
   - "NARRATOR|Alyssia staje na kraw\u0119dzi.\nA obok niej \nCotard.\n"
   - "ALYSIA|\u2026to tutaj.\n"
-  - 'COTARD|Nie.
+  - 'COTARD angry right pose2 |Nie.
 
 '
   - "COTARD|\u2026\n"
@@ -3697,7 +3761,7 @@ MonoBehaviour:
   - "NARRATOR|Zbyt d\u0142ugo.\n"
   - "COTARD|Nie czuj\u0119 strachu.\n"
   - "COTARD|\u2026\n"
-  - 'COTARD|[BG3]To nie jest odwaga.
+  - 'COTARD|To nie jest odwaga.
 
 '
   Chapter1ch1d2:
@@ -3789,7 +3853,7 @@ MonoBehaviour:
   - COTARD|Tak.
   - "COTARD|Wszystko zaczyna si\u0119 tutaj."
   - ALYSIA|Co takiego?
-  - "COTARD|Pierwszy poziom.\nKwiecista Nico\u015B\u0107."
+  - "COTARD|[BG2]Pierwszy poziom.\nKwiecista Nico\u015B\u0107."
   - "NARRATOR|Powietrze robi si\u0119 s\u0142odkie.\n"
   - "NARRATOR|Zbyt s\u0142odkie.\n"
   - "NARRATOR|Dusz\u0105ce.\n"
@@ -3800,7 +3864,7 @@ MonoBehaviour:
   - "ALYSIA|Och\u2026\nCotard!\nsp\xF3jrz tylko\nJak tu pi\u0119knie!\n"
   - "NARRATOR|Na jej twarzy pojawia si\u0119 prawdziwy, ciep\u0142y u\u015Bmiech.\nPierwszy
     od wej\u015Bcia.\n"
-  - "COTARD|Nie podchod\u017A!\n"
+  - "COTARD|[BG2]Nie podchod\u017A!\n"
   Chapter1ch1d5:
   - "ALYSIA|Dlaczego?\nS\u0105 niebezpieczne?\n"
   - 'NARRATOR|Cotard patrzy na kwiaty.
