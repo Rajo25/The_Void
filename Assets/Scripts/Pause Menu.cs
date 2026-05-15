@@ -23,7 +23,8 @@ public class PauseMenu : MonoBehaviour
     public Button autoOnButton;
     public Button autoOffButton;
     public Button backButton;
-
+    public Color selectedColor = Color.green;
+    public Color normalColor = Color.white;
     public Button slowButton;
     public Button mediumButton;
     public Button fastButton;
@@ -179,16 +180,83 @@ public class PauseMenu : MonoBehaviour
         mediumButton.onClick.RemoveAllListeners();
         fastButton.onClick.RemoveAllListeners();
 
-        autoOnButton.onClick.AddListener(gs.AutoOn);
-        autoOffButton.onClick.AddListener(gs.AutoOff);
+        autoOnButton.onClick.AddListener(() =>
+        {
+            gs.AutoOn();
 
-        slowButton.onClick.AddListener(gs.SpeedSlow);
-        mediumButton.onClick.AddListener(gs.SpeedMedium);
-        fastButton.onClick.AddListener(gs.SpeedFast);
+            if (dialogueSystem != null)
+                dialogueSystem.SetAuto(true);
+
+            HighlightButton(autoOnButton, autoOffButton);
+        });
+
+        autoOffButton.onClick.AddListener(() =>
+        {
+            gs.AutoOff();
+
+            if (dialogueSystem != null)
+                dialogueSystem.SetAuto(false);
+
+            HighlightButton(autoOffButton, autoOnButton);
+        });
+        slowButton.onClick.AddListener(() =>
+        {
+            gs.SpeedSlow();
+            HighlightButton(slowButton, mediumButton, fastButton);
+        });
+
+        mediumButton.onClick.AddListener(() =>
+        {
+            gs.SpeedMedium();
+            HighlightButton(mediumButton, slowButton, fastButton);
+        });
+
+        fastButton.onClick.AddListener(() =>
+        {
+            gs.SpeedFast();
+            HighlightButton(fastButton, slowButton, mediumButton);
+        });
+        switch (gs.autoSpeed)
+        {
+            case GameSettings.AutoSpeed.Slow:
+                HighlightButton(slowButton, mediumButton, fastButton);
+                break;
+
+            case GameSettings.AutoSpeed.Medium:
+                HighlightButton(mediumButton, slowButton, fastButton);
+                break;
+
+            case GameSettings.AutoSpeed.Fast:
+                HighlightButton(fastButton, slowButton, mediumButton);
+                break;
+        }
+        if (gs.autoEnabled)
+        {
+            HighlightButton(autoOnButton, autoOffButton);
+        }
+        else
+        {
+            HighlightButton(autoOffButton, autoOnButton);
+        }
     }
     private void BackFromOptions()
     {
         OptionsUI.SetActive(false);
         pauseMenuUI.SetActive(true);
+    }
+    void HighlightButton(Button activeButton, params Button[] otherButtons)
+    {
+        Image activeImage = activeButton.GetComponent<Image>();
+
+        if (activeImage != null)
+            activeImage.color = selectedColor;
+
+        foreach (Button btn in otherButtons)
+        {
+            Image img = btn.GetComponent<Image>();
+
+            if (img != null)
+                img.color = normalColor;
+        }
     }
 }

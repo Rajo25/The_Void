@@ -1807,6 +1807,8 @@ MonoBehaviour:
   autoOnButton: {fileID: 146480662}
   autoOffButton: {fileID: 84453315}
   backButton: {fileID: 4601043032182803161}
+  selectedColor: {r: 0, g: 1, b: 0, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
   slowButton: {fileID: 1632927640}
   mediumButton: {fileID: 950796622}
   fastButton: {fileID: 1434813598}
@@ -2817,7 +2819,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733236591}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eafbcbed1e864cb41b0db9263f65a29d, type: 3}
   m_Name: 
@@ -3599,9 +3601,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueHolder
   prologue:
-  - "ALYSIA|Jestem osob\u0105, kt\xF3ra pyta.\nNie potrafi\u0119 inaczej, nigdy nie
-    potrafi\u0142am."
-  - "ALYSIA|Pytam o wszystko, jakby kto\u015B zapisa\u0142 we mnie wewn\u0119trzny
+  - "ALYSIA|BG4|Jestem osob\u0105, kt\xF3ra pyta.\nNie potrafi\u0119 inaczej, nigdy
+    nie potrafi\u0142am.|"
+  - "ALYSIA|BG3|Pytam o wszystko, jakby kto\u015B zapisa\u0142 we mnie wewn\u0119trzny
     przymus aby zrozumie\u0107 niezrozumia\u0142e. \nPoci\u0105ga mnie to co jeszcze
     nienazwane, niewypowiedziane, o kt\xF3rych inni boj\u0105 si\u0119 nawet pomy\u015Ble\u0107."
   - "ALYSIA|Znale\u017Ali go na wybrze\u017Cu, gdzie spacerowali.\nNigdy nie dowiedzia\u0142am
@@ -3747,7 +3749,7 @@ MonoBehaviour:
     zosta\u0142 wyrwany z w\u0142asnego cia\u0142a."
   - "NARRATOR|Alyssia staje na kraw\u0119dzi.\nA obok niej \nCotard.\n"
   - "ALYSIA|\u2026to tutaj.\n"
-  - 'COTARD angry right pose2 |Nie.
+  - 'COTARD|Nie.
 
 '
   - "COTARD|\u2026\n"
@@ -3766,16 +3768,16 @@ MonoBehaviour:
 '
   Chapter1ch1d2:
   - "ALYSIA|Wiem, to g\u0142upota."
-  - "COTARD|To dobrze.\nPrzynajmniej to si\u0119 nie zmieni\u0142o"
+  - "COTARD|happy|To dobrze.\nPrzynajmniej to si\u0119 nie zmieni\u0142o"
   Chapter1ch2d2:
   - "ALYSIA|Dlaczego tak m\xF3wisz?"
-  - "COTARD|Bo ja i tak nie istniej\u0119.\nA jednak nadal potrafi\u0119 pope\u0142nia\u0107
+  - "COTARD|sad|Bo ja i tak nie istniej\u0119.\nA jednak nadal potrafi\u0119 pope\u0142nia\u0107
     b\u0142\u0119dy."
   Chapter1d3:
   - "NARRATOR|Pierwszy krok.\nZiemia nie wydaje d\u017Awi\u0119ku."
   - "ALYSIA|S\u0142yszysz to?"
-  - COTARD|Nie
-  - "COTARD|\u2026i w\u0142a\u015Bnie to powinno ci\u0119 martwi\u0107.\n"
+  - COTARD|neutral|Nie
+  - "COTARD|neutral|\u2026i w\u0142a\u015Bnie to powinno ci\u0119 martwi\u0107.\n"
   - "ALYSIA|Jeste\u015B jedyn\u0105 osob\u0105, kt\xF3ra mo\u017Ce tam wej\u015B\u0107
     i wr\xF3ci\u0107.\n"
   - "NARRATOR|Cotard przekrzywia g\u0142ow\u0119 jakby analizowa\u0142 co\u015B czego
@@ -3856,7 +3858,7 @@ MonoBehaviour:
   - "COTARD|[BG2]Pierwszy poziom.\nKwiecista Nico\u015B\u0107."
   - "NARRATOR|Powietrze robi si\u0119 s\u0142odkie.\n"
   - "NARRATOR|Zbyt s\u0142odkie.\n"
-  - "NARRATOR|Dusz\u0105ce.\n"
+  - "NARRATOR|BG3|Dusz\u0105ce.\n"
   - "NARRATOR|W oddali zaczynaj\u0105 si\u0119 wy\u0142ania\u0107 pierwsze kwiaty."
   - NARRATOR|Delikatne.
   - "NARRATOR|Bia\u0142e.\n"

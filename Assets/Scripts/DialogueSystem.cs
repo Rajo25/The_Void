@@ -117,7 +117,7 @@ public class DialogueSystem : MonoBehaviour
         UpdateSpeaker(line);
 
         Debug.Log("LINE RAW: " + line);
-
+        backgroundImage.sprite = backgrounds[currentBackground];
         var match = System.Text.RegularExpressions.Regex.Match(line, @"\[BG(\d+)\]");
 
         if (match.Success)
@@ -215,10 +215,15 @@ public class DialogueSystem : MonoBehaviour
 
     string GetCleanText(string line)
     {
-        if (!line.Contains("|")) return RemoveBGTags(line);
+        if (!line.Contains("|"))
+            return RemoveBGTags(line);
 
-        string text = line.Split('|')[1];
-        return RemoveBGTags(text);
+        string[] parts = line.Split('|');
+
+        if (parts.Length >= 3)
+            return RemoveBGTags(parts[2]);
+
+        return RemoveBGTags(parts[1]);
     }
     string RemoveBGTags(string text)
     {
@@ -239,6 +244,11 @@ public class DialogueSystem : MonoBehaviour
         }
 
         isTyping = false;
+        if (currentDialogue != null && DialogueHolder.index < currentDialogue.Length)
+        {
+            string line = currentDialogue[DialogueHolder.index];
+            SetCharacterIdle(line);
+        }
     }
 
     void Next()
@@ -368,10 +378,7 @@ public class DialogueSystem : MonoBehaviour
             choiceB.gameObject.SetActive(true);
             return;
         }
-
         
-        
-
         DialogueHolder.index = 0;
         history.Clear();
         StartTyping();
@@ -518,6 +525,7 @@ public class DialogueSystem : MonoBehaviour
 
     void ToggleAuto()
     {
+        
         ApplySettings();
         isAuto = !isAuto;
 
@@ -529,6 +537,28 @@ public class DialogueSystem : MonoBehaviour
         else
         {
             Debug.Log("AUTO OFF");
+            if (autoCoroutine != null)
+                StopCoroutine(autoCoroutine);
+        }
+        
+    }
+    public void SetAuto(bool value)
+    {
+        isAuto = value;
+
+        if (isAuto)
+        {
+            Debug.Log("AUTO ON");
+
+            if (autoCoroutine != null)
+                StopCoroutine(autoCoroutine);
+
+            autoCoroutine = StartCoroutine(AutoPlay());
+        }
+        else
+        {
+            Debug.Log("AUTO OFF");
+
             if (autoCoroutine != null)
                 StopCoroutine(autoCoroutine);
         }
@@ -583,13 +613,18 @@ public class DialogueSystem : MonoBehaviour
 
     void ChangeBackground(int index)
     {
+        if (backgroundImage == null)
+            return;
 
-        if (index >= 0 && index < backgrounds.Length)
-        {
-            backgroundHistory.Push(currentBackground);
-            currentBackground = index;
-            backgroundImage.sprite = backgrounds[index];
-        }
+        if (index < 0 || index >= backgrounds.Length)
+            return;
+
+        currentBackground = index;
+
+        backgroundImage.sprite = null;
+        backgroundImage.sprite = backgrounds[index];
+
+        Debug.Log("BACKGROUND CHANGED TO: " + index);
     }
     void AddToLog()
     {
@@ -654,8 +689,32 @@ public class DialogueSystem : MonoBehaviour
         DialogueHolder.index = entry.index;
 
         currentBackground = entry.background;
-        backgroundImage.sprite = backgrounds[currentBackground];
 
+        if (currentBackground >= 0 && currentBackground < backgrounds.Length)
+        {
+            backgroundImage.sprite = backgrounds[currentBackground];
+        }
+
+        string line = currentDialogue[DialogueHolder.index];
+
+        var match = System.Text.RegularExpressions.Regex.Match(line, @"\[BG(\d+)\]");
+
+        if (match.Success)
+        {
+            int bgIndex = int.Parse(match.Groups[1].Value);
+            currentBackground = bgIndex - 1;
+
+            if (currentBackground >= 0 && currentBackground < backgrounds.Length)
+            {
+                backgroundImage.sprite = backgrounds[currentBackground];
+            }
+        }
+        currentBackground = entry.background;
+
+        if (currentBackground >= 0 && currentBackground < backgrounds.Length)
+        {
+            backgroundImage.sprite = backgrounds[currentBackground];
+        }
         StopAllCoroutines();
 
         if (entry.choiceId != 0)
@@ -680,36 +739,57 @@ public class DialogueSystem : MonoBehaviour
             return;
 
         string[] parts = line.Split('|');
-        if (parts.Length < 2)
+
+        if (parts.Length < 3)
             return;
 
-        string meta = parts[0];
+        string characterName = parts[0];
+        string emotion = parts[1];
 
         VNCharacter speaker = null;
-        string emotion = "neutral";
-        
-        if (meta.Contains("ALYSIA"))
+
+        if (characterName == "ALYSIA")
             speaker = alysia;
-        else if (meta.Contains("COTARD"))
+        else if (characterName == "COTARD")
             speaker = cotard;
 
         if (speaker == null)
             return;
-        
-        if (meta.Contains("happy"))
-            emotion = "happy";
-        else if (meta.Contains("sad"))
-            emotion = "sad";
-        else if (meta.Contains("angry"))
-            emotion = "angry";
-        
+
         speaker.SetEmotion(emotion, true);
-        
+
         if (speaker != alysia && alysia != null)
             alysia.SetEmotion("neutral", false);
 
         if (speaker != cotard && cotard != null)
             cotard.SetEmotion("neutral", false);
+
+        Debug.Log("EMOTION: " + emotion);
+    }
+    void SetCharacterIdle(string line)
+    {
+        if (!line.Contains("|"))
+            return;
+
+        string[] parts = line.Split('|');
+
+        if (parts.Length < 3)
+            return;
+
+        string characterName = parts[0];
+        string emotion = parts[1];
+
+        VNCharacter speaker = null;
+
+        if (characterName == "ALYSIA")
+            speaker = alysia;
+        else if (characterName == "COTARD")
+            speaker = cotard;
+
+        if (speaker == null)
+            return;
+
+        speaker.SetEmotion(emotion, false);
     }
     void ApplySettings()
     {
